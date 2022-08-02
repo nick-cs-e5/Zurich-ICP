@@ -1,0 +1,11 @@
+{ "items":[
+    {"policyName": "Zurich Omni Health - Gold", "id":1, "insuredPerson":"Ahmed Majar", "policyCoverage" : "RM 14,000.00"},
+    {"policyName": "Z - Drive Assist Takaful", "id":2, "insuredPerson":"Ishbir Mishti", "policyCoverage" : "RM 15,000.00"},
+    {"policyName": "Personal Sentinel Version 3 Plus", "id":3, "insuredPerson":"Tak Peng Phoo", "policyCoverage" : "RM 10,000.00"},
+    {"policyName": "Zurich Omni Health - Gold", "id":1, "insuredPerson":"Ahmed Majar", "policyCoverage" : "RM 14,000.00"},
+    {"policyName": "Z - Drive Assist Takaful", "id":2, "insuredPerson":"Ishbir Mishti", "policyCoverage" : "RM 15,000.00"},
+    {"policyName": "Personal Sentinel Version 3 Plus", "id":3, "insuredPerson":"Tak Peng Phoo", "policyCoverage" : "RM 10,000.00"},
+    {"policyName": "Zurich Omni Health - Gold", "id":1, "insuredPerson":"Ahmed Majar", "policyCoverage" : "RM 14,000.00"},
+    {"policyName": "Z - Drive Assist Takaful", "id":2, "insuredPerson":"Ishbir Mishti", "policyCoverage" : "RM 15,000.00"},
+    {"policyName": "Personal Sentinel Version 3 Plus", "id":3, "insuredPerson":"Tak Peng Phoo", "policyCoverage" : "RM 10,000.00"}
+]}
