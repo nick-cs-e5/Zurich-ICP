@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Zurich | Claim Details 1</title>
+  </head>
+  <body>
+    <!-- Header from component -->
+    <custom-header></custom-header>
+    <!-- Side Banner -->
+    <div class="desktop-view side-bar-index">
+      <sidebar-custom></sidebar-custom>
+    </div>
+    <div class="main-header-body">
+      <div class="content-body">
+        <custom-menu></custom-menu>
+        <!-- Claim More Details -->
+        <div id="policy-info" class="main-body-container">
+            <div class="main-body-info element-padding-0">
+              <div id="info-container" class="policy-container">
+                <!-- Back to Claims Button -->
+                <div onclick="location.href='claims-in-progress.html'" class="back-to-policy policy-container-info-spacing element-cursor-ponter">
+                  <svg class="policy-back-icon" width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="policy-back-icon" d="M7 1L1 6.5L7 12.5" stroke="#23366F" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <p class="policy-back-text">Back</p>
+                </div>
+                <!-- Selected Claim Details -->
+                <div class="policy-content-details">
+                  <img id="policy-badge-info" src="assets/policy-entity-one.svg" class="policy-type-badge element-margin-right-2p"/>
+                  <div class="policy-header-container policy-name-claim-info">
+                    <div class="elemnt-display-flex">
+                      <img id="policy-icon-info" src="assets/medi-kit.svg" class="policy-type-icon desktop-view elemnt-margin-top-1p-right-5p" />
+                      <div class="desktop-view">
+                        <!-- Desktop View - Selected Claim Name & Number for Desktop -->
+                        <p class="policy-text-one" id="policy-id-info"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">6209025601</span></p>
+                        <p class="policy-text-two" id="policy-name-info">Zurich Omni Health - Gold</p>
+                      </div>
+                    </div>
+                    <!--- Mobile View - Selected Claim information -->
+                    <div class="mobile-view policy-number-container-info">
+                      <div class="elemnt-container-style-one">
+                        <img id="policy-icon-info-mob" src="assets/medi-kit.svg" class="policy-type-icon mobile-view element-style-m-w-one" />
+                        <p id="policy-id-info-mob" class="policy-text-one elemnt-margintop-1_5p"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span></p>
+                      </div>
+                      <p id="policy-name-info-mob" class="policy-text-two">Zurich Omni Health - Gold</p>
+                      <div class="policy-user-info mobile-view">
+                        <p class="policy-info-header">Insured Person</p>
+                        <p class="policy-info-text-mobile">Ahmed Majar</pdiv>
+                      </div>
+                      <div class="mobile-view elemnt-container-style-two" >
+                        <div class="policy-action-button mobile-view elemnt-border-violate elemnt-margin-top-4p">
+                          <p id="active-icon-mob" class="policy-action-text text-color-violate">Active</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--- End of Mobile View -->
+                  </div>
+                  <!-- Desktop View -  Selected Policy Info  -->
+                  <div class="info-tile-header desktop-view element-padding-0">
+                    <p class="policy-text-one">Insured Person</p>
+                    <p id="policy-insure-person-info" class="policy-text-three">Ahmed Majar</p>
+                  </div>
+                  <!-- <div class="new-policy-button desktop-view" style="padding: 0 4%;"><div id="policy-info-button-status" class="new-policy-text-more">Active</div></div> -->
+                  <div class="desktop-view">
+                    <div class="claim-action-button desktop-view info-tile-button">
+                      <p id="policy-info-button-status" class="claim-action-text desktop-view">Active</p>
+                    </div>
+                  </div>
+                  <!-- Important Note -->
+                  <div class="more-details-info-tile">
+                    <div class="more-details-info-tile-header">
+                      <img src="assets/alert-icon.svg" class="more-details-info-tile-icon" />
+                      <p class="more-details-info-tile-text-one">Important Note</p>
+                    </div>
+                    <p class="more-details-info-tile-text-one more-details-padding-top text-color-black-op-0_5"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Contact us at 1-300-888-622 or callcentre@zurich.com.my <span id="z-driver-link">For status of your claim : <a class="text-color-violate text-decoration-a" href="https://www.merimen.com.my/claims/index.cfm?fusebox=MTRcmt&fuseaction=dsp_claimant&ins=ZURICHINS"> &nbsp;Merimen e-Claims</a></span></p>
+                  </div>
+                </div>
+                <!-- claim info tile menu bar for Claim Details & Documents -->
+                <div id="menu-items" class="claims-menu-bar">
+                  <p id="claim-details" class="policy-menu-item-container info-claims-tab-active"> Claim Details </p>
+                  <p id="claim-documents" onclick="location.href='claim-document.html'" class="policy-menu-item-container info-claims-tab-inactive"> Documents </p>
+                </div>
+              </div>
+            </div>
+            <div id="menu-body">
+              <!-- claim details page  -->
+              <div id="claim-details-content" class="claim-menu-content-details elemnt-display-flex">
+                <div class="claim-menu-1">
+                  <!-- Claim Info -->
+                  <table class="claim-table-details-one">
+                    <!-- <tr><td class="mobile-view" style="font-size:4.5vw; font-weight: 600; padding: 0 0 3vw 0; color: #23366F;">Claim Status</td><td class="mobile-view" style="color: #1FB1EF;padding: 0 0 3vw 0;">Active</td></tr> -->
+                    <tr>
+                      <td class="claim-table-details-one-header">Claim #</td>
+                      <td>CL091878763435400</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Claim Register Date</td>
+                      <td>03 July 2021</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Claim Type</td>
+                      <td>Lorem Ipsum</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Claim Amount</td>
+                      <td>RM 300.00</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Claim Approval Date</td>
+                      <td>--</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Payment Date</td>
+                      <td>--</td>
+                    </tr>
+                    <tr id="annual-limit-info">
+                      <td class="claim-table-details-one-header">Annual Limit</td>
+                      <td>RM 6,000.00</td>
+                    </tr>
+                    <tr id="lifetime-limit-info">
+                      <td class="claim-table-details-one-header">Lifetime Limit</td>
+                      <td>RM 60,000.00</td>
+                    </tr>
+                  </table>
+                  <!-- Document Requested By claim team -->
+                  <table class="claim-table-details-one">
+                    <tr>
+                      <td class="notifier-details-class">Documents Requested by Claims Team</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="policy-info-container-flex">
+                          <img src="assets/document_line_blue.svg" class="claim-icon-table elemnt-align-self" />
+                          <p class="elemnt-align-self">Form 1</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="policy-info-container-flex">
+                          <img src="assets/document_line_blue.svg" class="claim-icon-table elemnt-align-self" />
+                          <p class="elemnt-align-self">Document Type B</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="verticle-horizontal-line"></div>
+                <!-- Notifier Details -->
+                <div class="claim-menu-2">
+                  <table class="claim-table-details-one">
+                    <tr>
+                      <td class="notifier-details-class">Notifier Details</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Name</td>
+                      <td>Agent</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Contact Numbers</td>
+                      <td>
+                        <p class="line-spacing"> +60 890-5645-5654 </p>
+                        <p class="line-spacing"> +60 899-6765-5653 </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Email Address</td>
+                      <td>ib.aziz@hotmail.com</td>
+                    </tr>
+                  </table>
+                  <table id="claim-download-info" class="claim-table-details-one">
+                    <tr>
+                      <td class="notifier-details-class elemnt-margin-top-10p">Download Documents</td>
+                    </tr>
+                    <tr>
+                      <td class="table-div-style-one">
+                        <div class="policy-info-container-flex">
+                          <img src="assets/download-claim.svg" class="claim-icon-table elemnt-align-self" />
+                          <p class="elemnt-align-self">Offer Letter</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-div-style-one">
+                        <div class="policy-info-container-flex">
+                          <img src="assets/download-claim.svg" class="claim-icon-table elemnt-align-self" />
+                          <p class="elemnt-align-self">Discharge voucher</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-div-style-one">
+                        <div class="policy-info-container-flex">
+                          <img src="assets/download-claim.svg" class="claim-icon-table elemnt-align-self" />
+                          <p class="elemnt-align-self">LOC</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="verticle-horizontal-line"></div>
+                <!-- Claim Details -->
+                <div class="claim-menu-3">
+                  <div class="verticle-horizontal-line-two mobile-view"></div>
+                  <table class="claim-table-details-one">
+                    <tr>
+                      <td class="notifier-details-class">Claim Details</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Zurich Policy #</td>
+                      <td>1109002837396763</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Report Date</td>
+                      <td>02 Jun 2021</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Claim Status</td>
+                      <td>Active</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Loss / Claim Date</td>
+                      <td>02 Jun 2021</td>
+                    </tr>
+                    <tr>
+                      <td class="claim-table-details-one-header">Claim Type</td>
+                      <td id="policy-claim-type">Death</td>
+                    </tr>
+                    <tr id="how-it-happended">
+                      <td class="claim-table-details-one-header">How it happened / Diagnosis</td>
+                      <td class="line-spacing">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</td>
+                    </tr>
+                    <tr id="date-of-mc-started">
+                      <td class="claim-table-details-one-header">Date of MC Started</td>
+                      <td>01 Jan 2021</td>
+                    </tr>
+                    <tr id="date-of-mc-ended">
+                      <td class="claim-table-details-one-header">Date of MC Ended</td>
+                      <td>24 Dec 2021</td>
+                    </tr>
+                    <tr id="medical-expenses">
+                      <td class="claim-table-details-one-header">Medical Expense</td>
+                      <td>RM 2,300.00</td>
+                    </tr>
+                  </table>
+                  <div class="claim-table-details-one claim-remark">
+                    <p class="notifier-details-class element-padding-t1-b2-p">Remark</p>
+                    <p class="notifier-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <custom-footer></custom-footer>
+    <script src="component/header.js"></script>
+    <script src="component/sidebar.js"></script>
+    <script src="component/menu.js"></script>
+    <script src="component/footer.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="functions/claims.js"></script>
+    <script src="functions/menu.js"></script>
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>

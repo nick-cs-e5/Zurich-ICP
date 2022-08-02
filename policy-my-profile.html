@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Zurich | Policy My Profile</title>
+  </head>
+  <body>
+    <!-- Header from component -->
+    <custom-header></custom-header>
+    <!-- Side Banner -->
+    <div class="desktop-view side-bar-index">
+      <sidebar-custom></sidebar-custom>
+    </div>
+    <div class="main-header-body">
+        <div class="content-body">
+          <custom-menu></custom-menu>
+
+          <div id="policy-main-content">
+            <div id="policy-info" class="main-body-container">
+                <div class="main-body-info">
+                  <div id="info-container" class="policy-container policy-info-padding">
+                    <div id="menu-items" class="policy-menu-bar">
+                      <div id="my-profile" class="policy-menu-item-container policy-over-view-menu-desktop"> My Profile </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mobile-scroll-outer-container ms-margin">
+                  <div class="mobile-scroll-container">
+                    <div id="menu-items-mobile" class="mobile-menu-bar">
+                      <div id="my-profile-mobile" class="policy-menu-item-container policy-over-view-menu"> My Profile </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="policy-container">
+                <!-- Policy Header Container -->
+                <div id="policy-header" class="policy-action-header" style="width: 88%;">
+                    <div>
+                        <div class="d-flex my-profile-container">
+                          <p class="p1 zurich-active flex-item">My Policy Details</p>
+                          <div class="tooltip isMobile flex-item">
+                            <!-- <div id="edit-detail-mob" class="d-flex-no-wrap isMobile zurich-inactive-btn-mob">
+                             <div class="d-flex-no-wrap">
+                              <svg id="inactive-edit-btn-mob" class="flex-item" width="3vw" height="3vw" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.0168 1.17155C20.6161 -0.229058 18.3454 -0.229058 16.9448 1.17155L2.72642 15.3899C2.62898 15.4874 2.55862 15.6081 2.52189 15.7408L0.652129 22.491C0.575234 22.7678 0.653374 23.0641 0.856352 23.2674C1.05964 23.4704 1.35601 23.5485 1.63277 23.472L8.38302 21.6019C8.51564 21.5652 8.63643 21.4948 8.73387 21.3974L22.9519 7.17868C24.3504 5.77714 24.3504 3.50828 22.9519 2.10674L22.0168 1.17155ZM4.46294 15.9079L16.0996 4.271L19.8525 8.0239L8.21553 19.6608L4.46294 15.9079ZM3.71329 17.4122L6.71157 20.4108L2.56423 21.5599L3.71329 17.4122ZM21.825 6.05172L20.9798 6.89694L17.2265 3.14373L18.0721 2.29851C18.8501 1.52053 20.1115 1.52053 20.8895 2.29851L21.825 3.2337C22.6017 4.01261 22.6017 5.27312 21.825 6.05172V6.05172Z" fill="rgb(35, 54, 111, 0.2)" />
+                              </svg> 
+                              <svg id="active-edit-btn-mob" class="flex-item" style="display: none;" width="3vw" height="3vw" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.0168 1.17155C20.6161 -0.229058 18.3454 -0.229058 16.9448 1.17155L2.72642 15.3899C2.62898 15.4874 2.55862 15.6081 2.52189 15.7408L0.652129 22.491C0.575234 22.7678 0.653374 23.0641 0.856352 23.2674C1.05964 23.4704 1.35601 23.5485 1.63277 23.472L8.38302 21.6019C8.51564 21.5652 8.63643 21.4948 8.73387 21.3974L22.9519 7.17868C24.3504 5.77714 24.3504 3.50828 22.9519 2.10674L22.0168 1.17155ZM4.46294 15.9079L16.0996 4.271L19.8525 8.0239L8.21553 19.6608L4.46294 15.9079ZM3.71329 17.4122L6.71157 20.4108L2.56423 21.5599L3.71329 17.4122ZM21.825 6.05172L20.9798 6.89694L17.2265 3.14373L18.0721 2.29851C18.8501 1.52053 20.1115 1.52053 20.8895 2.29851L21.825 3.2337C22.6017 4.01261 22.6017 5.27312 21.825 6.05172V6.05172Z" fill="#23366F" />
+                              </svg> 
+                              <span id="edit-action-text-enabled" class="p1 flex-item adjust-17">Edit</span> 
+                             </div>
+                            </div>
+                            <span id="toolip-disabled-mob" class="tooltiptext2">Disabled Button</span> -->
+                            <button onclick="location.href='./edit-policy-details.html'" id="edit-details-button-mob" class="primary-button d-flex zurich-inactive-btn pointer-none" type="button">
+                              <svg class="edit-text flex-item" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path class="edit-text" d="M22.0168 1.17155C20.6161 -0.229058 18.3454 -0.229058 16.9448 1.17155L2.72642 15.3899C2.62898 15.4874 2.55862 15.6081 2.52189 15.7408L0.652129 22.491C0.575234 22.7678 0.653374 23.0641 0.856352 23.2674C1.05964 23.4704 1.35601 23.5485 1.63277 23.472L8.38302 21.6019C8.51564 21.5652 8.63643 21.4948 8.73387 21.3974L22.9519 7.17868C24.3504 5.77714 24.3504 3.50828 22.9519 2.10674L22.0168 1.17155ZM4.46294 15.9079L16.0996 4.271L19.8525 8.0239L8.21553 19.6608L4.46294 15.9079ZM3.71329 17.4122L6.71157 20.4108L2.56423 21.5599L3.71329 17.4122ZM21.825 6.05172L20.9798 6.89694L17.2265 3.14373L18.0721 2.29851C18.8501 1.52053 20.1115 1.52053 20.8895 2.29851L21.825 3.2337C22.6017 4.01261 22.6017 5.27312 21.825 6.05172V6.05172Z" fill="#23366F" />
+                              </svg> 
+                              <span class="flex-item adjust-19">Edit</span> 
+                            </button>
+                            <span id="toolip-disabled-mob" class="tooltiptext2">Disabled Button</span>
+                          </div>
+                        </div>
+                        <div class="policy-sub-heading">
+                          <p class="p2 zurich-active adjust16">Check the policies you would like to update the contact information or addresses for:</p>
+                        </div>
+                      </div>
+                    <!-- Edit Details Button -->
+                    <div>
+                        <div class="tooltip isLandscapeDesktop">
+                        <button onclick="location.href='./edit-contact-form.html'" id="edit-details-button" class="primary-button d-flex zurich-inactive-btn pointer-none" type="button">
+                            <svg class="edit-text flex-item" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="edit-text" d="M22.0168 1.17155C20.6161 -0.229058 18.3454 -0.229058 16.9448 1.17155L2.72642 15.3899C2.62898 15.4874 2.55862 15.6081 2.52189 15.7408L0.652129 22.491C0.575234 22.7678 0.653374 23.0641 0.856352 23.2674C1.05964 23.4704 1.35601 23.5485 1.63277 23.472L8.38302 21.6019C8.51564 21.5652 8.63643 21.4948 8.73387 21.3974L22.9519 7.17868C24.3504 5.77714 24.3504 3.50828 22.9519 2.10674L22.0168 1.17155ZM4.46294 15.9079L16.0996 4.271L19.8525 8.0239L8.21553 19.6608L4.46294 15.9079ZM3.71329 17.4122L6.71157 20.4108L2.56423 21.5599L3.71329 17.4122ZM21.825 6.05172L20.9798 6.89694L17.2265 3.14373L18.0721 2.29851C18.8501 1.52053 20.1115 1.52053 20.8895 2.29851L21.825 3.2337C22.6017 4.01261 22.6017 5.27312 21.825 6.05172V6.05172Z" fill="#23366F" />
+                            </svg> 
+                            <span class="flex-item adjust-19">Edit Detail</span> 
+                        </button>
+                        <span id="toolip-disabled" class="tooltiptext2">Disabled Button</span>
+                        </div>
+                    </div>
+                </div>
+              
+                  <div class="policy-my-profile-table">
+                      <div id="policy-container-active-inactive" class="policy-content policy-content-expanded">
+                          <!-- <img alt="general-insurance" src="assets/policy-tile-one-small.svg" class="policy-type-badge-2 isLandscapeDesktop" /> -->
+                          <img alt="life-insurance" src="assets/policy-entity-one.svg" class="policy-type-badge isLandscapeDesktop" />
+                          <!-- <svg id="arrow-toggle-policy-data" onclick="togglePolicyData()" class="isMobile arrow-toggle-button" width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.03047 4.03134C7.99619 4.03142 7.96291 4.04324 7.93592 4.06494L5.00016 6.47629L2.06077 4.06494C2.04485 4.05219 2.02664 4.04279 2.00719 4.03727C1.98773 4.03175 1.9674 4.03021 1.94737 4.03275C1.92733 4.0353 1.90798 4.04186 1.89042 4.05208C1.87286 4.0623 1.85743 4.07597 1.84501 4.09231C1.8326 4.10865 1.82344 4.12734 1.81806 4.14731C1.81268 4.16729 1.81118 4.18815 1.81366 4.20872C1.81614 4.22928 1.82254 4.24915 1.83249 4.26717C1.84244 4.2852 1.85576 4.30104 1.87168 4.31379L4.90198 6.80229C4.92892 6.82408 4.96223 6.83594 4.99653 6.83594C5.03083 6.83594 5.06413 6.82408 5.09107 6.80229L8.12138 4.31379C8.14608 4.29371 8.16406 4.26623 8.17284 4.23518C8.18162 4.20412 8.18074 4.17102 8.17034 4.1405C8.15994 4.10997 8.14053 4.08354 8.11481 4.06486C8.08909 4.04619 8.05833 4.03621 8.02683 4.03632L8.03047 4.03134Z" fill="#5495CF"/>
+                          </svg>   -->
+                          <img alt="arrow-down" id="arrow-toggle-policy-data" onclick="togglePolicyData()" src="assets/arrow-down.svg" class="arrow-toggle-button isMobile" />
+                          <div class="table-info-one">  
+                              <div class="d-block adjust-24">
+                                <span name="policyID" class="policy-text-one d-flex-no-wrap align-items-center policy-number" style="margin: 0;">
+                                  <img src="assets/Blue CMYK.svg" class="icon-text-space flex-item"/><span class="span-txt-spacing-desktop flex-item">#</span><span class="span-txt-spacing-desktop flex-item">110150278958</span><span class="span-txt-spacing-desktop flex-item">|</span><span class="text-one-mobile span-txt-spacing-desktop isMobile flex-item">Inforced</span><span class="policy-text-one-desktop span-txt-spacing-desktop isLandscapeDesktop flex-item">Inforced</span>
+                                </span>
+                              </div>
+                              <div name="policyName" class="policy-text-two adjust-23"> Zurich - Omni Health Gold  </div>
+                              <div class="isLandscapeDesktop">
+                                <div class="d-flex-no-wrap adjust-21">
+                                    <p class="table-text-one table-item-fixed-width">Insured Person</p>
+                                    <span class="table-text-two">Ishbir Misti</span>
+                                </div>
+                                <div class="d-flex-no-wrap adjust-21">
+                                    <p class="table-text-one table-item-fixed-width">Contact Number 1</p>
+                                    <p class="table-text-two">03 4051 3611</p>
+                                </div>
+                                <div class="d-flex-no-wrap adjust-21">
+                                    <p class="table-text-one table-item-fixed-width">Contact Number 2</p>
+                                    <p class="table-text-two">+603 2109 7999</p>
+                                </div>
+                              </div>
+
+                              <div class="isLandscape">
+                                <div class="d-flex-no-wrap adjust-21">
+                                  <p class="table-text-one table-item-fixed-width">Email Address</p>
+                                  <p class="table-text-two">sampleuser@zurich.com.my</p>
+                                </div>
+                              </div>
+                            
+                              
+                          </div>
+
+                          <div class="table-info-four isDesktop">
+                            <p class="table-text-three">Email Address</p>
+                            <p class="table-text-two adjust-20">sampleuser@zurich.my</p>
+                          </div>
+
+                          <div class="table-info-three isDesktop">
+                            <p class="table-text-three">Residential Address</p>
+                            <p class="table-text-two adjust-20">No. 9, Jalan Noori Khyan, Api  Lane, Kota Bharu, Kelantan - 56000, Malaysia</p>
+                          </div>
+
+                          <div class="table-info-three isDesktop">
+                            <p class="table-text-three">Correspondence Address</p>
+                            <p class="table-text-two adjust-20">No. 9, Jalan Noori Khyan, Api  Lane, Kota Bharu, Kelantan - 56000, Malaysia</p>
+                          </div>
+
+                          <div class="table-info-two isLandscape">
+                              <p class="table-text-three">Residential Address</p>
+                              <p class="table-text-two adjust-20">No. 9, Jalan Noori Khyan, Api  Lane, Kota Bharu, Kelantan - 56000, Malaysia</p>
+                              <p class="table-text-three adjust-21">Correspondence Address</p>
+                              <p class="table-text-two adjust-20">No. 9, Jalan Noori Khyan, Api  Lane, Kota Bharu, Kelantan - 56000, Malaysia</p>
+                          </div>
+                          <!-- <input onclick="toggleHighlightContainer()" id="policy-is-checked" type="checkbox" class="adjust-22 custom-checkbox"/> -->
+                          <label class="checkbox adjust-22">
+                            <input id="policy-is-checked" onclick="toggleHighlightContainer()"  class="checkbox custom-checkbox outer-shadow" type="checkbox" />
+                            <span></span>
+                          </label>
+                        </div>
+                  </div>
+                  <div id="toggle-policy-data" style="display: none;">
+                    <div class="isMobile policy-data-expanded">
+                      <div class="d-flex-no-wrap adjust-21">
+                        <p class="table-text-one table-item-fixed-width">Insured Person</p>
+                        <p class="table-text-two">Ishbir Misti</p>
+                      </div>
+                      <div class="d-flex-no-wrap adjust-21">
+                          <p class="table-text-one table-item-fixed-width">Contact Number 1</p>
+                          <p class="table-text-two">03 4051 3611</p>
+                      </div>
+                      <div class="d-flex-no-wrap adjust-21">
+                          <p class="table-text-one table-item-fixed-width">Contact Number 2</p>
+                          <p class="table-text-two">+603 2109 7999</p>
+                      </div>
+                      <div class="d-flex-no-wrap adjust-21">
+                          <p class="table-text-one table-item-fixed-width">Correspondence Address</p>
+                          <p class="table-text-two table-item-fixed-width">No. 9, Jalan Noori Khyan, Api  Lane, Kota Bharu, Kelantan - 56000, Malaysia</p>
+                      </div>
+                      <div class="d-flex-no-wrap adjust-21">
+                          <p class="table-text-one table-item-fixed-width">Residential Address</p>
+                          <p class="table-text-two table-item-fixed-width">1104, Bourbon Heights, Taman Bhandar, Kuala Lumpur - 56078, Malaysia</p>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <custom-footer></custom-footer>
+    <script src="component/header.js"></script>
+    <script src="component/sidebar.js"></script>
+    <script src="component/menu.js"></script>
+    <script src="component/footer.js"></script>
+    <script src="functions/slider.js"></script>
+    <script src="functions/coverage.js"></script>
+    <script src="functions/menu.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="functions/lazyLoad.js"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>

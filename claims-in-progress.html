@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Zurich | My Claims</title>
+  </head>
+  <body>
+    <!-- Header from component -->
+    <custom-header></custom-header>
+    <!-- Side Banner -->
+    <div class="desktop-view side-bar-index">
+      <sidebar-custom></sidebar-custom>
+    </div>
+    <div class="main-header-body">
+      <div class="content-body">
+        <custom-menu></custom-menu>
+        <!-- Claims Home Page -->
+        <div id="policy-main-content" class="policy-container">
+            <!-- Create New Claim Button -->
+            <div id="claim-name" class="policy-action-header">
+              <button id="policy-button-new" onclick="toggleNewClaim()" class="new-policy-button">
+                <svg class="new-claims-button" width="30" height="50" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="new-claims-button" d="M8.95023 15.5C8.9846 15.4987 9.01854 15.4919 9.05077 15.4799C9.07862 15.4653 9.10475 15.4476 9.12869 15.4272H9.15131L14.9221 9.65063C14.9482 9.62397 14.9687 9.59239 14.9824 9.55774L15 9.51255V9.46736V9.42218V2.59623C15 2.32095 14.9457 2.04837 14.8402 1.79404C14.7348 1.53971 14.5802 1.30863 14.3853 1.11397C14.1904 0.919319 13.9591 0.764912 13.7044 0.659566C13.4498 0.554221 13.1769 0.5 12.9013 0.5H2.07356C1.52362 0.5 0.996199 0.718208 0.607331 1.10662C0.218463 1.49503 0 2.02183 0 2.57113V13.3937C0 13.9523 0.222171 14.4881 0.617637 14.8831C1.0131 15.2781 1.54947 15.5 2.10875 15.5H8.95023ZM9.26692 14.428V10.5795C9.26692 10.3578 9.3551 10.1451 9.51206 9.98837C9.66903 9.83159 9.88191 9.74352 10.1039 9.74352H13.9419L9.26692 14.428ZM0.628351 13.3937V2.57113C0.62802 2.38147 0.665175 2.19361 0.737687 2.01833C0.810198 1.84304 0.916638 1.68378 1.0509 1.54967C1.18517 1.41556 1.34462 1.30925 1.52011 1.23682C1.6956 1.1644 1.88368 1.12728 2.07356 1.12762H12.9189C13.3087 1.12828 13.6823 1.28322 13.9579 1.5585C14.2335 1.83377 14.3886 2.20694 14.3892 2.59623V9.12343H10.0989C9.71023 9.12343 9.33753 9.27763 9.06273 9.55211C8.78793 9.82659 8.63355 10.1989 8.63355 10.587V14.8799H2.09869C1.70607 14.8799 1.32952 14.7241 1.0519 14.4468C0.774267 14.1695 0.618298 13.7934 0.618298 13.4013L0.628351 13.3937Z" fill="#233665" />
+                  <path class="new-claims-button" d="M4.04926 8.26281V11.0971C3.73411 11.0268 3.45245 10.8511 3.25089 10.5991C3.04933 10.3471 2.93995 10.0339 2.94085 9.71134C2.94085 9.62812 2.90775 9.5483 2.84883 9.48945C2.78991 9.4306 2.71 9.39754 2.62668 9.39754C2.54335 9.39754 2.46344 9.4306 2.40452 9.48945C2.3456 9.5483 2.3125 9.62812 2.3125 9.71134C2.31323 10.2 2.48859 10.6723 2.80699 11.0432C3.12539 11.4142 3.56592 11.6594 4.04926 11.7348V12.99C4.04926 13.0732 4.08236 13.1531 4.14128 13.2119C4.2002 13.2708 4.28011 13.3038 4.36344 13.3038C4.44676 13.3038 4.52667 13.2708 4.58559 13.2119C4.64451 13.1531 4.67761 13.0732 4.67761 12.99V11.7348C5.1635 11.6621 5.60712 11.4176 5.92777 11.0458C6.24842 10.674 6.42478 10.1996 6.42478 9.70883C6.42478 9.2181 6.24842 8.74368 5.92777 8.37187C5.60712 8.00006 5.1635 7.75557 4.67761 7.68289V4.85611C4.93961 4.91372 5.17953 5.0453 5.3688 5.23519C5.50116 5.36686 5.60615 5.52336 5.67776 5.69569C5.74936 5.86802 5.78615 6.05279 5.78603 6.23938C5.78603 6.3226 5.81913 6.40242 5.87805 6.46127C5.93696 6.52012 6.01688 6.55318 6.1002 6.55318C6.18353 6.55318 6.26344 6.52012 6.32236 6.46127C6.38128 6.40242 6.41438 6.3226 6.41438 6.23938C6.41407 5.75091 6.23881 5.27866 5.92028 4.90801C5.60175 4.53737 5.16096 4.29278 4.67761 4.21846V2.9808C4.67761 2.89757 4.64451 2.81775 4.58559 2.7589C4.52667 2.70005 4.44676 2.66699 4.36344 2.66699C4.28011 2.66699 4.2002 2.70005 4.14128 2.7589C4.08236 2.81775 4.04926 2.89757 4.04926 2.9808V4.21846C3.56573 4.29285 3.12483 4.53764 2.80631 4.90855C2.48779 5.27945 2.31269 5.75197 2.31269 6.24063C2.31269 6.72929 2.48779 7.20181 2.80631 7.57272C3.12483 7.94362 3.56573 8.18842 4.04926 8.26281ZM5.78603 9.71134C5.78615 9.89793 5.74936 10.0827 5.67776 10.255C5.60615 10.4274 5.50116 10.5839 5.3688 10.7155C5.17984 10.9063 4.9399 11.0388 4.67761 11.0971V8.33561C4.99211 8.40721 5.27299 8.58326 5.47433 8.83498C5.67567 9.0867 5.78556 9.3992 5.78603 9.72139V9.71134ZM3.35808 5.23519C3.54802 5.04619 3.78766 4.91477 4.04926 4.85611V7.61762C3.80078 7.56163 3.57191 7.44002 3.38655 7.26549C3.20119 7.09097 3.06615 6.86994 2.99553 6.62549C2.92491 6.38103 2.92129 6.12212 2.98507 5.8758C3.04884 5.62947 3.17766 5.40476 3.35808 5.22515V5.23519Z" fill="#233665" />
+                  <path class="new-claims-button" d="M8.63644 4.5241H12.3261C12.4094 4.5241 12.4894 4.49104 12.5483 4.43219C12.6072 4.37334 12.6403 4.29352 12.6403 4.21029C12.6403 4.12706 12.6072 4.04725 12.5483 3.9884C12.4894 3.92955 12.4094 3.89648 12.3261 3.89648H8.63644C8.55312 3.89648 8.4732 3.92955 8.41429 3.9884C8.35537 4.04725 8.32227 4.12706 8.32227 4.21029C8.32227 4.29352 8.35537 4.37334 8.41429 4.43219C8.4732 4.49104 8.55312 4.5241 8.63644 4.5241Z" fill="#233665" />
+                  <path class="new-claims-button" d="M8.63644 7.04265H12.3261C12.4094 7.04265 12.4894 7.00959 12.5483 6.95074C12.6072 6.89189 12.6403 6.81207 12.6403 6.72885C12.6403 6.64562 12.6072 6.5658 12.5483 6.50695C12.4894 6.4481 12.4094 6.41504 12.3261 6.41504H8.63644C8.55312 6.41504 8.4732 6.4481 8.41429 6.50695C8.35537 6.5658 8.32227 6.64562 8.32227 6.72885C8.32227 6.81207 8.35537 6.89189 8.41429 6.95074C8.4732 7.00959 8.55312 7.04265 8.63644 7.04265Z" fill="#233665" />
+                </svg>
+                <p id="policy-text-new" class="new-policy-text">New Claim</p>
+              </button>
+            </div>
+            <!-- select new claim dropdown -->
+            <div id="select-new-claim-dropdown" class="new-claim-menu" style="display: none;">
+              <div id="new-claim-scroll-container-id" class="new-claim-scroll-container">
+                <!-- Policy Type One -->
+                <div onclick="location.href='new-claim.html'" class="new-claim-menu-container">
+                  <div class="new-claim-container-one">
+                    <div class="new-claim-container-one-flex">
+                      <img class="new-claim-icon-size" src="assets/medi-kit.svg" />
+                      <p class="new-claim-text"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span></p>
+                    </div>
+                    <p class="new-claim-text-three">Zurich Omni Health - Gold</p>
+                  </div>
+                  <p class="new-claim-text-two"> Ahmed Majar </p>
+                </div>
+              
+                <!-- Policy Type Demo -->
+                <div class="new-claim-menu-container">
+                  <div class="new-claim-container-one">
+                    <div class="new-claim-container-one-flex">
+                      <img class="new-claim-icon-size" src="assets/car.svg" />
+                      <p class="new-claim-text"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop cp-whitespace">952150021231-00</span></p>
+                    </div>
+                    <p class="new-claim-text-three">Z - Drive Assist Takaful</p>
+                  </div>
+                  <p class="new-claim-text-two"> Ishbir Mishti </p>
+                </div>
+                <!-- Policy Type Demo -->
+                <div class="new-claim-menu-container">
+                  <div class="new-claim-container-one">
+                    <div class="new-claim-container-one-flex">
+                      <img class="new-claim-icon-size" src="assets/medi-kit.svg" />
+                      <p class="new-claim-text"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <p class="new-claim-text-three">Personal Sentinel Version 3 Plus</p>
+                  </div>
+                  <p class="new-claim-text-two"> Ishr Misti </p>
+                </div>
+                <div class="new-claim-menu-container">
+                  <div class="new-claim-container-one">
+                    <div class="new-claim-container-one-flex">
+                      <img class="new-claim-icon-size" src="assets/medi-kit.svg" />
+                      <p class="new-claim-text"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <p class="new-claim-text-three">Personal Sentinel Version 3 Plus</p>
+                  </div>
+                  <p class="new-claim-text-two"> Ishr Misti </p>
+                </div>
+                <div class="new-claim-menu-container">
+                  <div class="new-claim-container-one">
+                    <div class="new-claim-container-one-flex">
+                      <img class="new-claim-icon-size" src="assets/medi-kit.svg" />
+                      <p class="new-claim-text"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <p class="new-claim-text-three">Personal Sentinel Version 3 Plus</p>
+                  </div>
+                  <p class="new-claim-text-two"> Ishr Misti </p>
+                </div> <div class="new-claim-menu-container">
+                  <div class="new-claim-container-one">
+                    <div class="new-claim-container-one-flex">
+                      <img class="new-claim-icon-size" src="assets/medi-kit.svg" />
+                      <p class="new-claim-text"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <p class="new-claim-text-three">Personal Sentinel Version 3 Plus</p>
+                  </div>
+                  <p class="new-claim-text-two"> Ishr Misti </p>
+                </div>
+                <div class="new-claim-menu-container">
+                  <div class="new-claim-container-one">
+                    <div class="new-claim-container-one-flex">
+                      <img class="new-claim-icon-size" src="assets/medi-kit.svg" />
+                      <p class="new-claim-text"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <p class="new-claim-text-three">Personal Sentinel Version 3 Plus</p>
+                  </div>
+                  <p class="new-claim-text-two"> Ishr Misti </p>
+                </div>
+                
+                <!-- Policy Type Demo -->
+                <div class="new-claim-menu-container">
+                  <div class="new-claim-container-one">
+                    <div class="new-claim-container-one-flex">
+                      <img class="new-claim-icon-size" src="assets/medi-kit.svg" />
+                      <p class="new-claim-text"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <p class="new-claim-text-three">Personal Sentinel Version 3 Plus</p>
+                  </div>
+                  <p class="new-claim-text-two"> Ishbir Misti </p>
+                </div>
+                <div id="lazy-loader-policy" style="display: none;">
+                  <div class="loader"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Homepage - Claims in Progress & Claim History Container -->
+            <div id="policy-header" class="policy-action-header">
+              <div class="claim-home-switch-menu-container">
+                <!-- Claims in Progress button -->
+                <p id="claim-progress" class="claim-menu-text-active menu-spacing">Claims in Progress</p>
+                <!-- Claims History button -->
+                <p onclick="location.href='claims-history.html'" id="claim-history" class="claim-menu-text">Claims History</p>
+              </div>
+              <!-- Filter Button -->
+              <div id="claim-history-filter-download" class="element-flex-container">
+                <div id="filter-checked" onclick="OpenFilter()" class="filter-container">
+                  <svg class="filter-icon" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="filter-icon" d="M20.4928 8.37433H7.4917C7.39195 7.89986 7.13203 7.47413 6.75558 7.16859C6.37912 6.86305 5.90903 6.69629 5.42418 6.69629C4.93933 6.69629 4.46924 6.86305 4.09278 7.16859C3.71633 7.47413 3.45641 7.89986 3.35666 8.37433H0.403533C0.293388 8.38394 0.190847 8.43449 0.116144 8.516C0.0414402 8.59751 0 8.70405 0 8.81462C0 8.92518 0.0414402 9.03173 0.116144 9.11324C0.190847 9.19474 0.293388 9.24529 0.403533 9.25491H3.35666C3.45641 9.72938 3.71633 10.1551 4.09278 10.4606C4.46924 10.7662 4.93933 10.9329 5.42418 10.9329C5.90903 10.9329 6.37912 10.7662 6.75558 10.4606C7.13203 10.1551 7.39195 9.72938 7.4917 9.25491H20.4928C20.603 9.24529 20.7055 9.19474 20.7802 9.11324C20.8549 9.03173 20.8963 8.92518 20.8963 8.81462C20.8963 8.70405 20.8549 8.59751 20.7802 8.516C20.7055 8.43449 20.603 8.38394 20.4928 8.37433ZM5.42585 10.0484C5.1815 10.0484 4.94263 9.97597 4.73945 9.84022C4.53628 9.70446 4.37792 9.5115 4.28441 9.28575C4.1909 9.05999 4.16643 8.81157 4.2141 8.57191C4.26177 8.33225 4.37944 8.11211 4.55223 7.93932C4.72502 7.76653 4.94516 7.64886 5.18482 7.60119C5.42448 7.55352 5.6729 7.57799 5.89866 7.6715C6.12441 7.76501 6.31737 7.92337 6.45313 8.12654C6.58888 8.32972 6.66135 8.56859 6.66135 8.81294C6.66135 8.97519 6.62939 9.13585 6.5673 9.28575C6.50521 9.43564 6.4142 9.57184 6.29948 9.68657C6.18475 9.80129 6.04855 9.8923 5.89866 9.95439C5.74876 10.0165 5.5881 10.0484 5.42585 10.0484Z" fill="#23366F" />
+                    <path class="filter-icon" d="M20.5196 1.67804H17.5363C17.4366 1.20357 17.1767 0.777841 16.8002 0.472301C16.4238 0.166761 15.9537 0 15.4688 0C14.984 0 14.5139 0.166761 14.1374 0.472301C13.761 0.777841 13.5011 1.20357 13.4013 1.67804H0.403533C0.293388 1.68765 0.190847 1.7382 0.116144 1.81971C0.0414402 1.90122 0 2.00777 0 2.11833C0 2.22889 0.0414402 2.33544 0.116144 2.41695C0.190847 2.49846 0.293388 2.54901 0.403533 2.55862H13.4013C13.5011 3.03309 13.761 3.45882 14.1374 3.76436C14.5139 4.0699 14.984 4.23666 15.4688 4.23666C15.9537 4.23666 16.4238 4.0699 16.8002 3.76436C17.1767 3.45882 17.4366 3.03309 17.5363 2.55862H20.5196C20.5807 2.56395 20.6421 2.55652 20.7002 2.53682C20.7582 2.51711 20.8115 2.48555 20.8567 2.44415C20.9018 2.40274 20.9379 2.3524 20.9626 2.29631C20.9873 2.24022 21 2.17961 21 2.11833C21 2.05705 20.9873 1.99644 20.9626 1.94035C20.9379 1.88426 20.9018 1.83391 20.8567 1.79251C20.8115 1.7511 20.7582 1.71955 20.7002 1.69984C20.6421 1.68013 20.5807 1.67271 20.5196 1.67804ZM15.4705 3.35215C15.2261 3.35215 14.9873 3.27969 14.7841 3.14393C14.5809 3.00817 14.4226 2.81521 14.3291 2.58946C14.2355 2.3637 14.2111 2.11528 14.2587 1.87562C14.3064 1.63596 14.4241 1.41582 14.5969 1.24303C14.7697 1.07024 14.9898 0.952575 15.2295 0.904903C15.4691 0.857232 15.7175 0.881698 15.9433 0.97521C16.1691 1.06872 16.362 1.22708 16.4978 1.43025C16.6335 1.63343 16.706 1.8723 16.706 2.11665C16.706 2.44433 16.5758 2.75858 16.3441 2.99028C16.1124 3.22198 15.7982 3.35215 15.4705 3.35215Z" fill="#23366F" />
+                    <path class="filter-icon" d="M20.4928 15.0706H14.1881C14.0884 14.5961 13.8285 14.1704 13.452 13.8649C13.0755 13.5593 12.6055 13.3926 12.1206 13.3926C11.6358 13.3926 11.1657 13.5593 10.7892 13.8649C10.4128 14.1704 10.1528 14.5961 10.0531 15.0706H0.403533C0.293388 15.0802 0.190847 15.1308 0.116144 15.2123C0.0414402 15.2938 0 15.4003 0 15.5109C0 15.6215 0.0414402 15.728 0.116144 15.8095C0.190847 15.891 0.293388 15.9416 0.403533 15.9512H10.0531C10.1528 16.4257 10.4128 16.8514 10.7892 17.1569C11.1657 17.4625 11.6358 17.6292 12.1206 17.6292C12.6055 17.6292 13.0755 17.4625 13.452 17.1569C13.8285 16.8514 14.0884 16.4257 14.1881 15.9512H20.4928C20.603 15.9416 20.7055 15.891 20.7802 15.8095C20.8549 15.728 20.8963 15.6215 20.8963 15.5109C20.8963 15.4003 20.8549 15.2938 20.7802 15.2123C20.7055 15.1308 20.603 15.0802 20.4928 15.0706ZM12.1223 16.7447C11.8779 16.7447 11.6391 16.6723 11.4359 16.5365C11.2327 16.4007 11.0743 16.2078 10.9808 15.982C10.8873 15.7563 10.8629 15.5079 10.9105 15.2682C10.9582 15.0285 11.0759 14.8084 11.2487 14.6356C11.4214 14.4628 11.6416 14.3452 11.8813 14.2975C12.1209 14.2498 12.3693 14.2743 12.5951 14.3678C12.8208 14.4613 13.0138 14.6197 13.1496 14.8228C13.2853 15.026 13.3578 15.2649 13.3578 15.5092C13.3578 15.8369 13.2276 16.1512 12.9959 16.3829C12.7642 16.6146 12.45 16.7447 12.1223 16.7447Z" fill="#23366F" />
+                  </svg>
+                  <p class="filter-text">Filter</p>
+                </div>
+              </div>
+              <!-- Filter Menu Dropdown Container -->
+              <div id="filter-container" class="filter-menu" style="display: none;">
+                <p class="filter-text-container">Active/Inforced</p>
+                <p class="filter-text-container">Lapsed</p>
+                <p class="filter-text-container">Non-Active</p>
+                <p class="filter-text-container">Life Insurance</p>
+                <p class="filter-text-container">General Insurance</p>
+                <p class="filter-text-container">Family Takaful</p>
+                <p class="filter-text-container">General Takaful</p>
+              </div>
+            </div>
+            <!-- Claims in Progress Page -->
+            <div id="claim-progress-tile" class="policy-items-container">
+              <!--Claims in progress Life Insurance -->
+              <div class="policy-content">
+                <img src="assets/policy-entity-one.svg" class="policy-type-badge" />
+                <!-- Mobile View - Policy info -->
+                <div class="mobile-view tile-container-w-80-percet">
+                  <div class="claims-progress-card-box-container">
+                    <!-- policy Number & Status -->
+                    <div class="tile-conteiner-text-image-wrp">
+                      <img src="assets/medi-kit.svg" class="policy-type-icon mobile-view" />
+                      <p
+                       class="policy-text-one mobile-view tile-text-container"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span></p>
+                    </div>
+                    <!-- Active & Inactive policy state toggle button -->
+                    <div class="active-inactive-mob-btn-container">
+                      <img onclick="ToggleBottomOpenSheet(0)" id="claims-arrow-up-tile-0" src="assets/arrow-down.svg" class="policy-action-arrow" />
+                    </div>
+                  </div>
+                  <!-- Policy Name -->
+                  <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Zurich Omni Health - Gold</p>
+                  <!-- Policy Details & the user details -->
+                  <div class="claims-progress-card-box-container">
+                    <div class="policy-header-container space-one policy-info-w-100-percent">
+                      <div id="policy-user-info-container policy-user-detail-margin" >
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Insured Person</p>
+                          <p class="policy-info-text-mobile">Ahmed Majar</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim #</p>
+                          <p class="policy-info-text-mobile">CL0918787634354</p>
+                        </div>
+                        <div id="claim-table-end-cell-0" class="policy-user-info">
+                          <p class="policy-info-header">Claim Amount</p>
+                          <p class="policy-info-text-mobile">RM 1,250.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Policy Alert Icon -->
+                  <img id="claims-info-alert-img-0" src="assets/alert-icon.svg" class="claims-more-info" />
+                </div>
+                <!-- Multiple Claims on Policy Tiles -->
+                <div class="mobile-view">
+                  <div style="display: none;" id="claims-card-view-list-0" class="mobile-view">
+                    <!-- Claim Tile 1 -->
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container mobile-view">
+                      <div class="policy-header-container space-one mobile-view policy-history-style-flex-style-one">
+                        <div class="mobile-view policy-user-info-margin" id="policy-user-info-container">
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,250.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p  class="policy-info-text-mobile text-blue-color">Active</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img onclick="location.href='claim-details-1.html'"  src="assets/arrow-right.svg" class="policy-info-detail-margin-top-70-percent policy-action-arrow" />
+                        <img  src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                    <!-- Claim Tile 2 -->
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container mobile-view">
+                      <div class="policy-header-container space-one mobile-view policy-history-style-flex-style-one">
+                        <div class="mobile-view policy-user-info-margin" id="policy-user-info-container">
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,250.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p class="policy-info-text-mobile text-green-color">Approved</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img  src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img  src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                    <!-- Claim Tile 3 -->
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container mobile-view">
+                      <div s class="policy-header-container space-one mobile-view policy-history-tile-conatiner">
+                        <div class="mobile-view policy-user-info-margin" id="policy-user-info-container">
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,250.00</p>
+                          </div>
+                          <div  class="policy-user-info">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p class="policy-info-text-mobile text-blue-color">Repudiate</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img  src="assets/alert-icon.svg" class="policy-action-arrow policy-icon-style" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of mobile view-->
+                <!--desktop view - Policy Info-->
+                <div class="desktop-view policy-detail-w-100-percent">
+                  <div class="policy-info-container-flex">
+                    <div class="policy-header-container">
+                      <div class="poicy-info-container-flex-two">
+                        <img class="policy-type-icon" src="./assets/medi-kit.svg" />
+                        <div class="policy-info-header-two-margin">
+                          <!-- Policy Number and Status -->
+                          <p class="policy-text-one desktop-view"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span></p>
+                          <!-- Header Text with navigation to Policy Info for desktop & mobile -->
+                          <p class="policy-text-two desktop-view">Zurich Omni Health - Gold</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Policy Info & Owner Info -->
+                    <div class="policy-header-container desktop-view policy-info-container-width-25">
+                      <p class="policy-text-one">Insured Person</p>
+                      <p class="policy-text-three">Ahmed Majar</p>
+                    </div>
+                    <!-- Policy Status -->
+                    <div onclick="location.href='claim-details-1.html'" class="policy-action-container desktop-view policy-info-container-width-39">
+                      <div class="policy-info-container-flex-three">
+                        <button class="claim-action-button">
+                          <p class="claim-action-text">Active</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Claims History -->
+                  <div class="claims-card-bottom-box desktop-view">
+                    <div class="claims-history-container-block">
+                      <div class="claims-card-table-container-box-header">
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim No.</p>
+                        <p class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim Type</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-2">Register Date</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Status</p>
+                      </div>
+                      <div class="claims-card-shadow-container claims-card-table-body-box-container element-padding-bottom">
+                        <!-- Claims History 1 -->
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two text-blue-color claim-type-header-text-flex-cell-1">Active</p>
+                        </div>
+                        <!-- Claims History 2 -->
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two text-green-color claim-type-header-text-flex-cell-1">Approved</p>
+                        </div>
+                        <!-- Claims History 3 -->
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two text-blue-color claim-type-header-text-flex-cell-1">Repudiate</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="claims-history-container-one">
+                      <!-- Claims History More Details Button -->
+                      <div class="claims-card-more-detail-containers-box">
+                        <div class="element-padding-top"></div>
+                        <div onclick="location.href='claim-details-1.html'" class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                        <div class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                        <div class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of desktop view-->
+              </div>
+              <!--Claims in progress General Takaful -->
+              <div class="policy-content">
+                <img src="assets/policy-entity-two.svg" class="policy-type-badge" />
+                <!--mobile  structure-->
+                <div  class="mobile-view policy-info-container-width-80">
+                  <div class="claims-progress-card-box-container">
+                    <!--policy header mobile view container-->
+                    <div class="tile-conteiner-text-image-wrp">
+                      <img src="assets/car.svg" class="policy-type-icon mobile-view" />
+                      <p class="policy-text-one mobile-view tile-text-container"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <div class="policy-action-wrapper">
+                      <img onclick="ToggleBottomOpenSheet(1)" id="claims-arrow-up-tile-1" src="assets/arrow-down.svg" class="policy-action-arrow" />
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Private Car - Z - Driver Takaful</p>
+                  <div class="claims-progress-card-box-container">
+                    <!--policy table info-->
+                    <div class="policy-header-container policy-info-w-100-percent space-one">
+                      <div id="policy-user-info-container policy-user-detail-margin">
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Insured Person</p>
+                          <p class="policy-info-text-mobile">Ishbir Misti</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Vehicle No.</p>
+                          <p class="policy-info-text-mobile">MYR 4039</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim #</p>
+                          <p class="policy-info-text-mobile">CL0918787634354</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim Amount</p>
+                          <p class="policy-info-text-mobile">RM 1,250.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img id="claims-info-alert-img-1" src="assets/alert-icon.svg" class="claims-more-info" />
+                </div>
+                <div class="mobile-view">
+                  <div style="display: none;" id="claims-card-view-list-1">
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container">
+                      <div class="policy-header-container claims-card-cotainer-wrapper space-one">
+                        <div id="policy-user-info-container policy-user-info-margin" >
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,250.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p  class="policy-info-text-mobile text-blue-color">Examine case</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img onclick="location.href='claim-details-2.html'" src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img  src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of mobile view-->
+                <!--desktop view code-->
+                <div class="desktop-view policy-info-w-100-percent">
+                  <div class="policy-info-container-flex">
+                    <div class="policy-header-container">
+                      <div class="poicy-info-container-flex-two">
+                        <img class="policy-type-icon" src="./assets/car.svg" />
+                        <div class="policy-info-header-two-margin">
+                          <!-- Policy Number for Desktop -->
+                          <p class="policy-text-one desktop-view"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                          <!-- Header Text with navigation to Policy Info for desktop & mobile -->
+                          <p class="policy-text-two desktop-view">Private Car - Z - Driver Takaful</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Policy Info & Owner Info in Desktop -->
+                    <div class="policy-header-container desktop-view policy-info-container-width-25">
+                      <p class="policy-text-one">Insured Person</p>
+                      <p class="policy-text-three">Ishbir Misti</p>
+                    </div>
+                    <div class="policy-header-container space-two desktop-view policy-info-container-width-15" >
+                      <p class="policy-text-one">Vehicle No.</p>
+                      <p class="policy-text-three">MYR 4039</p>
+                    </div>
+                    <div onclick="location.href='claim-details-2.html'" class="policy-action-container desktop-view policy-info-container-width-23">
+                      <div class="policy-action-container-sub-one">
+                        <button class="claim-action-button">
+                          <p class="claim-action-text">Examine case</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="claims-card-bottom-box desktop-view">
+                    <div class="claims-history-container-block">
+                      <div class="claims-card-table-container-box-header">
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim No.</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim Type</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-2">Register Date</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Status</p>
+                      </div>
+                      <div class="claims-card-shadow-container claims-card-table-body-box-container element-padding-bottom">
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two claim-type-header-text-flex-cell-1">Examine case</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="claims-more-detail-container-box-one">
+                      <div class="claims-card-more-detail-containers-box">
+                        <div class="element-padding-top"></div>
+                        <div onclick="location.href='claim-details-2.html'" class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of desktop view-->
+              </div>
+              <!-- Claims in progress General Insurance -->
+              <div class="policy-content">
+                <img src="assets/policy-entity-three.svg" class="policy-type-badge" />
+                <!--mobile  structure-->
+                <div class="mobile-view policy-info-container-width-80">
+                  <div class="claims-progress-card-box-container">
+                    <!--policy header mobile view container-->
+                    <div class="tile-conteiner-text-image-wrp">
+                      <img src="assets/education.svg" class="policy-type-icon mobile-view" />
+                      <p class="policy-text-one mobile-view tile-text-container"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <div class="active-inactive-mob-btn-container">
+                      <img onclick="ToggleBottomOpenSheet(2)" id="claims-arrow-up-tile-2" src="assets/arrow-down.svg" class="policy-action-arrow" />
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Personal Sentinel Version 3 Plus</p>
+                  <div class="claims-progress-card-box-container">
+                    <!--policy table info-->
+                    <div  class="policy-header-container space-one policy-info-w-100-percent">
+                      <div id="policy-user-info-container policy-user-detail-margin">
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Insured Person</p>
+                          <p class="policy-info-text-mobile">Ahmed Majar</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim #</p>
+                          <p class="policy-info-text-mobile">CL0918787634354</p>
+                        </div>
+                        <div id="claim-table-end-cell-1" class="policy-user-info">
+                          <p class="policy-info-header">Claim Amount</p>
+                          <p class="policy-info-text-mobile">RM 1,399.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img id="claims-info-alert-img-2" src="assets/alert-icon.svg" class="claims-more-info" />
+                </div>
+                <div class="mobile-view">
+                  <div style="display: none;" id="claims-card-view-list-2">
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container">
+                      <div  class="policy-header-container space-one policy-history-style-flex-style-one">
+                        <div id="policy-user-info-container policy-user-info-margin" >
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,399.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p  class="policy-info-text-mobile text-blue-color">Active</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img onclick="" src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of mobile view-->
+                <!--desktop view code-->
+                <div class="desktop-view policy-detail-w-100-percent">
+                  <div class="policy-info-header-flex-container">
+                    <div class="policy-header-container">
+                      <div class="policy-info-header-sub-flex-content">
+                        <img class="policy-type-icon" src="./assets/education.svg" />
+                        <div class="policy-info-header-two-margin">
+                          <!-- Policy Number for Desktop -->
+                          <p class="policy-text-one desktop-view"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                          <!-- Header Text with navigation to Policy Info for desktop & mobile -->
+                          <p class="policy-text-two desktop-view">Personal Sentinial Version 3 Plus</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Policy Info & Owner Info in Desktop -->
+                    <div class="policy-header-container desktop-view policy-info-container-width-25">
+                      <p class="policy-text-one">Insured Person</p>
+                      <p class="policy-text-three">Tak Peng Poo</p>
+                    </div>
+                    <div onclick="onClickPolicyInfoDetail(2)"  class="policy-action-container desktop-view policy-info-container-width-39">
+                      <div class="policy-action-container-sub-one">
+                        <button class="claim-action-button">
+                          <p class="claim-action-text">Active</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="claims-card-bottom-box desktop-view">
+                    <div class="claims-history-container-block">
+                      <div class="claims-card-table-container-box-header">
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim No.</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim Type</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-2">Register Date</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Status</p>
+                      </div>
+                      <div class="claims-card-shadow-container claims-card-table-body-box-container element-padding-bottom">
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two claim-type-header-text-flex-cell-1 text-blue-color">Active</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="claims-history-container-one">
+                      <div class="claims-card-more-detail-containers-box">
+                        <div class="element-padding-top"></div>
+                        <div onclick="onClickPolicyInfoDetail(2)" class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of desktop view-->
+              </div>
+              <!-- Claims in progress General Insurance -->
+              <div class="policy-content">
+                <img src="assets/policy-entity-three.svg" class="policy-type-badge" />
+                <!--mobile  structure-->
+                <div class="mobile-view policy-info-container-width-80">
+                  <div class="claims-progress-card-box-container">
+                    <!--policy header mobile view container-->
+                    <div class="tile-conteiner-text-image-wrp">
+                      <img src="assets/education.svg" class="policy-type-icon mobile-view" />
+                      <p class="policy-text-one mobile-view tile-text-container"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <div class="active-inactive-mob-btn-container">
+                      <img onclick="ToggleBottomOpenSheet(2)" id="claims-arrow-up-tile-2" src="assets/arrow-down.svg" class="policy-action-arrow" />
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Personal Sentinel Version 3 Plus</p>
+                  <div class="claims-progress-card-box-container">
+                    <!--policy table info-->
+                    <div  class="policy-header-container space-one policy-info-w-100-percent">
+                      <div id="policy-user-info-container policy-user-detail-margin">
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Insured Person</p>
+                          <p class="policy-info-text-mobile">Ahmed Majar</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim #</p>
+                          <p class="policy-info-text-mobile">CL0918787634354</p>
+                        </div>
+                        <div id="claim-table-end-cell-1" class="policy-user-info">
+                          <p class="policy-info-header">Claim Amount</p>
+                          <p class="policy-info-text-mobile">RM 1,399.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img id="claims-info-alert-img-2" src="assets/alert-icon.svg" class="claims-more-info" />
+                </div>
+                <div class="mobile-view">
+                  <div style="display: none;" id="claims-card-view-list-2">
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container">
+                      <div  class="policy-header-container space-one policy-history-style-flex-style-one">
+                        <div id="policy-user-info-container policy-user-info-margin" >
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,399.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p  class="policy-info-text-mobile text-blue-color">Active</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img onclick="" src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of mobile view-->
+                <!--desktop view code-->
+                <div class="desktop-view policy-detail-w-100-percent">
+                  <div class="policy-info-header-flex-container">
+                    <div class="policy-header-container">
+                      <div class="policy-info-header-sub-flex-content">
+                        <img class="policy-type-icon" src="./assets/education.svg" />
+                        <div class="policy-info-header-two-margin">
+                          <!-- Policy Number for Desktop -->
+                          <p class="policy-text-one desktop-view"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                          <!-- Header Text with navigation to Policy Info for desktop & mobile -->
+                          <p class="policy-text-two desktop-view">Personal Sentinial Version 3 Plus</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Policy Info & Owner Info in Desktop -->
+                    <div class="policy-header-container desktop-view policy-info-container-width-25">
+                      <p class="policy-text-one">Insured Person</p>
+                      <p class="policy-text-three">Tak Peng Poo</p>
+                    </div>
+                    <div onclick="onClickPolicyInfoDetail(2)"  class="policy-action-container desktop-view policy-info-container-width-39">
+                      <div class="policy-action-container-sub-one">
+                        <button class="claim-action-button">
+                          <p class="claim-action-text">Active</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="claims-card-bottom-box desktop-view">
+                    <div class="claims-history-container-block">
+                      <div class="claims-card-table-container-box-header">
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim No.</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim Type</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-2">Register Date</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Status</p>
+                      </div>
+                      <div class="claims-card-shadow-container claims-card-table-body-box-container element-padding-bottom">
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two claim-type-header-text-flex-cell-1 text-blue-color">Active</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="claims-history-container-one">
+                      <div class="claims-card-more-detail-containers-box">
+                        <div class="element-padding-top"></div>
+                        <div onclick="onClickPolicyInfoDetail(2)" class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of desktop view-->
+              </div>
+              <!-- Claims in progress General Insurance -->
+              <div class="policy-content">
+                <img src="assets/policy-entity-three.svg" class="policy-type-badge" />
+                <!--mobile  structure-->
+                <div class="mobile-view policy-info-container-width-80">
+                  <div class="claims-progress-card-box-container">
+                    <!--policy header mobile view container-->
+                    <div class="tile-conteiner-text-image-wrp">
+                      <img src="assets/education.svg" class="policy-type-icon mobile-view" />
+                      <p class="policy-text-one mobile-view tile-text-container"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <div class="active-inactive-mob-btn-container">
+                      <img onclick="ToggleBottomOpenSheet(2)" id="claims-arrow-up-tile-2" src="assets/arrow-down.svg" class="policy-action-arrow" />
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Personal Sentinel Version 3 Plus</p>
+                  <div class="claims-progress-card-box-container">
+                    <!--policy table info-->
+                    <div  class="policy-header-container space-one policy-info-w-100-percent">
+                      <div id="policy-user-info-container policy-user-detail-margin">
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Insured Person</p>
+                          <p class="policy-info-text-mobile">Ahmed Majar</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim #</p>
+                          <p class="policy-info-text-mobile">CL0918787634354</p>
+                        </div>
+                        <div id="claim-table-end-cell-1" class="policy-user-info">
+                          <p class="policy-info-header">Claim Amount</p>
+                          <p class="policy-info-text-mobile">RM 1,399.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img id="claims-info-alert-img-2" src="assets/alert-icon.svg" class="claims-more-info" />
+                </div>
+                <div class="mobile-view">
+                  <div style="display: none;" id="claims-card-view-list-2">
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container">
+                      <div  class="policy-header-container space-one policy-history-style-flex-style-one">
+                        <div id="policy-user-info-container policy-user-info-margin" >
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,399.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p  class="policy-info-text-mobile text-blue-color">Active</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img onclick="" src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of mobile view-->
+                <!--desktop view code-->
+                <div class="desktop-view policy-detail-w-100-percent">
+                  <div class="policy-info-header-flex-container">
+                    <div class="policy-header-container">
+                      <div class="policy-info-header-sub-flex-content">
+                        <img class="policy-type-icon" src="./assets/education.svg" />
+                        <div class="policy-info-header-two-margin">
+                          <!-- Policy Number for Desktop -->
+                          <p class="policy-text-one desktop-view"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                          <!-- Header Text with navigation to Policy Info for desktop & mobile -->
+                          <p class="policy-text-two desktop-view">Personal Sentinial Version 3 Plus</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Policy Info & Owner Info in Desktop -->
+                    <div class="policy-header-container desktop-view policy-info-container-width-25">
+                      <p class="policy-text-one">Insured Person</p>
+                      <p class="policy-text-three">Tak Peng Poo</p>
+                    </div>
+                    <div onclick="onClickPolicyInfoDetail(2)"  class="policy-action-container desktop-view policy-info-container-width-39">
+                      <div class="policy-action-container-sub-one">
+                        <button class="claim-action-button">
+                          <p class="claim-action-text">Active</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="claims-card-bottom-box desktop-view">
+                    <div class="claims-history-container-block">
+                      <div class="claims-card-table-container-box-header">
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim No.</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim Type</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-2">Register Date</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Status</p>
+                      </div>
+                      <div class="claims-card-shadow-container claims-card-table-body-box-container element-padding-bottom">
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two claim-type-header-text-flex-cell-1 text-blue-color">Active</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="claims-history-container-one">
+                      <div class="claims-card-more-detail-containers-box">
+                        <div class="element-padding-top"></div>
+                        <div onclick="onClickPolicyInfoDetail(2)" class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of desktop view-->
+              </div>
+              <!-- Claims in progress General Insurance -->
+              <div class="policy-content">
+                <img src="assets/policy-entity-three.svg" class="policy-type-badge" />
+                <!--mobile  structure-->
+                <div class="mobile-view policy-info-container-width-80">
+                  <div class="claims-progress-card-box-container">
+                    <!--policy header mobile view container-->
+                    <div class="tile-conteiner-text-image-wrp">
+                      <img src="assets/education.svg" class="policy-type-icon mobile-view" />
+                      <p class="policy-text-one mobile-view tile-text-container"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <div class="active-inactive-mob-btn-container">
+                      <img onclick="ToggleBottomOpenSheet(2)" id="claims-arrow-up-tile-2" src="assets/arrow-down.svg" class="policy-action-arrow" />
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Personal Sentinel Version 3 Plus</p>
+                  <div class="claims-progress-card-box-container">
+                    <!--policy table info-->
+                    <div  class="policy-header-container space-one policy-info-w-100-percent">
+                      <div id="policy-user-info-container policy-user-detail-margin">
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Insured Person</p>
+                          <p class="policy-info-text-mobile">Ahmed Majar</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim #</p>
+                          <p class="policy-info-text-mobile">CL0918787634354</p>
+                        </div>
+                        <div id="claim-table-end-cell-1" class="policy-user-info">
+                          <p class="policy-info-header">Claim Amount</p>
+                          <p class="policy-info-text-mobile">RM 1,399.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img id="claims-info-alert-img-2" src="assets/alert-icon.svg" class="claims-more-info" />
+                </div>
+                <div class="mobile-view">
+                  <div style="display: none;" id="claims-card-view-list-2">
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container">
+                      <div  class="policy-header-container space-one policy-history-style-flex-style-one">
+                        <div id="policy-user-info-container policy-user-info-margin" >
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,399.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p  class="policy-info-text-mobile text-blue-color">Active</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img onclick="" src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of mobile view-->
+                <!--desktop view code-->
+                <div class="desktop-view policy-detail-w-100-percent">
+                  <div class="policy-info-header-flex-container">
+                    <div class="policy-header-container">
+                      <div class="policy-info-header-sub-flex-content">
+                        <img class="policy-type-icon" src="./assets/education.svg" />
+                        <div class="policy-info-header-two-margin">
+                          <!-- Policy Number for Desktop -->
+                          <p class="policy-text-one desktop-view"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                          <!-- Header Text with navigation to Policy Info for desktop & mobile -->
+                          <p class="policy-text-two desktop-view">Personal Sentinial Version 3 Plus</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Policy Info & Owner Info in Desktop -->
+                    <div class="policy-header-container desktop-view policy-info-container-width-25">
+                      <p class="policy-text-one">Insured Person</p>
+                      <p class="policy-text-three">Tak Peng Poo</p>
+                    </div>
+                    <div onclick="onClickPolicyInfoDetail(2)"  class="policy-action-container desktop-view policy-info-container-width-39">
+                      <div class="policy-action-container-sub-one">
+                        <button class="claim-action-button">
+                          <p class="claim-action-text">Active</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="claims-card-bottom-box desktop-view">
+                    <div class="claims-history-container-block">
+                      <div class="claims-card-table-container-box-header">
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim No.</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim Type</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-2">Register Date</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Status</p>
+                      </div>
+                      <div class="claims-card-shadow-container claims-card-table-body-box-container element-padding-bottom">
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two claim-type-header-text-flex-cell-1 text-blue-color">Active</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="claims-history-container-one">
+                      <div class="claims-card-more-detail-containers-box">
+                        <div class="element-padding-top"></div>
+                        <div onclick="onClickPolicyInfoDetail(2)" class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of desktop view-->
+              </div><!-- Claims in progress General Insurance -->
+              <div class="policy-content">
+                <img src="assets/policy-entity-three.svg" class="policy-type-badge" />
+                <!--mobile  structure-->
+                <div class="mobile-view policy-info-container-width-80">
+                  <div class="claims-progress-card-box-container">
+                    <!--policy header mobile view container-->
+                    <div class="tile-conteiner-text-image-wrp">
+                      <img src="assets/education.svg" class="policy-type-icon mobile-view" />
+                      <p class="policy-text-one mobile-view tile-text-container"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <div class="active-inactive-mob-btn-container">
+                      <img onclick="ToggleBottomOpenSheet(2)" id="claims-arrow-up-tile-2" src="assets/arrow-down.svg" class="policy-action-arrow" />
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Personal Sentinel Version 3 Plus</p>
+                  <div class="claims-progress-card-box-container">
+                    <!--policy table info-->
+                    <div  class="policy-header-container space-one policy-info-w-100-percent">
+                      <div id="policy-user-info-container policy-user-detail-margin">
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Insured Person</p>
+                          <p class="policy-info-text-mobile">Ahmed Majar</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim #</p>
+                          <p class="policy-info-text-mobile">CL0918787634354</p>
+                        </div>
+                        <div id="claim-table-end-cell-1" class="policy-user-info">
+                          <p class="policy-info-header">Claim Amount</p>
+                          <p class="policy-info-text-mobile">RM 1,399.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img id="claims-info-alert-img-2" src="assets/alert-icon.svg" class="claims-more-info" />
+                </div>
+                <div class="mobile-view">
+                  <div style="display: none;" id="claims-card-view-list-2">
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container">
+                      <div  class="policy-header-container space-one policy-history-style-flex-style-one">
+                        <div id="policy-user-info-container policy-user-info-margin" >
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,399.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p  class="policy-info-text-mobile text-blue-color">Active</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img onclick="" src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of mobile view-->
+                <!--desktop view code-->
+                <div class="desktop-view policy-detail-w-100-percent">
+                  <div class="policy-info-header-flex-container">
+                    <div class="policy-header-container">
+                      <div class="policy-info-header-sub-flex-content">
+                        <img class="policy-type-icon" src="./assets/education.svg" />
+                        <div class="policy-info-header-two-margin">
+                          <!-- Policy Number for Desktop -->
+                          <p class="policy-text-one desktop-view"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                          <!-- Header Text with navigation to Policy Info for desktop & mobile -->
+                          <p class="policy-text-two desktop-view">Personal Sentinial Version 3 Plus</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Policy Info & Owner Info in Desktop -->
+                    <div class="policy-header-container desktop-view policy-info-container-width-25">
+                      <p class="policy-text-one">Insured Person</p>
+                      <p class="policy-text-three">Tak Peng Poo</p>
+                    </div>
+                    <div onclick="onClickPolicyInfoDetail(2)"  class="policy-action-container desktop-view policy-info-container-width-39">
+                      <div class="policy-action-container-sub-one">
+                        <button class="claim-action-button">
+                          <p class="claim-action-text">Active</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="claims-card-bottom-box desktop-view">
+                    <div class="claims-history-container-block">
+                      <div class="claims-card-table-container-box-header">
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim No.</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim Type</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-2">Register Date</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Status</p>
+                      </div>
+                      <div class="claims-card-shadow-container claims-card-table-body-box-container element-padding-bottom">
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two claim-type-header-text-flex-cell-1 text-blue-color">Active</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="claims-history-container-one">
+                      <div class="claims-card-more-detail-containers-box">
+                        <div class="element-padding-top"></div>
+                        <div onclick="onClickPolicyInfoDetail(2)" class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of desktop view-->
+              </div>
+              <!-- Claims in progress General Insurance -->
+              <div class="policy-content">
+                <img src="assets/policy-entity-three.svg" class="policy-type-badge" />
+                <!--mobile  structure-->
+                <div class="mobile-view policy-info-container-width-80">
+                  <div class="claims-progress-card-box-container">
+                    <!--policy header mobile view container-->
+                    <div class="tile-conteiner-text-image-wrp">
+                      <img src="assets/education.svg" class="policy-type-icon mobile-view" />
+                      <p class="policy-text-one mobile-view tile-text-container"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <div class="active-inactive-mob-btn-container">
+                      <img onclick="ToggleBottomOpenSheet(2)" id="claims-arrow-up-tile-2" src="assets/arrow-down.svg" class="policy-action-arrow" />
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Personal Sentinel Version 3 Plus</p>
+                  <div class="claims-progress-card-box-container">
+                    <!--policy table info-->
+                    <div  class="policy-header-container space-one policy-info-w-100-percent">
+                      <div id="policy-user-info-container policy-user-detail-margin">
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Insured Person</p>
+                          <p class="policy-info-text-mobile">Ahmed Majar</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim #</p>
+                          <p class="policy-info-text-mobile">CL0918787634354</p>
+                        </div>
+                        <div id="claim-table-end-cell-1" class="policy-user-info">
+                          <p class="policy-info-header">Claim Amount</p>
+                          <p class="policy-info-text-mobile">RM 1,399.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img id="claims-info-alert-img-2" src="assets/alert-icon.svg" class="claims-more-info" />
+                </div>
+                <div class="mobile-view">
+                  <div style="display: none;" id="claims-card-view-list-2">
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container">
+                      <div  class="policy-header-container space-one policy-history-style-flex-style-one">
+                        <div id="policy-user-info-container policy-user-info-margin" >
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,399.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p  class="policy-info-text-mobile text-blue-color">Active</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img onclick="" src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of mobile view-->
+                <!--desktop view code-->
+                <div class="desktop-view policy-detail-w-100-percent">
+                  <div class="policy-info-header-flex-container">
+                    <div class="policy-header-container">
+                      <div class="policy-info-header-sub-flex-content">
+                        <img class="policy-type-icon" src="./assets/education.svg" />
+                        <div class="policy-info-header-two-margin">
+                          <!-- Policy Number for Desktop -->
+                          <p class="policy-text-one desktop-view"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                          <!-- Header Text with navigation to Policy Info for desktop & mobile -->
+                          <p class="policy-text-two desktop-view">Personal Sentinial Version 3 Plus</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Policy Info & Owner Info in Desktop -->
+                    <div class="policy-header-container desktop-view policy-info-container-width-25">
+                      <p class="policy-text-one">Insured Person</p>
+                      <p class="policy-text-three">Tak Peng Poo</p>
+                    </div>
+                    <div onclick="onClickPolicyInfoDetail(2)"  class="policy-action-container desktop-view policy-info-container-width-39">
+                      <div class="policy-action-container-sub-one">
+                        <button class="claim-action-button">
+                          <p class="claim-action-text">Active</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="claims-card-bottom-box desktop-view">
+                    <div class="claims-history-container-block">
+                      <div class="claims-card-table-container-box-header">
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim No.</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim Type</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-2">Register Date</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Status</p>
+                      </div>
+                      <div class="claims-card-shadow-container claims-card-table-body-box-container element-padding-bottom">
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two claim-type-header-text-flex-cell-1 text-blue-color">Active</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="claims-history-container-one">
+                      <div class="claims-card-more-detail-containers-box">
+                        <div class="element-padding-top"></div>
+                        <div onclick="onClickPolicyInfoDetail(2)" class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of desktop view-->
+              </div>
+              <!-- Claims in progress General Insurance -->
+              <div class="policy-content">
+                <img src="assets/policy-entity-three.svg" class="policy-type-badge" />
+                <!--mobile  structure-->
+                <div class="mobile-view policy-info-container-width-80">
+                  <div class="claims-progress-card-box-container">
+                    <!--policy header mobile view container-->
+                    <div class="tile-conteiner-text-image-wrp">
+                      <img src="assets/education.svg" class="policy-type-icon mobile-view" />
+                      <p class="policy-text-one mobile-view tile-text-container"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <div class="active-inactive-mob-btn-container">
+                      <img onclick="ToggleBottomOpenSheet(2)" id="claims-arrow-up-tile-2" src="assets/arrow-down.svg" class="policy-action-arrow" />
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Personal Sentinel Version 3 Plus</p>
+                  <div class="claims-progress-card-box-container">
+                    <!--policy table info-->
+                    <div  class="policy-header-container space-one policy-info-w-100-percent">
+                      <div id="policy-user-info-container policy-user-detail-margin">
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Insured Person</p>
+                          <p class="policy-info-text-mobile">Ahmed Majar</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim #</p>
+                          <p class="policy-info-text-mobile">CL0918787634354</p>
+                        </div>
+                        <div id="claim-table-end-cell-1" class="policy-user-info">
+                          <p class="policy-info-header">Claim Amount</p>
+                          <p class="policy-info-text-mobile">RM 1,399.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img id="claims-info-alert-img-2" src="assets/alert-icon.svg" class="claims-more-info" />
+                </div>
+                <div class="mobile-view">
+                  <div style="display: none;" id="claims-card-view-list-2">
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container">
+                      <div  class="policy-header-container space-one policy-history-style-flex-style-one">
+                        <div id="policy-user-info-container policy-user-info-margin" >
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,399.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p  class="policy-info-text-mobile text-blue-color">Active</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img onclick="" src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of mobile view-->
+                <!--desktop view code-->
+                <div class="desktop-view policy-detail-w-100-percent">
+                  <div class="policy-info-header-flex-container">
+                    <div class="policy-header-container">
+                      <div class="policy-info-header-sub-flex-content">
+                        <img class="policy-type-icon" src="./assets/education.svg" />
+                        <div class="policy-info-header-two-margin">
+                          <!-- Policy Number for Desktop -->
+                          <p class="policy-text-one desktop-view"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                          <!-- Header Text with navigation to Policy Info for desktop & mobile -->
+                          <p class="policy-text-two desktop-view">Personal Sentinial Version 3 Plus</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Policy Info & Owner Info in Desktop -->
+                    <div class="policy-header-container desktop-view policy-info-container-width-25">
+                      <p class="policy-text-one">Insured Person</p>
+                      <p class="policy-text-three">Tak Peng Poo</p>
+                    </div>
+                    <div onclick="onClickPolicyInfoDetail(2)"  class="policy-action-container desktop-view policy-info-container-width-39">
+                      <div class="policy-action-container-sub-one">
+                        <button class="claim-action-button">
+                          <p class="claim-action-text">Active</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="claims-card-bottom-box desktop-view">
+                    <div class="claims-history-container-block">
+                      <div class="claims-card-table-container-box-header">
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim No.</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim Type</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-2">Register Date</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Status</p>
+                      </div>
+                      <div class="claims-card-shadow-container claims-card-table-body-box-container element-padding-bottom">
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two claim-type-header-text-flex-cell-1 text-blue-color">Active</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="claims-history-container-one">
+                      <div class="claims-card-more-detail-containers-box">
+                        <div class="element-padding-top"></div>
+                        <div onclick="onClickPolicyInfoDetail(2)" class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of desktop view-->
+              </div>
+              <!-- Claims in progress General Insurance -->
+              <div class="policy-content">
+                <img src="assets/policy-entity-three.svg" class="policy-type-badge" />
+                <!--mobile  structure-->
+                <div class="mobile-view policy-info-container-width-80">
+                  <div class="claims-progress-card-box-container">
+                    <!--policy header mobile view container-->
+                    <div class="tile-conteiner-text-image-wrp">
+                      <img src="assets/education.svg" class="policy-type-icon mobile-view" />
+                      <p class="policy-text-one mobile-view tile-text-container"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                    </div>
+                    <div class="active-inactive-mob-btn-container">
+                      <img onclick="ToggleBottomOpenSheet(2)" id="claims-arrow-up-tile-2" src="assets/arrow-down.svg" class="policy-action-arrow" />
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Personal Sentinel Version 3 Plus</p>
+                  <div class="claims-progress-card-box-container">
+                    <!--policy table info-->
+                    <div  class="policy-header-container space-one policy-info-w-100-percent">
+                      <div id="policy-user-info-container policy-user-detail-margin">
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Insured Person</p>
+                          <p class="policy-info-text-mobile">Ahmed Majar</p>
+                        </div>
+                        <div class="policy-user-info">
+                          <p class="policy-info-header">Claim #</p>
+                          <p class="policy-info-text-mobile">CL0918787634354</p>
+                        </div>
+                        <div id="claim-table-end-cell-1" class="policy-user-info">
+                          <p class="policy-info-header">Claim Amount</p>
+                          <p class="policy-info-text-mobile">RM 1,399.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img id="claims-info-alert-img-2" src="assets/alert-icon.svg" class="claims-more-info" />
+                </div>
+                <div class="mobile-view">
+                  <div style="display: none;" id="claims-card-view-list-2">
+                    <div class="claims-progress-card-container-box claims-progress-card-box-container">
+                      <div  class="policy-header-container space-one policy-history-style-flex-style-one">
+                        <div id="policy-user-info-container policy-user-info-margin" >
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim #</p>
+                            <p class="policy-info-text-mobile">CL0918787634354</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Register Date</p>
+                            <p class="policy-info-text-mobile">03 Jun 2021</p>
+                          </div>
+                          <div class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Amount</p>
+                            <p class="policy-info-text-mobile">RM 1,399.00</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Claim Type</p>
+                            <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                          </div>
+                          <div  class="policy-user-info policy-user-info-padding-top">
+                            <p class="policy-info-header">Status</p>
+                            <p  class="policy-info-text-mobile text-blue-color">Active</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="policy-info-detail-w-10-percent">
+                        <img onclick="" src="assets/arrow-right.svg" class="policy-action-arrow policy-info-detail-margin-top-70-percent" />
+                        <img src="assets/alert-icon.svg" class="policy-action-arrow policy-history-tile-container" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of mobile view-->
+                <!--desktop view code-->
+                <div class="desktop-view policy-detail-w-100-percent">
+                  <div class="policy-info-header-flex-container">
+                    <div class="policy-header-container">
+                      <div class="policy-info-header-sub-flex-content">
+                        <img class="policy-type-icon" src="./assets/education.svg" />
+                        <div class="policy-info-header-two-margin">
+                          <!-- Policy Number for Desktop -->
+                          <p class="policy-text-one desktop-view"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></p>
+                          <!-- Header Text with navigation to Policy Info for desktop & mobile -->
+                          <p class="policy-text-two desktop-view">Personal Sentinial Version 3 Plus</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Policy Info & Owner Info in Desktop -->
+                    <div class="policy-header-container desktop-view policy-info-container-width-25">
+                      <p class="policy-text-one">Insured Person</p>
+                      <p class="policy-text-three">Tak Peng Poo</p>
+                    </div>
+                    <div onclick="onClickPolicyInfoDetail(2)"  class="policy-action-container desktop-view policy-info-container-width-39">
+                      <div class="policy-action-container-sub-one">
+                        <button class="claim-action-button">
+                          <p class="claim-action-text">Active</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="claims-card-bottom-box desktop-view">
+                    <div class="claims-history-container-block">
+                      <div class="claims-card-table-container-box-header">
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim No.</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Claim Type</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-2">Register Date</p>
+                        <p  class="claim-type-header-text claim-type-header-text-flex-cell-1">Status</p>
+                      </div>
+                      <div class="claims-card-shadow-container claims-card-table-body-box-container element-padding-bottom">
+                        <div class="claims-card-table-body-row">
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">CL0910298339254</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-1">Lorem Ipsum</p>
+                          <p  class="claims-table-td-text-one claim-type-header-text-flex-cell-2">03 Jun 2021</p>
+                          <p  class="claims-table-td-text-two claim-type-header-text-flex-cell-1 text-blue-color">Active</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="claims-history-container-one">
+                      <div class="claims-card-more-detail-containers-box">
+                        <div class="element-padding-top"></div>
+                        <div onclick="onClickPolicyInfoDetail(2)" class="claims-card-moredetail-container">
+                          <svg class="policy-more-icon" width="12" height="12" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+                          </svg>
+                          <p class="claim-more-details-txt">More Details</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end of desktop view-->
+              </div>
+
+            </div>
+      
+        </div>
+      </div>
+      <img alt="policy-info" class="desktop-view policy-info-background-home" src="assets/policy-bg.png" />
+    </div>
+    <div id="lazy-loader-id" class="loader-container-2" style="display: none;">
+      <div class="loader"></div>
+    </div>
+    
+    <custom-footer></custom-footer>
+    <script src="component/header.js"></script>
+    <script src="component/sidebar.js"></script>
+    <script src="component/menu.js"></script>
+    <script src="component/footer.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="functions/claims.js"></script>
+    <script src="functions/slider.js"></script>
+    <script src="functions/menu.js"></script>
+    <script src="functions/lazyLoad.js"></script>
+    <script type="text/javascript">
+
+    </script>
+  </body>
+</html>

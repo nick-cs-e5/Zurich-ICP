@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <title>Zurich | Upcoming Payments</title>
+  </head>
+  <body>
+    <!-- Header from component -->
+    <custom-header></custom-header>
+    <!-- Side Banner -->
+    <div class="desktop-view side-bar-index">
+      <sidebar-custom></sidebar-custom>
+    </div>
+    <div class="main-header-body">
+      <div class="content-body">
+        <custom-menu></custom-menu>
+        <!-- My Payment Home Page (START) -->
+        <div id="payment-home" class="body">
+          <div class="body-container">
+            <div class="mx-3">
+              <!-- My Auto Debt, Pay Now, Download - Desktop (START) -->
+              <div class="row mt-2 mb-3">
+                <div class="col col-12 isMobile ps-0">
+                  <div class="d-flex justify-content-between">
+                    <button onclick="location.href='my-auto-debit.html'" type="button" class="auto-debt-mob">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning-charge" viewBox="0 0 16 16">
+                        <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z" />
+                      </svg> My Auto Debit 
+                    </button>
+                    <button onclick="location.href='pay-now.html'" id='pay-now-id-mob' class="primary-button pay-now-mob pay-now-mob-margin-right" type="button">
+                      <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                          <path d="M28.3827 19.3019H27.6688V15.5018C27.6688 14.0828 26.5143 12.9283 25.0954 12.9283H24.2328L26.7483 8.16386C27.0103 7.66772 27.0632 7.09934 26.897 6.56345C26.7307 6.02694 26.365 5.58737 25.8672 5.32568L16.1941 0.241514C15.1683 -0.297746 13.8937 0.096699 13.3529 1.12066L7.11882 12.9283H5.56579C4.14683 12.9283 2.99243 14.0828 2.99243 15.5018V29.4266C2.99243 30.8456 4.14683 32 5.56579 32H25.0954C26.5144 32 27.6689 30.8456 27.6689 29.4266V25.6265H28.3827C28.7279 25.6265 29.0078 25.3466 29.0078 25.0014V19.9269C29.0077 19.5817 28.7279 19.3019 28.3827 19.3019ZM14.4583 1.70429C14.6778 1.28866 15.1955 1.12884 15.6126 1.34797L25.2857 6.43214C25.4876 6.5382 25.6358 6.71627 25.7031 6.93346C25.7703 7.14996 25.7489 7.37965 25.643 7.58022L22.8194 12.9283H21.1417L22.7364 9.90777C22.8139 9.76095 22.8299 9.58945 22.7807 9.43088C22.7316 9.27238 22.6214 9.13994 22.4745 9.06269C22.0651 8.8475 21.7642 8.48611 21.6276 8.04523C21.4913 7.60541 21.5347 7.13884 21.7497 6.73145C21.8272 6.58464 21.8432 6.41314 21.794 6.25457C21.7449 6.09607 21.6347 5.96363 21.4878 5.88638L18.2075 4.16234C17.9025 4.00203 17.525 4.11884 17.364 4.42378C16.919 5.26668 15.8692 5.59093 15.024 5.1468C14.719 4.98648 14.3415 5.10336 14.1805 5.40824L10.2101 12.9283H8.53235L14.4583 1.70429ZM20.4336 8.4153C20.6062 8.97231 20.9307 9.4557 21.3692 9.82008L19.7281 12.9283H11.6237L15.0253 6.48557C16.1511 6.80102 17.3703 6.42426 18.1199 5.52849L20.41 6.7322C20.2553 7.27909 20.2613 7.85954 20.4336 8.4153ZM26.4188 29.4266C26.4188 30.1564 25.8251 30.75 25.0954 30.75H5.56579C4.83609 30.75 4.24246 30.1564 4.24246 29.4266V15.5018C4.24246 14.772 4.83609 14.1784 5.56579 14.1784H25.0954C25.8251 14.1784 26.4188 14.772 26.4188 15.5018V19.3019H23.9784C22.2347 19.3019 20.8161 20.7205 20.8161 22.4642C20.8161 24.2079 22.2347 25.6265 23.9784 25.6265H26.4188V29.4266ZM27.7577 24.3764H23.9783C22.9239 24.3764 22.0661 23.5185 22.0661 22.4641C22.0661 21.4097 22.9239 20.5519 23.9783 20.5519H27.7577V24.3764Z" fill="#ffffff" fill-opacity="1" />
+                        </g>
+                      </svg> Pay Now 
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- My Auto Debt, Pay Now, Download - Desktop (END) -->
+              <!-- Life Insurance, Famly Takaful, My Auto Debt START -->
+              <div class="row mb-3  button-spacing">
+                <div class="col col-sm-12 col-md-9 col-lg-10 ps-0 mt-2 set-position">
+                  <span class="label cursor-pointer me-4" onclick="changeActiveTab('life-insurance')">
+                    <svg style="margin-top: 0.2%;" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0.5C0 0.223858 0.223858 0 0.5 0H9.5C9.77614 0 10 0.223858 10 0.5V15.476C10 15.9589 9.38325 16.1612 9.09717 15.7722L5.40283 10.7478C5.20302 10.4761 4.79698 10.4761 4.59717 10.7478L0.902826 15.7722C0.616754 16.1612 0 15.9589 0 15.476V0.5Z" fill="#5495CF" />
+                    </svg>
+                    <span class="life-insurance active me-1 entity-tag" id="life-insurance">Life Insurance </span>
+                    <span class="badge text-darkBlue rounded-pill me-3 bg-white">2</span>
+                  </span>
+                  <span class="label cursor-pointer cp-whitespace" onclick="changeActiveTab('family-takaful')">
+                    <svg style="margin-top: 0.2%;" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0.5C0 0.223858 0.223858 0 0.5 0H9.5C9.77614 0 10 0.223858 10 0.5V15.476C10 15.9589 9.38325 16.1612 9.09717 15.7722L5.40283 10.7478C5.20302 10.4761 4.79698 10.4761 4.59717 10.7478L0.902826 15.7722C0.616754 16.1612 0 15.9589 0 15.476V0.5Z" fill="#19BAB6" />
+                    </svg>
+                    <span class="family-takaful me-1 entity-tag" id="family-takaful">Family Takaful</span>
+                    <span class="badge text-darkBlue rounded-pill bg-white">3</span>
+                  </span>
+                </div>
+                <div class="col col-sm-2 col-md-3 col-lg-2 justify-content-end isLandscapeDesktop">
+                  <button onclick="location.href='my-auto-debit.html'" type="button" class="button-width">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning-charge" viewBox="0 0 16 16">
+                      <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z" />
+                    </svg> My Auto Debit 
+                  </button>
+                </div>
+              </div>
+              <!-- Life Insurance, Famly Takaful, My Auto Debt END -->
+              <div class="row button-spacing">
+                <!--Upcoming Payments, e-Payment Receipt,  START -->
+                <div class="col col-sm-12 col-md-9 col-lg-10 ps-0 mt-2 mr-3 set-position" >
+                  <span class="label cursor-pointer me-5">
+                    <span class="upcoming-payments active me-1 up-tab entity-tag" id="upcoming-payments"> Upcoming Payments </span>
+                  </span>
+                  <span class="label cursor-pointer" onclick="location.href='epayments-receipts.html'">
+                    <span class="ePayment me-1 text-hoverable entity-tag" id="ePayment"> e-Payment Receipts</span>
+                  </span>
+                </div>
+                <!-- Upcoming Payments, e-Payment Receipt,  END -->
+                <div class="col col-sm-2 col-md-3 col-lg-2 justify-content-end isLandscapeDesktop">
+                  <!-- Pay now & Download Icon - Desktop (START) -->
+                  <button id="pay-now-id" onclick="location.href='pay-now.html'" class="primary-button button-width" type="button">
+                    <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path d="M28.3827 19.3019H27.6688V15.5018C27.6688 14.0828 26.5143 12.9283 25.0954 12.9283H24.2328L26.7483 8.16386C27.0103 7.66772 27.0632 7.09934 26.897 6.56345C26.7307 6.02694 26.365 5.58737 25.8672 5.32568L16.1941 0.241514C15.1683 -0.297746 13.8937 0.096699 13.3529 1.12066L7.11882 12.9283H5.56579C4.14683 12.9283 2.99243 14.0828 2.99243 15.5018V29.4266C2.99243 30.8456 4.14683 32 5.56579 32H25.0954C26.5144 32 27.6689 30.8456 27.6689 29.4266V25.6265H28.3827C28.7279 25.6265 29.0078 25.3466 29.0078 25.0014V19.9269C29.0077 19.5817 28.7279 19.3019 28.3827 19.3019ZM14.4583 1.70429C14.6778 1.28866 15.1955 1.12884 15.6126 1.34797L25.2857 6.43214C25.4876 6.5382 25.6358 6.71627 25.7031 6.93346C25.7703 7.14996 25.7489 7.37965 25.643 7.58022L22.8194 12.9283H21.1417L22.7364 9.90777C22.8139 9.76095 22.8299 9.58945 22.7807 9.43088C22.7316 9.27238 22.6214 9.13994 22.4745 9.06269C22.0651 8.8475 21.7642 8.48611 21.6276 8.04523C21.4913 7.60541 21.5347 7.13884 21.7497 6.73145C21.8272 6.58464 21.8432 6.41314 21.794 6.25457C21.7449 6.09607 21.6347 5.96363 21.4878 5.88638L18.2075 4.16234C17.9025 4.00203 17.525 4.11884 17.364 4.42378C16.919 5.26668 15.8692 5.59093 15.024 5.1468C14.719 4.98648 14.3415 5.10336 14.1805 5.40824L10.2101 12.9283H8.53235L14.4583 1.70429ZM20.4336 8.4153C20.6062 8.97231 20.9307 9.4557 21.3692 9.82008L19.7281 12.9283H11.6237L15.0253 6.48557C16.1511 6.80102 17.3703 6.42426 18.1199 5.52849L20.41 6.7322C20.2553 7.27909 20.2613 7.85954 20.4336 8.4153ZM26.4188 29.4266C26.4188 30.1564 25.8251 30.75 25.0954 30.75H5.56579C4.83609 30.75 4.24246 30.1564 4.24246 29.4266V15.5018C4.24246 14.772 4.83609 14.1784 5.56579 14.1784H25.0954C25.8251 14.1784 26.4188 14.772 26.4188 15.5018V19.3019H23.9784C22.2347 19.3019 20.8161 20.7205 20.8161 22.4642C20.8161 24.2079 22.2347 25.6265 23.9784 25.6265H26.4188V29.4266ZM27.7577 24.3764H23.9783C22.9239 24.3764 22.0661 23.5185 22.0661 22.4641C22.0661 21.4097 22.9239 20.5519 23.9783 20.5519H27.7577V24.3764Z" fill="#ffffff" fill-opacity="1" />
+                      </g>
+                    </svg> <span>Pay Now</span> </button>
+                  <!-- Pay now & Download Icon - Desktop (END) -->
+                </div>
+              </div>
+              <!-- Upcoming Payment Start -->
+              <div id="upcoming-payments-info" class="upcoming-payments-tab">
+                <div class="row mt-4 desktop-view table-size table-border">
+                  <!-- Desktop view for Upcoming Payments Start -->
+                  <div class="row isLandscapeDesktop ps-0">
+                    <table class="table table-ellipsis  table-borderless">
+                      <thead>
+                        <tr>
+                          <td class="label row-1"></td>
+                          <td class="label row-name">Policy</td>
+                          <td class="label">Insured Person</td>
+                          <td class="label">Payment Type</td>
+                          <td class="label">Due Date</td>
+                          <td class="label">Due Amount</td>
+                          <td class="label shrink">Auto-Debit</td>
+                        </tr>
+                      </thead>
+                      <tbody class="tb-styling1">
+                        <tr class="align-bottom">
+                          <td class="check-box-id checkbox-style1">
+                            <input id="policyID" type="checkbox" name="check" value="check">
+                          </td>
+                          <td class="heading-tab">
+                            <div class="d-block">
+                              <span name="policyID" class="label d-flex align-items-center policy-number wb-text">
+                                <img src="assets/Blue CMYK.svg" class="icon-text-space"/><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">110150278958</span></span>
+                            </div>
+                            <span name="policyName" class="value"> 3 - Pay Zurich Edustart </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="insuredPerson" class="value"> Arshad Amin </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="paymentType" class="value"> Lorem Ipsum </span>
+                          </td>
+                          <td class="date-padding">
+                            <span name="dueDate" class="value"> 02 Jul 2021 </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="dueAmount" class="value"> RM 1,399.00 </span>
+                          </td>
+                          <td class="auto-debt-alignment">
+                            <span name="autoDebit" class="value text-grey">
+                              <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 16C32 24.8367 24.8367 32 16 32C7.16333 32 0 24.8367 0 16C0 7.16333 7.16333 0 16 0C24.8367 0 32 7.16333 32 16Z" fill="#FF7569" />
+                                <path d="M9 9L23.5 23.5" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                <path d="M23.5 9L9 23.5" stroke="white" stroke-width="2" stroke-linecap="round" />
+                              </svg>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr class="align-bottom">
+                          <td >
+                            <input id="policyID" type="checkbox" name="check" value="check">
+                          </td>
+                          <td class="heading-tab">
+                            <div class="d-block">
+                              <span name="policyID" class="label d-flex align-items-center policy-number wb-text">
+                                <img src="assets/Blue CMYK.svg" class="icon-text-space"/><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">110150278958</span></span>
+                            </div>
+                            <span name="policyName" class="value"> 3 - Pay Zurich Edustart </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="insuredPerson" class="value"> Arshad Amin </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="paymentType" class="value"> Lorem Ipsum </span>
+                          </td>
+                          <td class="date-padding">
+                            <span name="dueDate" class="value"> 02 Jul 2021 </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="dueAmount" class="value"> RM 1,399.00 </span>
+                          </td>
+                          <td class="auto-debt-alignment">
+                            <span name="autoDebit" class="value text-grey">
+                              <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 32C7.17775 32 0 24.8223 0 16C0 7.17775 7.17775 0 16 0C24.8223 0 32 7.17775 32 16C32 24.8223 24.8223 32 16 32Z" fill="#77A984" />
+                                <path d="M7 18L11.5 22L25 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr class="align-bottom">
+                          <td >
+                            <input id="policyID" type="checkbox" name="check" value="check">
+                          </td>
+                          <td class="heading-tab">
+                            <div class="d-block">
+                              <span name="policyID" class="label d-flex align-items-center policy-number wb-text">
+                                <img src="assets/Blue CMYK.svg" class="icon-text-space"/><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">110150278958</span></span>
+                            </div>
+                            <span name="policyName" class="value"> 3 - Pay Zurich Edustart </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="insuredPerson" class="value"> Arshad Amin </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="paymentType" class="value"> Lorem Ipsum </span>
+                          </td>
+                          <td class="date-padding">
+                            <span name="dueDate" class="value"> 02 Jul 2021 </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="dueAmount" class="value"> RM 1,399.00 </span>
+                          </td>
+                          <td class="auto-debt-alignment">
+                            <span name="autoDebit" class="value text-grey">
+                              <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 32C7.17775 32 0 24.8223 0 16C0 7.17775 7.17775 0 16 0C24.8223 0 32 7.17775 32 16C32 24.8223 24.8223 32 16 32Z" fill="#77A984" />
+                                <path d="M7 18L11.5 22L25 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="isDesktop">
+                    <div id="lazy-loader-id" style="display: none">
+                      <div class="loader"></div>
+                    </div>  
+                  </div>
+                </div>
+                <div class="row isMobile pe-0 space.zero">
+                  <div class="policy-content policy-content-tile pct-margin-1">
+                    <img src="assets/policy-entity-one.svg" class="policy-type-badge" />
+                    <div class="mobile-view mobile-width">
+                      <div class="claims-progress-card-box-container">
+                        <!-- policy Number & Status -->
+                        <div class="mobile-icon-text">
+                          <img src="assets/medi-kit.svg" class="policy-type-icon mobile-view" />
+                          <div class="policy-text-one mobile-view mv1"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span><span class="span-txt-spacing-mob">|</span><span class="text-one-mobile span-txt-spacing-mob">Inforced</span>
+                          </div>
+                        </div>
+                        <!-- Active & Inactive policy state toggle button -->
+                        <div class="active-inactive">
+                          <input class="checkbox-size" type="checkbox" />
+                        </div>
+                      </div>
+                      <!-- Policy Name -->
+                      <div id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Zurich Omni Health - Gold</div>
+                      <!-- Policy Details & the user details -->
+                      <div class="claims-progress-card-box-container">
+                        <div class="policy-header-container space-one fitting1">
+                          <div id="policy-user-info-container container-space1">
+                            <div class="policy-user-info">
+                              <p class="policy-info-header">Insured Person</p>
+                              <p class="policy-info-text-mobile">Arshad Amin</p>
+                            </div>
+                            <div class="policy-user-info">
+                              <p class="policy-info-header">Payment</p>
+                              <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                            </div>
+                            <div id="claim-table-end-cell-0" class="policy-user-info">
+                              <p class="policy-info-header">Paid On</p>
+                              <p class="policy-info-text-mobile">02 Jul 2021</p>
+                            </div>
+                            <div id="claim-table-end-cell-0" class="policy-user-info">
+                              <p class="policy-info-header">Amount Paid</p>
+                              <p class="policy-info-text-mobile-amount">RM 13,999.00</p>
+                            </div>
+                            <div id="claim-table-end-cell-0" class="policy-user-info">
+                              <p class="policy-info-header">Auto-Debt</p>
+                              <p class="policy-info-text-mobile auto-not-enabled">Not Enabled</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="policy-content policy-content-tile pct-margin-1">
+                    <img src="assets/policy-entity-one.svg" class="policy-type-badge" />
+                    <div class="mobile-view mobile-width">
+                      <div class="claims-progress-card-box-container">
+                        <!-- policy Number & Status -->
+                        <div class="policy-icons-text">
+                          <img src="assets/medi-kit.svg" class="policy-type-icon mobile-view" />
+                          <p class="policy-text-one mobile-view mv1"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span><span class="span-txt-spacing-mob">|</span> <span class="text-one-mobile span-txt-spacing-mob"> Inforced</span></p>
+                        </div>
+                        <!-- Active & Inactive policy state toggle button -->
+                        <div class="policy-action">
+                          <input class="checkbox-size" type="checkbox"/>
+                        </div>
+                      </div>
+                      <!-- Policy Name -->
+                      <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Zurich Omni Health - Gold</p>
+                      <!-- Policy Details & the user details -->
+                      <div class="claims-progress-card-box-container">
+                        <div class="policy-header-container space-one mobile-width">
+                          <div id="policy-user-info-container container-space1">
+                            <div class="policy-user-info">
+                              <p class="policy-info-header">Insured Person</p>
+                              <p class="policy-info-text-mobile">Arshad Amin</p>
+                            </div>
+                            <div class="policy-user-info">
+                              <p class="policy-info-header">Payment</p>
+                              <p class="policy-info-text-mobile">Lorem Ipsum</p>
+                            </div>
+                            <div id="claim-table-end-cell-0" class="policy-user-info">
+                              <p class="policy-info-header">Paid On</p>
+                              <p class="policy-info-text-mobile">02 Jul 2021</p>
+                            </div>
+                            <div id="claim-table-end-cell-0" class="policy-user-info">
+                              <p class="policy-info-header">Amount Paid</p>
+                              <p class="policy-info-text-mobile-amount">RM 13,999.00</p>
+                            </div>
+                            <div id="claim-table-end-cell-0" class="policy-user-info">
+                              <p class="policy-info-header">Auto-Debt</p>
+                              <p class="policy-info-text-mobile auto-enabled" >Enabled</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="isMobile">
+                  <div id="lazy-loader-mob" style="display: none">
+                    <div class="loader"></div>
+                  </div>
+                </div>
+                
+                <!-- Mobile view for Upcoming Payments End -->
+              </div>
+             
+              <!-- Upcoming Payment End -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <img alt="policy-info" class="desktop-view policy-info-background-home" src="assets/policy-bg.png" />
+    </div>
+    
+    
+    <custom-footer></custom-footer>
+    <script src="component/header.js"></script>
+    <script src="component/sidebar.js"></script>
+    <script src="component/menu.js"></script>
+    <script src="component/footer.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="functions/payment.js"></script>
+    <script src="functions/menu.js"></script>
+    <script src="functions/lazyLoad.js"></script>
+    <script src="functions/slider.js"></script>
+    <script type="text/javascript">
+      $(".chb-unique").change(function() {
+        $(".chb-unique").prop('checked', false);
+        $(this).prop('checked', true);
+      });
+      document.getElementById('target').addEventListener('input', function(e) {
+        e.target.value = e.target.value.replace(/\s/g, '').replace(/(\d{4})/g, '$1 ').trim();
+      });
+    </script>
+  </body>
+</html>

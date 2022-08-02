@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Zurich | My Auto Debit</title>
+  </head>
+  <body>
+    <!-- Header from component -->
+    <custom-header></custom-header>
+    <!-- Side Banner -->
+    <div class="desktop-view side-bar-index">
+      <sidebar-custom></sidebar-custom>
+    </div>
+    <div class="main-header-body">
+      <div class="content-body">
+        <custom-menu></custom-menu>
+        <!-- My Payment - Auto-Debt Page (START)  -->
+        <div class="body" id="payment-auto-debt">
+            <div class="body-container">
+              <!-- Auto Debt Action Header (START) -->
+              <div onclick="location.href='upcoming-payments.html'" class="mb-3 cursor-pointer text-hoverable back-key">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-chevron-left me-0" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+                </svg>
+                <span class="label payment-back-txt">Back to My Payments</span>
+              </div>
+              <div class="row mt-4 mb-3 isLandscapeDesktop">
+                <div class="d-flex fitting2">
+                  <div class="col col-sm-12 col-md-10 col-lg-10 ps-0">
+                    <div class="row">
+                      <div class="col col-md-6 col-lg-3 fitting3">
+                        <h5 class="mb-3 text-darkBlue text-space1">My Auto-Debit Plans</h5>
+                      </div>
+                      <div class="col col-md-6 col-lg-8 justify-content-between">
+                        <span class="label cursor-pointer space-control-menu me-4">
+                          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.5C0 0.223858 0.223858 0 0.5 0H9.5C9.77614 0 10 0.223858 10 0.5V15.476C10 15.9589 9.38325 16.1612 9.09717 15.7722L5.40283 10.7478C5.20302 10.4761 4.79698 10.4761 4.59717 10.7478L0.902826 15.7722C0.616754 16.1612 0 15.9589 0 15.476V0.5Z" fill="#5495CF" />
+                          </svg>
+                          <span class="life-insurance active me-1" id="life-insurance"> Life Insurance </span>
+                          <span class="badge text-black rounded-pill me-3 bg-white">2</span>
+                        </span>
+                        <span class="label cursor-pointer">
+                          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.5C0 0.223858 0.223858 0 0.5 0H9.5C9.77614 0 10 0.223858 10 0.5V15.476C10 15.9589 9.38325 16.1612 9.09717 15.7722L5.40283 10.7478C5.20302 10.4761 4.79698 10.4761 4.59717 10.7478L0.902826 15.7722C0.616754 16.1612 0 15.9589 0 15.476V0.5Z" fill="#19BAB6" />
+                          </svg>
+                          <span class="family-takaful active me-1" id="family-takaful"> Family Takaful </span>
+                          <span class="badge text-black rounded-pill bg-white">3</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-2 col-md-2 col-lg-2 justify-content-end cursor-pointer isLandscapeDesktop adjust3">
+                    <!-- Filter Button -->
+                    <div id="filter-checked" onclick="OpenFilter()" class="filter-container filter-adjust1">
+                      <svg class="filter-icon" width="15" height="15" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="filter-icon" d="M20.4928 8.37433H7.4917C7.39195 7.89986 7.13203 7.47413 6.75558 7.16859C6.37912 6.86305 5.90903 6.69629 5.42418 6.69629C4.93933 6.69629 4.46924 6.86305 4.09278 7.16859C3.71633 7.47413 3.45641 7.89986 3.35666 8.37433H0.403533C0.293388 8.38394 0.190847 8.43449 0.116144 8.516C0.0414402 8.59751 0 8.70405 0 8.81462C0 8.92518 0.0414402 9.03173 0.116144 9.11324C0.190847 9.19474 0.293388 9.24529 0.403533 9.25491H3.35666C3.45641 9.72938 3.71633 10.1551 4.09278 10.4606C4.46924 10.7662 4.93933 10.9329 5.42418 10.9329C5.90903 10.9329 6.37912 10.7662 6.75558 10.4606C7.13203 10.1551 7.39195 9.72938 7.4917 9.25491H20.4928C20.603 9.24529 20.7055 9.19474 20.7802 9.11324C20.8549 9.03173 20.8963 8.92518 20.8963 8.81462C20.8963 8.70405 20.8549 8.59751 20.7802 8.516C20.7055 8.43449 20.603 8.38394 20.4928 8.37433ZM5.42585 10.0484C5.1815 10.0484 4.94263 9.97597 4.73945 9.84022C4.53628 9.70446 4.37792 9.5115 4.28441 9.28575C4.1909 9.05999 4.16643 8.81157 4.2141 8.57191C4.26177 8.33225 4.37944 8.11211 4.55223 7.93932C4.72502 7.76653 4.94516 7.64886 5.18482 7.60119C5.42448 7.55352 5.6729 7.57799 5.89866 7.6715C6.12441 7.76501 6.31737 7.92337 6.45313 8.12654C6.58888 8.32972 6.66135 8.56859 6.66135 8.81294C6.66135 8.97519 6.62939 9.13585 6.5673 9.28575C6.50521 9.43564 6.4142 9.57184 6.29948 9.68657C6.18475 9.80129 6.04855 9.8923 5.89866 9.95439C5.74876 10.0165 5.5881 10.0484 5.42585 10.0484Z" fill="#23366F" />
+                        <path class="filter-icon" d="M20.5196 1.67804H17.5363C17.4366 1.20357 17.1767 0.777841 16.8002 0.472301C16.4238 0.166761 15.9537 0 15.4688 0C14.984 0 14.5139 0.166761 14.1374 0.472301C13.761 0.777841 13.5011 1.20357 13.4013 1.67804H0.403533C0.293388 1.68765 0.190847 1.7382 0.116144 1.81971C0.0414402 1.90122 0 2.00777 0 2.11833C0 2.22889 0.0414402 2.33544 0.116144 2.41695C0.190847 2.49846 0.293388 2.54901 0.403533 2.55862H13.4013C13.5011 3.03309 13.761 3.45882 14.1374 3.76436C14.5139 4.0699 14.984 4.23666 15.4688 4.23666C15.9537 4.23666 16.4238 4.0699 16.8002 3.76436C17.1767 3.45882 17.4366 3.03309 17.5363 2.55862H20.5196C20.5807 2.56395 20.6421 2.55652 20.7002 2.53682C20.7582 2.51711 20.8115 2.48555 20.8567 2.44415C20.9018 2.40274 20.9379 2.3524 20.9626 2.29631C20.9873 2.24022 21 2.17961 21 2.11833C21 2.05705 20.9873 1.99644 20.9626 1.94035C20.9379 1.88426 20.9018 1.83391 20.8567 1.79251C20.8115 1.7511 20.7582 1.71955 20.7002 1.69984C20.6421 1.68013 20.5807 1.67271 20.5196 1.67804ZM15.4705 3.35215C15.2261 3.35215 14.9873 3.27969 14.7841 3.14393C14.5809 3.00817 14.4226 2.81521 14.3291 2.58946C14.2355 2.3637 14.2111 2.11528 14.2587 1.87562C14.3064 1.63596 14.4241 1.41582 14.5969 1.24303C14.7697 1.07024 14.9898 0.952575 15.2295 0.904903C15.4691 0.857232 15.7175 0.881698 15.9433 0.97521C16.1691 1.06872 16.362 1.22708 16.4978 1.43025C16.6335 1.63343 16.706 1.8723 16.706 2.11665C16.706 2.44433 16.5758 2.75858 16.3441 2.99028C16.1124 3.22198 15.7982 3.35215 15.4705 3.35215Z" fill="#23366F" />
+                        <path class="filter-icon" d="M20.4928 15.0706H14.1881C14.0884 14.5961 13.8285 14.1704 13.452 13.8649C13.0755 13.5593 12.6055 13.3926 12.1206 13.3926C11.6358 13.3926 11.1657 13.5593 10.7892 13.8649C10.4128 14.1704 10.1528 14.5961 10.0531 15.0706H0.403533C0.293388 15.0802 0.190847 15.1308 0.116144 15.2123C0.0414402 15.2938 0 15.4003 0 15.5109C0 15.6215 0.0414402 15.728 0.116144 15.8095C0.190847 15.891 0.293388 15.9416 0.403533 15.9512H10.0531C10.1528 16.4257 10.4128 16.8514 10.7892 17.1569C11.1657 17.4625 11.6358 17.6292 12.1206 17.6292C12.6055 17.6292 13.0755 17.4625 13.452 17.1569C13.8285 16.8514 14.0884 16.4257 14.1881 15.9512H20.4928C20.603 15.9416 20.7055 15.891 20.7802 15.8095C20.8549 15.728 20.8963 15.6215 20.8963 15.5109C20.8963 15.4003 20.8549 15.2938 20.7802 15.2123C20.7055 15.1308 20.603 15.0802 20.4928 15.0706ZM12.1223 16.7447C11.8779 16.7447 11.6391 16.6723 11.4359 16.5365C11.2327 16.4007 11.0743 16.2078 10.9808 15.982C10.8873 15.7563 10.8629 15.5079 10.9105 15.2682C10.9582 15.0285 11.0759 14.8084 11.2487 14.6356C11.4214 14.4628 11.6416 14.3452 11.8813 14.2975C12.1209 14.2498 12.3693 14.2743 12.5951 14.3678C12.8208 14.4613 13.0138 14.6197 13.1496 14.8228C13.2853 15.026 13.3578 15.2649 13.3578 15.5092C13.3578 15.8369 13.2276 16.1512 12.9959 16.3829C12.7642 16.6146 12.45 16.7447 12.1223 16.7447Z" fill="#23366F" />
+                      </svg>
+                      <div class="filter-text">Filter</div>
+                    </div>
+                    <ul id="filter-container" class="filter-menu-payment" style="display: none;">
+                      <li class="filter-text-container">Active/Inforced</li>
+                      <li class="filter-text-container">Lapsed</li>
+                      <li class="filter-text-container">Non-Active</li>
+                      <li class="filter-text-container">Life Insurance</li>
+                      <li class="filter-text-container">General Insurance</li>
+                      <li class="filter-text-container">Family Takaful</li>
+                      <li class="filter-text-container">General Takaful</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3 mb-3 isMobile adjust4">
+                <div class="mb-3 col col-12 ps-0">
+                  <span class="label text-darkBlue">My Auto-Debit Plans</span>
+                </div>
+                <div class="col col-12 ps-0">
+                  <div class="d-flex justify-content-between">
+                    <span class="label cursor-pointer me-2" onclick="changeActiveTab('life-insurances')">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" viewBox="0 0 10 14" fill="none">
+                        <path d="M0 0.5C0 0.223857 0.223858 0 0.5 0H9.5C9.77614 0 10 0.223858 10 0.5V12.6893C10 13.1485 9.43288 13.3648 9.12703 13.0223L5.37297 8.81773C5.17417 8.59507 4.82583 8.59507 4.62703 8.81772L0.872969 13.0223C0.567125 13.3648 0 13.1485 0 12.6893V0.5Z" fill="#5495CF" />
+                      </svg>
+                      <span class="life-insurance active me-1" id="life-insurances"> Life Insurance </span>
+                      <span class="badge text-black rounded-pill me-3 bg-white">2</span>
+                    </span>
+                    <span class="label cursor-pointer" onclick="changeActiveTab('family-takafuls')">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" viewBox="0 0 10 14" fill="none">
+                        <path d="M0 0.5C0 0.223857 0.223858 0 0.5 0H9.5C9.77614 0 10 0.223858 10 0.5V12.6893C10 13.1485 9.43288 13.3648 9.12703 13.0223L5.37297 8.81773C5.17417 8.59507 4.82583 8.59507 4.62703 8.81772L0.872969 13.0223C0.567125 13.3648 0 13.1485 0 12.6893V0.5Z" fill="#19BAB6" />
+                      </svg>
+                      <span class="family-takaful active me-1" id="family-takafuls"> Family Takaful </span>
+                      <span class="badge text-black rounded-pill bg-white">3</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Auto Debt Action Header (END) -->
+              <!-- My Payment - Auto-Debt Policy  List (START) -->
+              <div id="auto-debt-payment-info" class="auto-debt-payment-tab">
+                <div class="row mt-4 desktop-view table-size table-border">
+                  <!-- Desktop view for Upcoming Payments Start -->
+                  <div class="row isLandscapeDesktop ps-0">
+                    <table class="table table-ellipsis  table-borderless">
+                      <thead>
+                        <tr>
+                          <td class="label row-name">Plan</td>
+                          <td class="label">Insured Person</td>
+                          <td class="label">Payment Mode</td>
+                          <td class="label">Account Number</td>
+                          <td class="label">Registered Amount</td>
+                          <td class="label"></td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="align-bottom">
+                          <td class="heading-tab">
+                            <div class="d-block">
+                              <span name="policyID" class="label d-flex align-items-center policy-number wb-text">
+                                <img src="assets/Blue CMYK.svg" class="icon-text-space" /><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></span>
+                            </div>
+                            <span name="policyName" class="value"> 3 - Pay Zurich Edustart </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="insuredPerson" class="value"> Arshad Amin </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="paymentType" class="value"> Credit Card </span>
+                          </td>
+                          <td class="date-padding">
+                            <span name="dueDate" class="value"> XXXXXX75-45 </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="dueAmount" class="value"> RM 1,399.00 </span>
+                          </td>
+                          <td class="auto-debt-alignment btn-space1">
+                            <button type="button" class="dropdown-button fitting1" onclick="OpenPaymentContainer()"> Update </button>
+                            <div id="payment-action" class="payment-menu" style="display: none;">
+                              <div id="change-1" class="payment-text-container" data-bs-toggle="modal" data-bs-target="#eZPayAutoDebitMaintenance">Change</div>
+                              <div id="terminate-1" class="payment-text-container" data-bs-toggle="modal" data-bs-target="#eZPayAutoDebitTermination">Terminate</div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="align-bottom">
+                          <td class="heading-tab">
+                            <div class="d-block">
+                              <span name="policyID" class="label d-flex align-items-center policy-number wb-text">
+                                <img src="assets/Blue CMYK.svg" class="icon-text-space" /><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></span>
+                            </div>
+                            <span name="policyName" class="value"> 3 - Pay Zurich Edustart </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="insuredPerson" class="value"> Arshad Amin </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="paymentType" class="value"> May Bank </span>
+                          </td>
+                          <td class="date-padding">
+                            <span name="dueDate" class="value"> XXXXXX75-45 </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="dueAmount" class="value"> RM 1,399.00 </span>
+                          </td>
+                          <td class="auto-debt-alignment btn-space1">
+                            <button type="button" class="dropdown-button fitting1" onclick="paymentActionBank()"> Update </button>
+                            <div id="payment-action-bank" class="payment-menu" style="display: none;">
+                              <div id="change-2" class="payment-text-container" data-bs-toggle="modal" data-bs-target="#eMandateAutoDebitMaintenance">Change</div>
+                              <div id="terminate-2" class="payment-text-container" data-bs-toggle="modal" data-bs-target="#eMandateAutoDebitTermination">Terminate</div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <!-- <tbody style="width: 80vw;">
+                        <tr style="width: 80vw;">
+                          <td>
+                            <p class="text-darkBlue">Auto-Debit Unregistered Policies</p>
+                            <p class="terms text-darkBlue">Choose from the Auto-Debit options to register the policies below</p>
+                          </td>
+                        </tr>
+                       
+                      </tbody> -->
+
+                      <!-- <tbody>
+                        <tr class="align-bottom">
+                          <td class="heading-tab">
+                            <div class="d-block">
+                              <span name="policyID" class="label d-flex align-items-center policy-number wb-text">
+                                <img src="assets/Blue CMYK.svg" class="icon-text-space" /> #110150278958 </span>
+                            </div>
+                            <span name="policyName" class="value"> 3 - Pay Zurich Edustart </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="insuredPerson" class="value"> Arshad Amin </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="paymentType" class="value"> -- </span>
+                          </td>
+                          <td class="date-padding">
+                            <span name="dueDate" class="value"> -- </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="dueAmount" class="value"> -- </span>
+                          </td>
+                          <td class="auto-debt-alignment btn-space1">
+                            <button type="button" id="open-register-container" class="dropdown-button fitting4" onclick="OpenRegisterContainer()"> Register </button>
+                            <div id="register-action" class="payment-menu" style="display: none;">
+                              <p class="payment-text-container" onclick="location.href='ezpay-registration.html'">EzPay</p>
+                              <p class="payment-text-container" onclick="location.href='emandate-registration.html'">eMandate</p>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody> -->
+                    </table>
+                  </div>
+                </div>
+                <div class="saperator-container desktop-view">
+                  <div class="separator-line"></div>
+                  <p class="text-darkBlue">Auto-Debit Unregistered Policies</p>
+                  <p class="terms text-darkBlue">Choose from the Auto-Debit options to register the policies below</p>
+                </div>
+                <div class="row mt-4 desktop-view table-size table-border">
+                  <div class="row isLandscapeDesktop ps-0">
+                    <table class="table table-ellipsis  table-borderless">
+                      <thead>
+                        <tr>
+                          <td class="label row-name">Plan</td>
+                          <td class="label">Insured Person</td>
+                          <td class="label">Payment Mode</td>
+                          <td class="label">Account Number</td>
+                          <td class="label">Registered Amount</td>
+                          <td class="label"></td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="align-bottom">
+                          <td class="heading-tab">
+                            <div class="d-block">
+                              <span name="policyID" class="label d-flex align-items-center policy-number wb-text">
+                                <img src="assets/Blue CMYK.svg" class="icon-text-space" /><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></span>
+                            </div>
+                            <span name="policyName" class="value"> 3 - Pay Zurich Edustart </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="insuredPerson" class="value"> Arshad Amin </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="paymentType" class="value"> -- </span>
+                          </td>
+                          <td class="date-padding">
+                            <span name="dueDate" class="value"> -- </span>
+                          </td>
+                          <td class="value-padding">
+                            <span name="dueAmount" class="value"> -- </span>
+                          </td>
+                          <td class="auto-debt-alignment btn-space1">
+                            <button type="button" id="open-register-container" class="dropdown-button fitting4" onclick="OpenRegisterContainer()"> Register </button>
+                            <div id="register-action" class="payment-menu" style="display: none;">
+                              <p class="payment-text-container" onclick="location.href='ezpay-registration.html'">EzPay</p>
+                              <p class="payment-text-container" onclick="location.href='emandate-registration.html'">eMandate</p>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="row isMobile pe-0 space.zero">
+                  <div class="policy-content policy-content-tile pct-margin-2">
+                    <img src="assets/policy-entity-one.svg" class="policy-type-badge" />
+                    <div class="mobile-view mobile-width">
+                      <div class="claims-progress-card-box-container">
+                        <!-- policy Number & Status -->
+                        <div class="mobile-icon-text">
+                          <img src="assets/medi-kit.svg" class="policy-type-icon mobile-view" />
+                          <p class="policy-text-one mobile-view mv2"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span><span class="span-txt-spacing-mob">|</span><span class="text-one-mobile span-txt-spacing-mob">Inforced</span></p>
+                        </div>
+                        <!-- Active & Inactive policy state toggle button -->
+                        <div class="policy-action">
+                          <img src="assets/GreenTick.svg" class="policy-action-arrow" />
+                        </div>
+                      </div>
+                      <!-- Policy Name -->
+                      <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Zurich Omni Health - Gold</p>
+                      <!-- Policy Details & the user details -->
+                      <div class="claims-progress-card-box-container">
+                        <div class="policy-header-container space-one fitting1">
+                          <div id="policy-user-info-container" class="container-space1">
+                            <div class="policy-user-info">
+                              <p class="policy-info-header extended-header">Insured Person</p>
+                              <p class="policy-info-text-mobile">Arshad Amin</p>
+                            </div>
+                            <div class="policy-user-info">
+                              <p class="policy-info-header extended-header">Payment Method</p>
+                              <p class="policy-info-text-mobile">Credit Card</p>
+                            </div>
+                            <div class="policy-user-info">
+                              <p class="policy-info-header extended-header">Account Number</p>
+                              <p class="policy-info-text-mobile">XXXXXX75-45</p>
+                            </div>
+                            <div class="policy-user-info">
+                              <p class="policy-info-header extended-header">Registered Amount</p>
+                              <p class="policy-info-text-mobile-amount">RM 8,999.00</p>
+                            </div>
+                            <div class="policy-user-info adjust5">
+                              <button class="adjust6" type="button" data-bs-toggle="modal" data-bs-target="#eZPayAutoDebitTermination"> Terminate </button>
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#eZPayAutoDebitMaintenance"> Change </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="policy-content policy-content-tile pct-margin-2">
+                    <img src="assets/policy-entity-one.svg" class="policy-type-badge" />
+                    <div class="mobile-view mobile-width">
+                      <div class="claims-progress-card-box-container">
+                        <!-- policy Number & Status -->
+                        <div class="mobile-icon-text">
+                          <img src="assets/medi-kit.svg" class="policy-type-icon mobile-view" />
+                          <div class="policy-text-one mobile-view mv2"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span><span class="span-txt-spacing-mob">|</span><span class="text-one-mobile span-txt-spacing-mob">Inforced</span></span>
+                          </div>
+                        </div>
+                        <!-- Active & Inactive policy state toggle button -->
+                        <div class="policy-action">
+                          <img src="assets/GreenTick.svg" class="policy-action-arrow" />
+                        </div>
+                      </div>
+                      <!-- Policy Name -->
+                      <p id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Zurich Omni Health - Gold</p>
+                      <!-- Policy Details & the user details -->
+                      <div class="claims-progress-card-box-container">
+                        <div class="policy-header-container space-one fitting1">
+                          <div id="policy-user-info-container container-space1">
+                            <div class="policy-user-info">
+                              <p class="policy-info-header extended-header">Insured Person</p>
+                              <p class="policy-info-text-mobile">Arshad Amin</p>
+                            </div>
+                            <div class="policy-user-info">
+                              <p class="policy-info-header extended-header">Payment Method</p>
+                              <p class="policy-info-text-mobile">Credit Card</p>
+                            </div>
+                            <div class="policy-user-info">
+                              <p class="policy-info-header extended-header">Account Number</p>
+                              <p class="policy-info-text-mobile">XXXXXX75-45</p>
+                            </div>
+                            <div class="policy-user-info">
+                              <p class="policy-info-header extended-header">Registered Amount</p>
+                              <p class="policy-info-text-mobile-amount">RM 8,999.00</p>
+                            </div>
+                            <div class="policy-user-info adjust5">
+                              <button class="adjust6" type="button" data-bs-toggle="modal" data-bs-target="#eMandateAutoDebitTermination"> Terminate </button>
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#eMandateAutoDebitMaintenance"> Change </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="separator-line2"></div>
+                    <div>
+                      <p class="text-darkBlue">Auto-Debit Unregistered Policies</p>
+                      <p class="text-darkBlue">Choose from the Auto-Debit options to register the policies below</p>
+                    </div>
+                  </div>
+                  <div class="policy-content policy-content-tile pct-margin-2">
+                    <img src="assets/policy-entity-one.svg" class="policy-type-badge" />
+                    <div class="mobile-view mobile-width">
+                      <div class="claims-progress-card-box-container">
+                        <!-- policy Number & Status -->
+                        <div class="mobile-icon-text">
+                          <img src="assets/medi-kit.svg" class="policy-type-icon mobile-view" />
+                          <div class="policy-text-one mobile-view mv2"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span><span class="span-txt-spacing-mob">|</span><span class="text-one-mobile span-txt-spacing-mob">Inforced</span></span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Policy Name -->
+                      <div id="life-insurance-tile-mobile" class="policy-text-two mobile-view">Zurich Omni Health - Gold</div>
+                      <!-- Policy Details & the user details -->
+                      <div class="claims-progress-card-box-container">
+                        <div class="policy-header-container space-one fitting1">
+                          <div id="policy-user-info-container container-space1">
+                            <div class="policy-user-info">
+                              <div class="policy-info-header extended-header">Insured Person</div>
+                              <div class="policy-info-text-mobile">Arshad Amin</div>
+                            </div>
+                            <div class="policy-user-info">
+                              <div class="policy-info-header extended-header">Payment Method</div>
+                              <div class="policy-info-text-mobile">Credit Card</div>
+                            </div>
+                            <div class="policy-user-info">
+                              <div class="policy-info-header extended-header">Account Number</div>
+                              <div class="policy-info-text-mobile">XXXXXX75-45</div>
+                            </div>
+                            <div class="policy-user-info">
+                              <div class="policy-info-header extended-header">Registered Amount</div>
+                              <div class="policy-info-text-mobile-amount">RM 8,999.00</div>
+                            </div>
+                            <div class="policy-user-info adjust5">
+                              <button class="adjust6" type="button" onclick="location.href='emandate-registration.html'"> eMandate </button>
+                              <button type="button" onclick="location.href='ezpay-registration.html'"> EzPay </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Mobile view for Upcoming Payments End -->
+              </div>
+            </div>
+          </div>
+          <!-- My Payment - Auto-Debt Page (END) -->
+      </div>
+    </div>
+
+    <!-- eZPay Auto Debit Successfully Registered Modal -->
+    <div class="modal fade mt-0" id="eZPayAutoDebitSuccessfullyRegistered" data-bs-backdrop=true data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header payment-header-popup padding-modal">
+              <h5 class="modal-title payment-title " id="staticBackdropLabel">EzPay Auto Debit Successfully Registered</h5>
+            </div>
+            <div class="modal-body ps-4 pe-4">
+              <div>
+                <div class="modal-policy-info-container">
+                  <div class="modal-container-1">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 48 52" fill="none" class="informational-svg me-3">
+                      <path d="M47.551 14.6984L24.3718 0.119978C24.2467 0.0413544 24.1052 0 23.9612 0C23.8172 0 23.6756 0.0413544 23.5506 0.119978L0.417715 14.6984C0.290954 14.7772 0.185475 14.8915 0.112077 15.0299C0.038679 15.1682 0 15.3255 0 15.4857C0 15.6459 0.038679 15.8032 0.112077 15.9415C0.185475 16.0798 0.290954 16.1942 0.417715 16.2729L6.31186 19.9977L4.03367 27.5056C3.91759 27.8861 3.85941 28.2851 3.86149 28.6865C3.86787 29.3574 4.01281 30.018 4.28534 30.6181C4.55834 31.2336 4.97126 31.7609 5.48403 32.1489L21.7227 44.0741C22.3987 44.5567 23.1886 44.8102 23.9943 44.803C24.7994 44.8055 25.5881 44.5524 26.2659 44.0741L34.7958 37.8126V44.7228C34.0028 44.9448 33.3108 45.478 32.8497 46.222C32.3887 46.9661 32.1903 47.8698 32.292 48.7635C32.3937 49.6571 32.7883 50.4792 33.4018 51.0752C34.0153 51.6711 34.8054 52 35.6237 52C36.4419 52 37.232 51.6711 37.8455 51.0752C38.459 50.4792 38.8537 49.6571 38.9553 48.7635C39.057 47.8698 38.8587 46.9661 38.3976 46.222C37.9365 45.478 37.2445 44.9448 36.4515 44.7228L36.4184 36.6318L42.4781 32.178C43.0047 31.7886 43.4257 31.2496 43.6966 30.6181C43.9727 30.0142 44.1178 29.348 44.1205 28.6719C44.1226 28.2705 44.0644 27.8715 43.9483 27.4911L41.7099 19.9686L47.5841 16.2875C47.7106 16.2068 47.8156 16.0909 47.8886 15.9514C47.9616 15.812 48 15.6539 48 15.493C48 15.332 47.9616 15.1739 47.8886 15.0345C47.8156 14.8951 47.7106 14.7792 47.5841 14.6984H47.551ZM37.4184 48.2945C37.4197 48.6697 37.3198 49.0368 37.1314 49.3494C36.943 49.662 36.6746 49.9061 36.36 50.0507C36.0455 50.1952 35.6991 50.2338 35.3647 50.1615C35.0302 50.0892 34.7228 49.9093 34.4813 49.6445C34.2398 49.3797 34.0752 49.0421 34.0082 48.6742C33.9412 48.3064 33.9749 47.925 34.1051 47.5782C34.2352 47.2315 34.4559 46.9351 34.7392 46.7265C35.0225 46.518 35.3557 46.4066 35.6965 46.4066C35.9223 46.4057 36.1461 46.4538 36.3549 46.5482C36.5638 46.6427 36.7537 46.7816 36.9137 46.957C37.0736 47.1324 37.2006 47.3408 37.2872 47.5704C37.3738 47.7999 37.4184 48.046 37.4184 48.2945V48.2945ZM40.935 18.3358L39.7297 19.0647L35.5442 21.6888L24.4049 14.6984C24.2132 14.5798 23.9867 14.5492 23.7746 14.6133C23.5626 14.6775 23.3821 14.8312 23.2724 15.041C23.1649 15.2509 23.1373 15.4991 23.1956 15.7314C23.254 15.9636 23.3935 16.1609 23.5837 16.2802V16.2802L33.8753 22.7603L23.9016 29.0218L8.25229 19.1376L7.02048 18.3649L2.47736 15.493L23.9479 1.94229L45.4715 15.493L40.935 18.3358ZM25.3519 42.5579C24.9392 42.8202 24.4709 42.9583 23.9943 42.9583C23.5177 42.9583 23.0494 42.8202 22.6367 42.5579L6.39796 30.6181C6.12713 30.4049 5.91052 30.1188 5.76881 29.7872C5.60561 29.4375 5.5194 29.0504 5.51715 28.6573C5.5172 28.452 5.54625 28.2479 5.60324 28.0523L7.76884 20.9016L23.4844 30.8587C23.6094 30.9373 23.7509 30.9787 23.895 30.9787C24.039 30.9787 24.1805 30.9373 24.3056 30.8587L34.7495 24.2984L34.7892 35.6113L25.3519 42.5579ZM42.3721 28.0596C42.4291 28.2552 42.4582 28.4593 42.4582 28.6646C42.4518 29.0595 42.3659 29.4479 42.2066 29.8017C42.0557 30.1358 41.8272 30.42 41.5443 30.6254L36.4118 34.4085V23.2779L40.2198 20.887L42.3721 28.0596Z" fill="#2167AE" />
+                    </svg>
+                    <div class="modal-container-1-item">
+                      <div name="policyID" class="label no-margin-padding"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></div>
+                      <div name="policyName" class="value no-margin-padding">3 - Pay Zurich Edustart</div>
+                    </div>
+                  </div>
+                  <div class="modal-container-2">
+                    <span class="label d-flex no-margin-padding"> Insured Person </span>
+                    <span name="insuredPerson" class="value no-margin-padding">Arshad Ahim</span>
+                  </div>
+                </div>
+                <div class="card-bordered">
+                  <div class="modal-policy-info-container modal-margin">
+                    <div class="padding-tile-modal modal-container-1">
+                      <div class="modal-container-1-item">
+                        <div name="policyID" class="label no-margin-padding"> Credit Card Number </div>
+                        <div name="policyName" class="value no-margin-padding">5602-0286-2326-XX02</div>
+                      </div>
+                    </div>
+                    <div class="modal-container-2">
+                      <span class="label d-flex no-margin-padding"> Expiry Date </span>
+                      <span name="insuredPerson" class="value no-margin-padding">23 July 2029</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div>
+                <div class="modal-policy-info-container">
+                  <div class="modal-container-1">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 48 52" fill="none" class="informational-svg me-3">
+                      <path d="M47.551 14.6984L24.3718 0.119978C24.2467 0.0413544 24.1052 0 23.9612 0C23.8172 0 23.6756 0.0413544 23.5506 0.119978L0.417715 14.6984C0.290954 14.7772 0.185475 14.8915 0.112077 15.0299C0.038679 15.1682 0 15.3255 0 15.4857C0 15.6459 0.038679 15.8032 0.112077 15.9415C0.185475 16.0798 0.290954 16.1942 0.417715 16.2729L6.31186 19.9977L4.03367 27.5056C3.91759 27.8861 3.85941 28.2851 3.86149 28.6865C3.86787 29.3574 4.01281 30.018 4.28534 30.6181C4.55834 31.2336 4.97126 31.7609 5.48403 32.1489L21.7227 44.0741C22.3987 44.5567 23.1886 44.8102 23.9943 44.803C24.7994 44.8055 25.5881 44.5524 26.2659 44.0741L34.7958 37.8126V44.7228C34.0028 44.9448 33.3108 45.478 32.8497 46.222C32.3887 46.9661 32.1903 47.8698 32.292 48.7635C32.3937 49.6571 32.7883 50.4792 33.4018 51.0752C34.0153 51.6711 34.8054 52 35.6237 52C36.4419 52 37.232 51.6711 37.8455 51.0752C38.459 50.4792 38.8537 49.6571 38.9553 48.7635C39.057 47.8698 38.8587 46.9661 38.3976 46.222C37.9365 45.478 37.2445 44.9448 36.4515 44.7228L36.4184 36.6318L42.4781 32.178C43.0047 31.7886 43.4257 31.2496 43.6966 30.6181C43.9727 30.0142 44.1178 29.348 44.1205 28.6719C44.1226 28.2705 44.0644 27.8715 43.9483 27.4911L41.7099 19.9686L47.5841 16.2875C47.7106 16.2068 47.8156 16.0909 47.8886 15.9514C47.9616 15.812 48 15.6539 48 15.493C48 15.332 47.9616 15.1739 47.8886 15.0345C47.8156 14.8951 47.7106 14.7792 47.5841 14.6984H47.551ZM37.4184 48.2945C37.4197 48.6697 37.3198 49.0368 37.1314 49.3494C36.943 49.662 36.6746 49.9061 36.36 50.0507C36.0455 50.1952 35.6991 50.2338 35.3647 50.1615C35.0302 50.0892 34.7228 49.9093 34.4813 49.6445C34.2398 49.3797 34.0752 49.0421 34.0082 48.6742C33.9412 48.3064 33.9749 47.925 34.1051 47.5782C34.2352 47.2315 34.4559 46.9351 34.7392 46.7265C35.0225 46.518 35.3557 46.4066 35.6965 46.4066C35.9223 46.4057 36.1461 46.4538 36.3549 46.5482C36.5638 46.6427 36.7537 46.7816 36.9137 46.957C37.0736 47.1324 37.2006 47.3408 37.2872 47.5704C37.3738 47.7999 37.4184 48.046 37.4184 48.2945V48.2945ZM40.935 18.3358L39.7297 19.0647L35.5442 21.6888L24.4049 14.6984C24.2132 14.5798 23.9867 14.5492 23.7746 14.6133C23.5626 14.6775 23.3821 14.8312 23.2724 15.041C23.1649 15.2509 23.1373 15.4991 23.1956 15.7314C23.254 15.9636 23.3935 16.1609 23.5837 16.2802V16.2802L33.8753 22.7603L23.9016 29.0218L8.25229 19.1376L7.02048 18.3649L2.47736 15.493L23.9479 1.94229L45.4715 15.493L40.935 18.3358ZM25.3519 42.5579C24.9392 42.8202 24.4709 42.9583 23.9943 42.9583C23.5177 42.9583 23.0494 42.8202 22.6367 42.5579L6.39796 30.6181C6.12713 30.4049 5.91052 30.1188 5.76881 29.7872C5.60561 29.4375 5.5194 29.0504 5.51715 28.6573C5.5172 28.452 5.54625 28.2479 5.60324 28.0523L7.76884 20.9016L23.4844 30.8587C23.6094 30.9373 23.7509 30.9787 23.895 30.9787C24.039 30.9787 24.1805 30.9373 24.3056 30.8587L34.7495 24.2984L34.7892 35.6113L25.3519 42.5579ZM42.3721 28.0596C42.4291 28.2552 42.4582 28.4593 42.4582 28.6646C42.4518 29.0595 42.3659 29.4479 42.2066 29.8017C42.0557 30.1358 41.8272 30.42 41.5443 30.6254L36.4118 34.4085V23.2779L40.2198 20.887L42.3721 28.0596Z" fill="#2167AE" />
+                    </svg>
+                    <div class="modal-container-1-item">
+                      <div name="policyID" class="label no-margin-padding"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></div>
+                      <div name="policyName" class="value no-margin-padding">3 - Pay Zurich Edustart</div>
+                    </div>
+                  </div>
+                  <div class="modal-container-2">
+                    <span class="label d-flex no-margin-padding"> Insured Person </span>
+                    <span name="insuredPerson" class="value no-margin-padding">Arshad Ahim</span>
+                  </div>
+                </div>
+                <div class="card-bordered">
+                  <div class="modal-policy-info-container modal-margin">
+                    <div class="padding-tile-modal modal-container-1">
+                      <div class=modal-container-1-item>
+                        <div name="policyID" class="label no-margin-padding"> Credit Card Number </div>
+                        <div name="policyName" class="value no-margin-padding">5602-0286-2326-XX02</div>
+                      </div>
+                    </div>
+                    <div class="modal-container-2">
+                      <span class="label d-flex no-margin-padding"> Expiry Date </span>
+                      <span name="insuredPerson" class="value no-margin-padding">23 July 2029</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer payment-footer ps-4 pe-4">
+              <button type="button" class="primary-button" data-bs-dismiss="modal" onclick="eZPay()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg> Back to My Auto Debit </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- eMandate Auto Debit Maintenance Modal -->
+      <div class="modal fade mt-0" id="eMandateAutoDebitMaintenance" data-bs-backdrop=true data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header payment-header-popup padding-modal">
+              <h5 class="modal-title payment-title " id="staticBackdropLabel">eMandate Auto Debit Maintenance </span>
+            </div>
+            <div class="modal-body ps-4 pe-4">
+              <form class="needs-validation form-floating" novalidate>
+                <div class="modal-policy-info-container">
+                  <div class="modal-container-1">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 48 52" fill="none" class="informational-svg me-3">
+                      <path d="M47.551 14.6984L24.3718 0.119978C24.2467 0.0413544 24.1052 0 23.9612 0C23.8172 0 23.6756 0.0413544 23.5506 0.119978L0.417715 14.6984C0.290954 14.7772 0.185475 14.8915 0.112077 15.0299C0.038679 15.1682 0 15.3255 0 15.4857C0 15.6459 0.038679 15.8032 0.112077 15.9415C0.185475 16.0798 0.290954 16.1942 0.417715 16.2729L6.31186 19.9977L4.03367 27.5056C3.91759 27.8861 3.85941 28.2851 3.86149 28.6865C3.86787 29.3574 4.01281 30.018 4.28534 30.6181C4.55834 31.2336 4.97126 31.7609 5.48403 32.1489L21.7227 44.0741C22.3987 44.5567 23.1886 44.8102 23.9943 44.803C24.7994 44.8055 25.5881 44.5524 26.2659 44.0741L34.7958 37.8126V44.7228C34.0028 44.9448 33.3108 45.478 32.8497 46.222C32.3887 46.9661 32.1903 47.8698 32.292 48.7635C32.3937 49.6571 32.7883 50.4792 33.4018 51.0752C34.0153 51.6711 34.8054 52 35.6237 52C36.4419 52 37.232 51.6711 37.8455 51.0752C38.459 50.4792 38.8537 49.6571 38.9553 48.7635C39.057 47.8698 38.8587 46.9661 38.3976 46.222C37.9365 45.478 37.2445 44.9448 36.4515 44.7228L36.4184 36.6318L42.4781 32.178C43.0047 31.7886 43.4257 31.2496 43.6966 30.6181C43.9727 30.0142 44.1178 29.348 44.1205 28.6719C44.1226 28.2705 44.0644 27.8715 43.9483 27.4911L41.7099 19.9686L47.5841 16.2875C47.7106 16.2068 47.8156 16.0909 47.8886 15.9514C47.9616 15.812 48 15.6539 48 15.493C48 15.332 47.9616 15.1739 47.8886 15.0345C47.8156 14.8951 47.7106 14.7792 47.5841 14.6984H47.551ZM37.4184 48.2945C37.4197 48.6697 37.3198 49.0368 37.1314 49.3494C36.943 49.662 36.6746 49.9061 36.36 50.0507C36.0455 50.1952 35.6991 50.2338 35.3647 50.1615C35.0302 50.0892 34.7228 49.9093 34.4813 49.6445C34.2398 49.3797 34.0752 49.0421 34.0082 48.6742C33.9412 48.3064 33.9749 47.925 34.1051 47.5782C34.2352 47.2315 34.4559 46.9351 34.7392 46.7265C35.0225 46.518 35.3557 46.4066 35.6965 46.4066C35.9223 46.4057 36.1461 46.4538 36.3549 46.5482C36.5638 46.6427 36.7537 46.7816 36.9137 46.957C37.0736 47.1324 37.2006 47.3408 37.2872 47.5704C37.3738 47.7999 37.4184 48.046 37.4184 48.2945V48.2945ZM40.935 18.3358L39.7297 19.0647L35.5442 21.6888L24.4049 14.6984C24.2132 14.5798 23.9867 14.5492 23.7746 14.6133C23.5626 14.6775 23.3821 14.8312 23.2724 15.041C23.1649 15.2509 23.1373 15.4991 23.1956 15.7314C23.254 15.9636 23.3935 16.1609 23.5837 16.2802V16.2802L33.8753 22.7603L23.9016 29.0218L8.25229 19.1376L7.02048 18.3649L2.47736 15.493L23.9479 1.94229L45.4715 15.493L40.935 18.3358ZM25.3519 42.5579C24.9392 42.8202 24.4709 42.9583 23.9943 42.9583C23.5177 42.9583 23.0494 42.8202 22.6367 42.5579L6.39796 30.6181C6.12713 30.4049 5.91052 30.1188 5.76881 29.7872C5.60561 29.4375 5.5194 29.0504 5.51715 28.6573C5.5172 28.452 5.54625 28.2479 5.60324 28.0523L7.76884 20.9016L23.4844 30.8587C23.6094 30.9373 23.7509 30.9787 23.895 30.9787C24.039 30.9787 24.1805 30.9373 24.3056 30.8587L34.7495 24.2984L34.7892 35.6113L25.3519 42.5579ZM42.3721 28.0596C42.4291 28.2552 42.4582 28.4593 42.4582 28.6646C42.4518 29.0595 42.3659 29.4479 42.2066 29.8017C42.0557 30.1358 41.8272 30.42 41.5443 30.6254L36.4118 34.4085V23.2779L40.2198 20.887L42.3721 28.0596Z" fill="#2167AE" />
+                    </svg>
+                    <div class="modal-container-1-item">
+                      <div name="policyID" class="label no-margin-padding"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></div>
+                      <div name="policyName" class="value no-margin-padding">3 - Pay Zurich Edustart</div>
+                    </div>
+                  </div>
+                  <div class="modal-container-2">
+                    <span class="label d-flex no-margin-padding"> Insured Person </span>
+                    <span name="insuredPerson" class="value no-margin-padding">Arshad Ahim</span>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <div class="card-bordered">
+                    <div class="mb-2 emandate-content-box">
+                      <div class="emandate-label-1">
+                        <div class="label e-mandate-lebel">Name</div>
+                      </div>
+                      <div class="emandate-label-2">
+                        <div class="value">Mariam Binh</div>
+                      </div>
+                    </div>
+                    <div class="mb-2 emandate-content-box">
+                      <div class="emandate-label-1">
+                        <div class="label e-mandate-lebel">IC Number</div>
+                      </div>
+                      <div class="emandate-label-2">
+                        <div class="value">8100014589523652</div>
+                      </div>
+                    </div>
+                    <div class="mb-2 emandate-content-box">
+                      <div class="emandate-label-1">
+                        <div class="label e-mandate-lebel">Telephone No.</div>
+                      </div>
+                      <div class="emandate-label-2 emandate-label-display">
+                        <div class="emandate-input-box">
+                          <input type="tel" class="input-form value eMandate emandate-input" id="floatingInput-tel" required value="012-2344545" disabled />
+                        </div>
+                        <div class="modal-width">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil input-svg" viewBox="0 0 16 16" id="tel-disabled" onclick="toggleInput('tel', 'able')">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check input-svg" viewBox="0 0 16 16" id="tel-abled" onclick="toggleInput('tel', 'disable')" style="display: none;">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 emandate-content-box">
+                      <div class="emandate-label-1">
+                        <div class="label e-mandate-lebel">Email Address</div>
+                      </div>
+                      <div class="emandate-label-2 emandate-label-display">
+                        <div class="emandate-input-box">
+                          <input type="email" class="input-form value eMandate emandate-input" id="floatingInput-email" required value="mariam@gmail.com" disabled>
+                        </div>
+                        <div class="modal-width">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#23366F" class="bi bi-pencil input-svg" viewBox="0 0 16 16" id="email-disabled" onclick="toggleInput('email', 'able')">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check input-svg" viewBox="0 0 16 16" id="email-abled" onclick="toggleInput('email', 'disable')" style="display: none;">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 emandate-content-box">
+                      <div class="emandate-label-1">
+                        <div class="label e-mandate-lebel">Max Amount</div>
+                      </div>
+                      <div class="emandate-label-2 emandate-label-display">
+                        <!-- <div class="value">RM 8,999.00</div> -->
+                        <div class="emandate-input-box">
+                          <input type="text" class="input-form value eMandate emandate-input" id="floatingInput-amount" required value="RM 8,999.00" disabled>
+                        </div>
+                        <div class="modal-width">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#23366F" class="bi bi-pencil input-svg" viewBox="0 0 16 16" id="amount-disabled" onclick="toggleInput('amount', 'able')">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check input-svg" viewBox="0 0 16 16" id="amount-abled" onclick="toggleInput('amount', 'disable')" style="display: none;">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 emandate-content-box">
+                      <div class="emandate-label-1">
+                        <div class="label e-mandate-lebel">Max No. of Debit</div>
+                      </div>
+                      <div class="emandate-label-2 emandate-label-display">
+                        <div class="emandate-input-box">
+                          <input type="text" class="input-form value eMandate emandate-input" id="floatingInput-noOfDebiting" required value="012-2344545" disabled>
+                        </div>
+                        <div class="modal-width">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil input-svg" viewBox="0 0 16 16" id="noOfDebiting-disabled" onclick="toggleInput('noOfDebiting', 'able')">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check input-svg" viewBox="0 0 16 16" id="noOfDebiting-abled" onclick="toggleInput('noOfDebiting', 'disable')" style="display: none;">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 emandate-content-box">
+                      <div class="emandate-label-1">
+                        <div class="label e-mandate-lebel">Purpose of Payment</div>
+                      </div>
+                      <div clas="emandate-label-2">
+                        <div class="value">Lorem Ipsum</div>
+                      </div>
+                    </div>
+                    <div class="mb-2 emandate-content-box">
+                      <div class="emandate-label-1">
+                        <div class="label e-mandate-lebel">Payment Ref No.</div>
+                      </div>
+                      <div class="emandate-label-2">
+                        <div class="value">811025785412</div>
+                      </div>
+                    </div>
+                    <div class="mb-2 emandate-content-box">
+                      <div class="emandate-label-1">
+                        <div class="label e-mandate-lebel">Payer Bank</div>
+                      </div>
+                      <div class="emandate-label-2">
+                        <div class="value">May Bank</div>
+                      </div>
+                    </div>
+                    <div class="mb-2 emandate-content-box">
+                      <div class="emandate-label-1">
+                        <div class="label e-mandate-lebel">Account Number</div>
+                      </div>
+                      <div class="emandate-label-2">
+                        <div class="value">1143453255865</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <p class="terms">I fully understand and agree to the <span class="zurich-active">terms & conditions</span> of Direct Debit and acknowledge lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  </div>
+                </div>
+                <div class="modal-footer payment-footer ps-4 pe-0">
+                  <button class="button" type="button" data-bs-dismiss="modal">Cancel</button>
+                  <!-- Change button type to submit while integrating-->
+                  <button type="button" class="primary-button" data-bs-target="#eMandateAutoDebitSuccessfullyUpdated" data-bs-toggle="modal" data-bs-dismiss="modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg> Update </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- eZPay Auto Debit Successfully Updated Modal -->
+      <div class="modal fade mt-0" id="eZPayAutoDebitSuccessfullyUpdated" data-bs-backdrop=true data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header payment-header-popup padding-modal">
+              <h5 class="modal-title payment-title " id="staticBackdropLabel">EzPay Auto Debit Successfully Updated </span>
+            </div>
+            <div class="modal-body ps-4 pe-4">
+              <div>
+                <div class="modal-policy-info-container">
+                  <div class="modal-container-1">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 48 52" fill="none" class="informational-svg me-3">
+                      <path d="M47.551 14.6984L24.3718 0.119978C24.2467 0.0413544 24.1052 0 23.9612 0C23.8172 0 23.6756 0.0413544 23.5506 0.119978L0.417715 14.6984C0.290954 14.7772 0.185475 14.8915 0.112077 15.0299C0.038679 15.1682 0 15.3255 0 15.4857C0 15.6459 0.038679 15.8032 0.112077 15.9415C0.185475 16.0798 0.290954 16.1942 0.417715 16.2729L6.31186 19.9977L4.03367 27.5056C3.91759 27.8861 3.85941 28.2851 3.86149 28.6865C3.86787 29.3574 4.01281 30.018 4.28534 30.6181C4.55834 31.2336 4.97126 31.7609 5.48403 32.1489L21.7227 44.0741C22.3987 44.5567 23.1886 44.8102 23.9943 44.803C24.7994 44.8055 25.5881 44.5524 26.2659 44.0741L34.7958 37.8126V44.7228C34.0028 44.9448 33.3108 45.478 32.8497 46.222C32.3887 46.9661 32.1903 47.8698 32.292 48.7635C32.3937 49.6571 32.7883 50.4792 33.4018 51.0752C34.0153 51.6711 34.8054 52 35.6237 52C36.4419 52 37.232 51.6711 37.8455 51.0752C38.459 50.4792 38.8537 49.6571 38.9553 48.7635C39.057 47.8698 38.8587 46.9661 38.3976 46.222C37.9365 45.478 37.2445 44.9448 36.4515 44.7228L36.4184 36.6318L42.4781 32.178C43.0047 31.7886 43.4257 31.2496 43.6966 30.6181C43.9727 30.0142 44.1178 29.348 44.1205 28.6719C44.1226 28.2705 44.0644 27.8715 43.9483 27.4911L41.7099 19.9686L47.5841 16.2875C47.7106 16.2068 47.8156 16.0909 47.8886 15.9514C47.9616 15.812 48 15.6539 48 15.493C48 15.332 47.9616 15.1739 47.8886 15.0345C47.8156 14.8951 47.7106 14.7792 47.5841 14.6984H47.551ZM37.4184 48.2945C37.4197 48.6697 37.3198 49.0368 37.1314 49.3494C36.943 49.662 36.6746 49.9061 36.36 50.0507C36.0455 50.1952 35.6991 50.2338 35.3647 50.1615C35.0302 50.0892 34.7228 49.9093 34.4813 49.6445C34.2398 49.3797 34.0752 49.0421 34.0082 48.6742C33.9412 48.3064 33.9749 47.925 34.1051 47.5782C34.2352 47.2315 34.4559 46.9351 34.7392 46.7265C35.0225 46.518 35.3557 46.4066 35.6965 46.4066C35.9223 46.4057 36.1461 46.4538 36.3549 46.5482C36.5638 46.6427 36.7537 46.7816 36.9137 46.957C37.0736 47.1324 37.2006 47.3408 37.2872 47.5704C37.3738 47.7999 37.4184 48.046 37.4184 48.2945V48.2945ZM40.935 18.3358L39.7297 19.0647L35.5442 21.6888L24.4049 14.6984C24.2132 14.5798 23.9867 14.5492 23.7746 14.6133C23.5626 14.6775 23.3821 14.8312 23.2724 15.041C23.1649 15.2509 23.1373 15.4991 23.1956 15.7314C23.254 15.9636 23.3935 16.1609 23.5837 16.2802V16.2802L33.8753 22.7603L23.9016 29.0218L8.25229 19.1376L7.02048 18.3649L2.47736 15.493L23.9479 1.94229L45.4715 15.493L40.935 18.3358ZM25.3519 42.5579C24.9392 42.8202 24.4709 42.9583 23.9943 42.9583C23.5177 42.9583 23.0494 42.8202 22.6367 42.5579L6.39796 30.6181C6.12713 30.4049 5.91052 30.1188 5.76881 29.7872C5.60561 29.4375 5.5194 29.0504 5.51715 28.6573C5.5172 28.452 5.54625 28.2479 5.60324 28.0523L7.76884 20.9016L23.4844 30.8587C23.6094 30.9373 23.7509 30.9787 23.895 30.9787C24.039 30.9787 24.1805 30.9373 24.3056 30.8587L34.7495 24.2984L34.7892 35.6113L25.3519 42.5579ZM42.3721 28.0596C42.4291 28.2552 42.4582 28.4593 42.4582 28.6646C42.4518 29.0595 42.3659 29.4479 42.2066 29.8017C42.0557 30.1358 41.8272 30.42 41.5443 30.6254L36.4118 34.4085V23.2779L40.2198 20.887L42.3721 28.0596Z" fill="#2167AE" />
+                    </svg>
+                    <div class="modal-container-1-item">
+                      <div name="policyID" class="label no-margin-padding"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></div>
+                      <div name="policyName" class="value no-margin-padding">3 - Pay Zurich Edustart</div>
+                    </div>
+                  </div>
+                  <div class="modal-container-2">
+                    <span class="label d-flex no-margin-padding"> Insured Person </span>
+                    <span name="insuredPerson" class="value no-margin-padding">Arshad Ahim</span>
+                  </div>
+                </div>
+                <div class="card-bordered">
+                  <div class="modal-policy-info-container modal-margin">
+                    <div class="padding-tile-modal modal-container-1">
+                      <div class="modal-container-1-item">
+                        <div name="policyID" class="label no-margin-padding"> Credit Card Number </div>
+                        <div name="policyName" class="value no-margin-padding">5602-0286-2326-XX02</div>
+                      </div>
+                    </div>
+                    <div class="modal-container-2">
+                      <span class="label d-flex no-margin-padding"> Expiry Date </span>
+                      <span name="insuredPerson" class="value no-margin-padding">23 July 2029</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer payment-footer ps-4 pe-4">
+              <button type="button" class="primary-button" data-bs-dismiss="modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg> Close </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- eMandate Auto Debit Successfully Updated Modal -->
+      <div class="modal fade mt-0" id="eMandateAutoDebitSuccessfullyUpdated" data-bs-backdrop=true data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header payment-header-popup padding-modal">
+              <h5 class="modal-title payment-title " id="staticBackdropLabel">eMandate Auto Debit Successfully Updated </span>
+            </div>
+            <div class="modal-body ps-4 pe-4">
+              <div class="modal-policy-info-container">
+                <div class="modal-container-1">
+                  <svg  xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 48 52" fill="none" class="informational-svg me-3">
+                    <path d="M47.551 14.6984L24.3718 0.119978C24.2467 0.0413544 24.1052 0 23.9612 0C23.8172 0 23.6756 0.0413544 23.5506 0.119978L0.417715 14.6984C0.290954 14.7772 0.185475 14.8915 0.112077 15.0299C0.038679 15.1682 0 15.3255 0 15.4857C0 15.6459 0.038679 15.8032 0.112077 15.9415C0.185475 16.0798 0.290954 16.1942 0.417715 16.2729L6.31186 19.9977L4.03367 27.5056C3.91759 27.8861 3.85941 28.2851 3.86149 28.6865C3.86787 29.3574 4.01281 30.018 4.28534 30.6181C4.55834 31.2336 4.97126 31.7609 5.48403 32.1489L21.7227 44.0741C22.3987 44.5567 23.1886 44.8102 23.9943 44.803C24.7994 44.8055 25.5881 44.5524 26.2659 44.0741L34.7958 37.8126V44.7228C34.0028 44.9448 33.3108 45.478 32.8497 46.222C32.3887 46.9661 32.1903 47.8698 32.292 48.7635C32.3937 49.6571 32.7883 50.4792 33.4018 51.0752C34.0153 51.6711 34.8054 52 35.6237 52C36.4419 52 37.232 51.6711 37.8455 51.0752C38.459 50.4792 38.8537 49.6571 38.9553 48.7635C39.057 47.8698 38.8587 46.9661 38.3976 46.222C37.9365 45.478 37.2445 44.9448 36.4515 44.7228L36.4184 36.6318L42.4781 32.178C43.0047 31.7886 43.4257 31.2496 43.6966 30.6181C43.9727 30.0142 44.1178 29.348 44.1205 28.6719C44.1226 28.2705 44.0644 27.8715 43.9483 27.4911L41.7099 19.9686L47.5841 16.2875C47.7106 16.2068 47.8156 16.0909 47.8886 15.9514C47.9616 15.812 48 15.6539 48 15.493C48 15.332 47.9616 15.1739 47.8886 15.0345C47.8156 14.8951 47.7106 14.7792 47.5841 14.6984H47.551ZM37.4184 48.2945C37.4197 48.6697 37.3198 49.0368 37.1314 49.3494C36.943 49.662 36.6746 49.9061 36.36 50.0507C36.0455 50.1952 35.6991 50.2338 35.3647 50.1615C35.0302 50.0892 34.7228 49.9093 34.4813 49.6445C34.2398 49.3797 34.0752 49.0421 34.0082 48.6742C33.9412 48.3064 33.9749 47.925 34.1051 47.5782C34.2352 47.2315 34.4559 46.9351 34.7392 46.7265C35.0225 46.518 35.3557 46.4066 35.6965 46.4066C35.9223 46.4057 36.1461 46.4538 36.3549 46.5482C36.5638 46.6427 36.7537 46.7816 36.9137 46.957C37.0736 47.1324 37.2006 47.3408 37.2872 47.5704C37.3738 47.7999 37.4184 48.046 37.4184 48.2945V48.2945ZM40.935 18.3358L39.7297 19.0647L35.5442 21.6888L24.4049 14.6984C24.2132 14.5798 23.9867 14.5492 23.7746 14.6133C23.5626 14.6775 23.3821 14.8312 23.2724 15.041C23.1649 15.2509 23.1373 15.4991 23.1956 15.7314C23.254 15.9636 23.3935 16.1609 23.5837 16.2802V16.2802L33.8753 22.7603L23.9016 29.0218L8.25229 19.1376L7.02048 18.3649L2.47736 15.493L23.9479 1.94229L45.4715 15.493L40.935 18.3358ZM25.3519 42.5579C24.9392 42.8202 24.4709 42.9583 23.9943 42.9583C23.5177 42.9583 23.0494 42.8202 22.6367 42.5579L6.39796 30.6181C6.12713 30.4049 5.91052 30.1188 5.76881 29.7872C5.60561 29.4375 5.5194 29.0504 5.51715 28.6573C5.5172 28.452 5.54625 28.2479 5.60324 28.0523L7.76884 20.9016L23.4844 30.8587C23.6094 30.9373 23.7509 30.9787 23.895 30.9787C24.039 30.9787 24.1805 30.9373 24.3056 30.8587L34.7495 24.2984L34.7892 35.6113L25.3519 42.5579ZM42.3721 28.0596C42.4291 28.2552 42.4582 28.4593 42.4582 28.6646C42.4518 29.0595 42.3659 29.4479 42.2066 29.8017C42.0557 30.1358 41.8272 30.42 41.5443 30.6254L36.4118 34.4085V23.2779L40.2198 20.887L42.3721 28.0596Z" fill="#2167AE" />
+                  </svg>
+                  <div class="modal-container-1-item">
+                    <div name="policyID" class="label no-margin-padding"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></div>
+                    <div name="policyName" class="value no-margin-padding">3 - Pay Zurich Edustart</div>
+                  </div>
+                </div>
+                <div class="modal-container-2">
+                  <span class="label d-flex no-margin-padding"> Insured Person </span>
+                  <span name="insuredPerson" class="value no-margin-padding">Arshad Ahim</span>
+                </div>
+              </div>
+              <div class="mt-3">
+                <div class="card-bordered">
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Name</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">Mariam Binh</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">IC Number</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">8100014589523652</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Telephone No.</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">012-2344545</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Email Address</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">mariam@gmail.com</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Max Amount</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">RM 8,999.00</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Max No. of Debit</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">012-2344545</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Purpose of Payment</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">Lorem Ipsum</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Payment Ref No.</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">811025785412</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Payer Bank</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">May Bank</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Account Number</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">1143453255865</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer payment-footer ps-4 pe-4">
+              <button type="button" class="primary-button" data-bs-dismiss="modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg> Close </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- eZPay Auto Debit Termination Modal -->
+      <div class="modal fade mt-0" id="eZPayAutoDebitTermination" data-bs-backdrop=true data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header payment-header-popup padding-modal">
+              <h5 class="modal-title payment-title " id="staticBackdropLabel">EzPay Auto Debit Termination</h5>
+            </div>
+            <div class="modal-body ps-4 pe-4">
+              <div>
+                <div class="modal-policy-info-container">
+                  <div class="modal-container-1">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 48 52" fill="none" class="informational-svg me-3">
+                      <path d="M47.551 14.6984L24.3718 0.119978C24.2467 0.0413544 24.1052 0 23.9612 0C23.8172 0 23.6756 0.0413544 23.5506 0.119978L0.417715 14.6984C0.290954 14.7772 0.185475 14.8915 0.112077 15.0299C0.038679 15.1682 0 15.3255 0 15.4857C0 15.6459 0.038679 15.8032 0.112077 15.9415C0.185475 16.0798 0.290954 16.1942 0.417715 16.2729L6.31186 19.9977L4.03367 27.5056C3.91759 27.8861 3.85941 28.2851 3.86149 28.6865C3.86787 29.3574 4.01281 30.018 4.28534 30.6181C4.55834 31.2336 4.97126 31.7609 5.48403 32.1489L21.7227 44.0741C22.3987 44.5567 23.1886 44.8102 23.9943 44.803C24.7994 44.8055 25.5881 44.5524 26.2659 44.0741L34.7958 37.8126V44.7228C34.0028 44.9448 33.3108 45.478 32.8497 46.222C32.3887 46.9661 32.1903 47.8698 32.292 48.7635C32.3937 49.6571 32.7883 50.4792 33.4018 51.0752C34.0153 51.6711 34.8054 52 35.6237 52C36.4419 52 37.232 51.6711 37.8455 51.0752C38.459 50.4792 38.8537 49.6571 38.9553 48.7635C39.057 47.8698 38.8587 46.9661 38.3976 46.222C37.9365 45.478 37.2445 44.9448 36.4515 44.7228L36.4184 36.6318L42.4781 32.178C43.0047 31.7886 43.4257 31.2496 43.6966 30.6181C43.9727 30.0142 44.1178 29.348 44.1205 28.6719C44.1226 28.2705 44.0644 27.8715 43.9483 27.4911L41.7099 19.9686L47.5841 16.2875C47.7106 16.2068 47.8156 16.0909 47.8886 15.9514C47.9616 15.812 48 15.6539 48 15.493C48 15.332 47.9616 15.1739 47.8886 15.0345C47.8156 14.8951 47.7106 14.7792 47.5841 14.6984H47.551ZM37.4184 48.2945C37.4197 48.6697 37.3198 49.0368 37.1314 49.3494C36.943 49.662 36.6746 49.9061 36.36 50.0507C36.0455 50.1952 35.6991 50.2338 35.3647 50.1615C35.0302 50.0892 34.7228 49.9093 34.4813 49.6445C34.2398 49.3797 34.0752 49.0421 34.0082 48.6742C33.9412 48.3064 33.9749 47.925 34.1051 47.5782C34.2352 47.2315 34.4559 46.9351 34.7392 46.7265C35.0225 46.518 35.3557 46.4066 35.6965 46.4066C35.9223 46.4057 36.1461 46.4538 36.3549 46.5482C36.5638 46.6427 36.7537 46.7816 36.9137 46.957C37.0736 47.1324 37.2006 47.3408 37.2872 47.5704C37.3738 47.7999 37.4184 48.046 37.4184 48.2945V48.2945ZM40.935 18.3358L39.7297 19.0647L35.5442 21.6888L24.4049 14.6984C24.2132 14.5798 23.9867 14.5492 23.7746 14.6133C23.5626 14.6775 23.3821 14.8312 23.2724 15.041C23.1649 15.2509 23.1373 15.4991 23.1956 15.7314C23.254 15.9636 23.3935 16.1609 23.5837 16.2802V16.2802L33.8753 22.7603L23.9016 29.0218L8.25229 19.1376L7.02048 18.3649L2.47736 15.493L23.9479 1.94229L45.4715 15.493L40.935 18.3358ZM25.3519 42.5579C24.9392 42.8202 24.4709 42.9583 23.9943 42.9583C23.5177 42.9583 23.0494 42.8202 22.6367 42.5579L6.39796 30.6181C6.12713 30.4049 5.91052 30.1188 5.76881 29.7872C5.60561 29.4375 5.5194 29.0504 5.51715 28.6573C5.5172 28.452 5.54625 28.2479 5.60324 28.0523L7.76884 20.9016L23.4844 30.8587C23.6094 30.9373 23.7509 30.9787 23.895 30.9787C24.039 30.9787 24.1805 30.9373 24.3056 30.8587L34.7495 24.2984L34.7892 35.6113L25.3519 42.5579ZM42.3721 28.0596C42.4291 28.2552 42.4582 28.4593 42.4582 28.6646C42.4518 29.0595 42.3659 29.4479 42.2066 29.8017C42.0557 30.1358 41.8272 30.42 41.5443 30.6254L36.4118 34.4085V23.2779L40.2198 20.887L42.3721 28.0596Z" fill="#2167AE" />
+                    </svg>
+                    <div class="modal-container-1-item">
+                      <div name="policyID" class="label no-margin-padding"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></div>
+                      <div name="policyName" class="value no-margin-padding">3 - Pay Zurich Edustart</div>
+                    </div>
+                  </div>
+                  <div class="modal-container-2">
+                    <span class="label d-flex no-margin-padding"> Insured Person </span>
+                    <span name="insuredPerson" class="value no-margin-padding">Arshad Ahim</span>
+                  </div>
+                </div>
+  
+    
+                  <div class="modal-policy-info-container modal-margin">
+                    <div class="padding-tile-modal modal-container-1">
+                      <div class="modal-container-1-item">
+                        <div name="policyID" class="label no-margin-padding"> Credit Card Number </div>
+                        <div name="policyName" class="value no-margin-padding">5602-0286-2326-XX02</div>
+                      </div>
+                    </div>
+                    <div class="modal-container-2">
+                      <span class="label d-flex no-margin-padding"> Expiry Date </span>
+                      <span name="insuredPerson" class="value no-margin-padding">23 July 2029</span>
+                    </div>
+                  </div>
+                
+              </div>
+              <div class="mt-4 mx-3 d-flex justify-content-between">
+                <span class="label text-darkBlue pct-margin-1">Please select the reason for termination *</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>
+              </div>
+              <div class="row mt-3">
+                <p class="terms agree-txt">I fully understand and agree to the <span class="zurich-active">terms & conditions</span> of Direct Debit and acknowledge lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              </div>
+            </div>
+            <div class="modal-footer payment-footer ps-4 pe-4">
+              <button type="button" data-bs-dismiss="modal"> Cancel </button>
+              <button type="button" class="primary-button" data-bs-target="#eZPayAutoDebitTerminatedSuccessfully" data-bs-toggle="modal" data-bs-dismiss="modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg> Terminate </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- eMandate Auto Debit Termination Modal -->
+      <div class="modal fade mt-0" id="eMandateAutoDebitTermination" data-bs-backdrop=true data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header payment-header-popup padding-modal">
+              <h5 class="modal-title payment-title " id="staticBackdropLabel">eMandate Auto Debit Termination </span>
+            </div>
+            <div class="modal-body ps-4 pe-4">
+              <div class="modal-policy-info-container">
+                <div class="modal-container-1">
+                  <svg  xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 48 52" fill="none" class="informational-svg me-3">
+                    <path d="M47.551 14.6984L24.3718 0.119978C24.2467 0.0413544 24.1052 0 23.9612 0C23.8172 0 23.6756 0.0413544 23.5506 0.119978L0.417715 14.6984C0.290954 14.7772 0.185475 14.8915 0.112077 15.0299C0.038679 15.1682 0 15.3255 0 15.4857C0 15.6459 0.038679 15.8032 0.112077 15.9415C0.185475 16.0798 0.290954 16.1942 0.417715 16.2729L6.31186 19.9977L4.03367 27.5056C3.91759 27.8861 3.85941 28.2851 3.86149 28.6865C3.86787 29.3574 4.01281 30.018 4.28534 30.6181C4.55834 31.2336 4.97126 31.7609 5.48403 32.1489L21.7227 44.0741C22.3987 44.5567 23.1886 44.8102 23.9943 44.803C24.7994 44.8055 25.5881 44.5524 26.2659 44.0741L34.7958 37.8126V44.7228C34.0028 44.9448 33.3108 45.478 32.8497 46.222C32.3887 46.9661 32.1903 47.8698 32.292 48.7635C32.3937 49.6571 32.7883 50.4792 33.4018 51.0752C34.0153 51.6711 34.8054 52 35.6237 52C36.4419 52 37.232 51.6711 37.8455 51.0752C38.459 50.4792 38.8537 49.6571 38.9553 48.7635C39.057 47.8698 38.8587 46.9661 38.3976 46.222C37.9365 45.478 37.2445 44.9448 36.4515 44.7228L36.4184 36.6318L42.4781 32.178C43.0047 31.7886 43.4257 31.2496 43.6966 30.6181C43.9727 30.0142 44.1178 29.348 44.1205 28.6719C44.1226 28.2705 44.0644 27.8715 43.9483 27.4911L41.7099 19.9686L47.5841 16.2875C47.7106 16.2068 47.8156 16.0909 47.8886 15.9514C47.9616 15.812 48 15.6539 48 15.493C48 15.332 47.9616 15.1739 47.8886 15.0345C47.8156 14.8951 47.7106 14.7792 47.5841 14.6984H47.551ZM37.4184 48.2945C37.4197 48.6697 37.3198 49.0368 37.1314 49.3494C36.943 49.662 36.6746 49.9061 36.36 50.0507C36.0455 50.1952 35.6991 50.2338 35.3647 50.1615C35.0302 50.0892 34.7228 49.9093 34.4813 49.6445C34.2398 49.3797 34.0752 49.0421 34.0082 48.6742C33.9412 48.3064 33.9749 47.925 34.1051 47.5782C34.2352 47.2315 34.4559 46.9351 34.7392 46.7265C35.0225 46.518 35.3557 46.4066 35.6965 46.4066C35.9223 46.4057 36.1461 46.4538 36.3549 46.5482C36.5638 46.6427 36.7537 46.7816 36.9137 46.957C37.0736 47.1324 37.2006 47.3408 37.2872 47.5704C37.3738 47.7999 37.4184 48.046 37.4184 48.2945V48.2945ZM40.935 18.3358L39.7297 19.0647L35.5442 21.6888L24.4049 14.6984C24.2132 14.5798 23.9867 14.5492 23.7746 14.6133C23.5626 14.6775 23.3821 14.8312 23.2724 15.041C23.1649 15.2509 23.1373 15.4991 23.1956 15.7314C23.254 15.9636 23.3935 16.1609 23.5837 16.2802V16.2802L33.8753 22.7603L23.9016 29.0218L8.25229 19.1376L7.02048 18.3649L2.47736 15.493L23.9479 1.94229L45.4715 15.493L40.935 18.3358ZM25.3519 42.5579C24.9392 42.8202 24.4709 42.9583 23.9943 42.9583C23.5177 42.9583 23.0494 42.8202 22.6367 42.5579L6.39796 30.6181C6.12713 30.4049 5.91052 30.1188 5.76881 29.7872C5.60561 29.4375 5.5194 29.0504 5.51715 28.6573C5.5172 28.452 5.54625 28.2479 5.60324 28.0523L7.76884 20.9016L23.4844 30.8587C23.6094 30.9373 23.7509 30.9787 23.895 30.9787C24.039 30.9787 24.1805 30.9373 24.3056 30.8587L34.7495 24.2984L34.7892 35.6113L25.3519 42.5579ZM42.3721 28.0596C42.4291 28.2552 42.4582 28.4593 42.4582 28.6646C42.4518 29.0595 42.3659 29.4479 42.2066 29.8017C42.0557 30.1358 41.8272 30.42 41.5443 30.6254L36.4118 34.4085V23.2779L40.2198 20.887L42.3721 28.0596Z" fill="#2167AE" />
+                  </svg>
+                  <div class="modal-container-1-item">
+                    <div name="policyID" class="label no-margin-padding"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></div>
+                    <div name="policyName" class="value no-margin-padding">3 - Pay Zurich Edustart</div>
+                  </div>
+                </div>
+                <div class="modal-container-2">
+                  <span class="label d-flex no-margin-padding"> Insured Person </span>
+                  <span name="insuredPerson" class="value no-margin-padding">Arshad Ahim</span>
+                </div>
+              </div>
+  
+              <div class="mt-3">
+                <div class="card-bordered">
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Name</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">Mariam Binh</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">IC Number</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">8100014589523652</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Telephone No.</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">012-2344545</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Email Address</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">mariam@gmail.com</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Max Amount</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">RM 8,999.00</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Max No. of Debit</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">012-2344545</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Purpose of Payment</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">Lorem Ipsum</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Payment Ref No.</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">811025785412</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Payer Bank</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">May Bank</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 emandate-content-box">
+                    <div class="emandate-label-1">
+                      <div class="label e-mandate-lebel">Account Number</div>
+                    </div>
+                    <div class="emandate-label-2">
+                      <div class="value">1143453255865</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4 mx-3 d-flex justify-content-between">
+                <span class="label text-darkBlue">Please select the reason for termination *</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>
+              </div>
+              <div class="row mt-3">
+                <p class="terms">I fully understand and agree to the <span class="zurich-active">terms & conditions</span> of Direct Debit and acknowledge lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              </div>
+            </div>
+            <div class="modal-footer payment-footer ps-4 pe-4">
+              <button class="button" type="button" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="primary-button" data-bs-target="#eMandateAutoDebitTerminatedSuccessfully" data-bs-toggle="modal" data-bs-dismiss="modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg> Terminate </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- eZPay Auto Debit Terminated Successfully Modal -->
+      <div class="modal fade mt-0" id="eZPayAutoDebitTerminatedSuccessfully" data-bs-backdrop=true data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-body mt-3">
+              <div class="modal-header payment-header-popup padding-modal">
+                <h5 class="modal-title payment-title " id="staticBackdropLabel">Auto Debit (EzPay) Terminated Successfully </span>
+                  <div class="modal-policy-info-container">
+                    <div class="modal-container-1">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 48 52" fill="none" class="informational-svg me-3">
+                        <path d="M47.551 14.6984L24.3718 0.119978C24.2467 0.0413544 24.1052 0 23.9612 0C23.8172 0 23.6756 0.0413544 23.5506 0.119978L0.417715 14.6984C0.290954 14.7772 0.185475 14.8915 0.112077 15.0299C0.038679 15.1682 0 15.3255 0 15.4857C0 15.6459 0.038679 15.8032 0.112077 15.9415C0.185475 16.0798 0.290954 16.1942 0.417715 16.2729L6.31186 19.9977L4.03367 27.5056C3.91759 27.8861 3.85941 28.2851 3.86149 28.6865C3.86787 29.3574 4.01281 30.018 4.28534 30.6181C4.55834 31.2336 4.97126 31.7609 5.48403 32.1489L21.7227 44.0741C22.3987 44.5567 23.1886 44.8102 23.9943 44.803C24.7994 44.8055 25.5881 44.5524 26.2659 44.0741L34.7958 37.8126V44.7228C34.0028 44.9448 33.3108 45.478 32.8497 46.222C32.3887 46.9661 32.1903 47.8698 32.292 48.7635C32.3937 49.6571 32.7883 50.4792 33.4018 51.0752C34.0153 51.6711 34.8054 52 35.6237 52C36.4419 52 37.232 51.6711 37.8455 51.0752C38.459 50.4792 38.8537 49.6571 38.9553 48.7635C39.057 47.8698 38.8587 46.9661 38.3976 46.222C37.9365 45.478 37.2445 44.9448 36.4515 44.7228L36.4184 36.6318L42.4781 32.178C43.0047 31.7886 43.4257 31.2496 43.6966 30.6181C43.9727 30.0142 44.1178 29.348 44.1205 28.6719C44.1226 28.2705 44.0644 27.8715 43.9483 27.4911L41.7099 19.9686L47.5841 16.2875C47.7106 16.2068 47.8156 16.0909 47.8886 15.9514C47.9616 15.812 48 15.6539 48 15.493C48 15.332 47.9616 15.1739 47.8886 15.0345C47.8156 14.8951 47.7106 14.7792 47.5841 14.6984H47.551ZM37.4184 48.2945C37.4197 48.6697 37.3198 49.0368 37.1314 49.3494C36.943 49.662 36.6746 49.9061 36.36 50.0507C36.0455 50.1952 35.6991 50.2338 35.3647 50.1615C35.0302 50.0892 34.7228 49.9093 34.4813 49.6445C34.2398 49.3797 34.0752 49.0421 34.0082 48.6742C33.9412 48.3064 33.9749 47.925 34.1051 47.5782C34.2352 47.2315 34.4559 46.9351 34.7392 46.7265C35.0225 46.518 35.3557 46.4066 35.6965 46.4066C35.9223 46.4057 36.1461 46.4538 36.3549 46.5482C36.5638 46.6427 36.7537 46.7816 36.9137 46.957C37.0736 47.1324 37.2006 47.3408 37.2872 47.5704C37.3738 47.7999 37.4184 48.046 37.4184 48.2945V48.2945ZM40.935 18.3358L39.7297 19.0647L35.5442 21.6888L24.4049 14.6984C24.2132 14.5798 23.9867 14.5492 23.7746 14.6133C23.5626 14.6775 23.3821 14.8312 23.2724 15.041C23.1649 15.2509 23.1373 15.4991 23.1956 15.7314C23.254 15.9636 23.3935 16.1609 23.5837 16.2802V16.2802L33.8753 22.7603L23.9016 29.0218L8.25229 19.1376L7.02048 18.3649L2.47736 15.493L23.9479 1.94229L45.4715 15.493L40.935 18.3358ZM25.3519 42.5579C24.9392 42.8202 24.4709 42.9583 23.9943 42.9583C23.5177 42.9583 23.0494 42.8202 22.6367 42.5579L6.39796 30.6181C6.12713 30.4049 5.91052 30.1188 5.76881 29.7872C5.60561 29.4375 5.5194 29.0504 5.51715 28.6573C5.5172 28.452 5.54625 28.2479 5.60324 28.0523L7.76884 20.9016L23.4844 30.8587C23.6094 30.9373 23.7509 30.9787 23.895 30.9787C24.039 30.9787 24.1805 30.9373 24.3056 30.8587L34.7495 24.2984L34.7892 35.6113L25.3519 42.5579ZM42.3721 28.0596C42.4291 28.2552 42.4582 28.4593 42.4582 28.6646C42.4518 29.0595 42.3659 29.4479 42.2066 29.8017C42.0557 30.1358 41.8272 30.42 41.5443 30.6254L36.4118 34.4085V23.2779L40.2198 20.887L42.3721 28.0596Z" fill="#2167AE" />
+                      </svg>
+                      <div class="modal-container-1-item">
+                        <div name="policyID" class="label no-margin-padding"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></div>
+                        <div name="policyName" class="value no-margin-padding">3 - Pay Zurich Edustart</div>
+                      </div>
+                    </div>
+                    <div class="modal-container-2">
+                      <span class="label d-flex no-margin-padding"> Insured Person </span>
+                      <span name="insuredPerson" class="value no-margin-padding">Arshad Ahim</span>
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <p class="terms dark-grey">EzPay Auto Debit has been terminated for this policy. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+              </div>
+            </div>
+            <div class="modal-footer payment-footer ps-4 pe-4">
+              <button type="button" class="primary-button" data-bs-dismiss="modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg> Close </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- eMandate Auto Debit Terminated Successfully Modal -->
+      <div class="modal fade mt-0" id="eMandateAutoDebitTerminatedSuccessfully" data-bs-backdrop=true data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-body mt-3">
+              <div class="modal-header payment-header-popup padding-modal">
+                <h5 class="modal-title payment-title padding-modal-4" id="staticBackdropLabel">Auto Debit (eMandate) Terminated Successfully </span>
+                  <div class="modal-policy-info-container">
+                    <div class="modal-container-1">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 48 52" fill="none" class="informational-svg me-3">
+                        <path d="M47.551 14.6984L24.3718 0.119978C24.2467 0.0413544 24.1052 0 23.9612 0C23.8172 0 23.6756 0.0413544 23.5506 0.119978L0.417715 14.6984C0.290954 14.7772 0.185475 14.8915 0.112077 15.0299C0.038679 15.1682 0 15.3255 0 15.4857C0 15.6459 0.038679 15.8032 0.112077 15.9415C0.185475 16.0798 0.290954 16.1942 0.417715 16.2729L6.31186 19.9977L4.03367 27.5056C3.91759 27.8861 3.85941 28.2851 3.86149 28.6865C3.86787 29.3574 4.01281 30.018 4.28534 30.6181C4.55834 31.2336 4.97126 31.7609 5.48403 32.1489L21.7227 44.0741C22.3987 44.5567 23.1886 44.8102 23.9943 44.803C24.7994 44.8055 25.5881 44.5524 26.2659 44.0741L34.7958 37.8126V44.7228C34.0028 44.9448 33.3108 45.478 32.8497 46.222C32.3887 46.9661 32.1903 47.8698 32.292 48.7635C32.3937 49.6571 32.7883 50.4792 33.4018 51.0752C34.0153 51.6711 34.8054 52 35.6237 52C36.4419 52 37.232 51.6711 37.8455 51.0752C38.459 50.4792 38.8537 49.6571 38.9553 48.7635C39.057 47.8698 38.8587 46.9661 38.3976 46.222C37.9365 45.478 37.2445 44.9448 36.4515 44.7228L36.4184 36.6318L42.4781 32.178C43.0047 31.7886 43.4257 31.2496 43.6966 30.6181C43.9727 30.0142 44.1178 29.348 44.1205 28.6719C44.1226 28.2705 44.0644 27.8715 43.9483 27.4911L41.7099 19.9686L47.5841 16.2875C47.7106 16.2068 47.8156 16.0909 47.8886 15.9514C47.9616 15.812 48 15.6539 48 15.493C48 15.332 47.9616 15.1739 47.8886 15.0345C47.8156 14.8951 47.7106 14.7792 47.5841 14.6984H47.551ZM37.4184 48.2945C37.4197 48.6697 37.3198 49.0368 37.1314 49.3494C36.943 49.662 36.6746 49.9061 36.36 50.0507C36.0455 50.1952 35.6991 50.2338 35.3647 50.1615C35.0302 50.0892 34.7228 49.9093 34.4813 49.6445C34.2398 49.3797 34.0752 49.0421 34.0082 48.6742C33.9412 48.3064 33.9749 47.925 34.1051 47.5782C34.2352 47.2315 34.4559 46.9351 34.7392 46.7265C35.0225 46.518 35.3557 46.4066 35.6965 46.4066C35.9223 46.4057 36.1461 46.4538 36.3549 46.5482C36.5638 46.6427 36.7537 46.7816 36.9137 46.957C37.0736 47.1324 37.2006 47.3408 37.2872 47.5704C37.3738 47.7999 37.4184 48.046 37.4184 48.2945V48.2945ZM40.935 18.3358L39.7297 19.0647L35.5442 21.6888L24.4049 14.6984C24.2132 14.5798 23.9867 14.5492 23.7746 14.6133C23.5626 14.6775 23.3821 14.8312 23.2724 15.041C23.1649 15.2509 23.1373 15.4991 23.1956 15.7314C23.254 15.9636 23.3935 16.1609 23.5837 16.2802V16.2802L33.8753 22.7603L23.9016 29.0218L8.25229 19.1376L7.02048 18.3649L2.47736 15.493L23.9479 1.94229L45.4715 15.493L40.935 18.3358ZM25.3519 42.5579C24.9392 42.8202 24.4709 42.9583 23.9943 42.9583C23.5177 42.9583 23.0494 42.8202 22.6367 42.5579L6.39796 30.6181C6.12713 30.4049 5.91052 30.1188 5.76881 29.7872C5.60561 29.4375 5.5194 29.0504 5.51715 28.6573C5.5172 28.452 5.54625 28.2479 5.60324 28.0523L7.76884 20.9016L23.4844 30.8587C23.6094 30.9373 23.7509 30.9787 23.895 30.9787C24.039 30.9787 24.1805 30.9373 24.3056 30.8587L34.7495 24.2984L34.7892 35.6113L25.3519 42.5579ZM42.3721 28.0596C42.4291 28.2552 42.4582 28.4593 42.4582 28.6646C42.4518 29.0595 42.3659 29.4479 42.2066 29.8017C42.0557 30.1358 41.8272 30.42 41.5443 30.6254L36.4118 34.4085V23.2779L40.2198 20.887L42.3721 28.0596Z" fill="#2167AE" />
+                      </svg>
+                      <div class="modal-container-1-item">
+                        <div name="policyID" class="label no-margin-padding"><span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span></div>
+                        <div name="policyName" class="value no-margin-padding">3 - Pay Zurich Edustart</div>
+                      </div>
+                    </div>
+                    <div class="modal-container-2">
+                      <span class="label d-flex no-margin-padding"> Insured Person </span>
+                      <span name="insuredPerson" class="value no-margin-padding">Arshad Ahim</span>
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <p class="value dark-grey">eMandate Auto Debit has been terminated for this policy. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+              </div>
+            </div>
+            <div class="modal-footer payment-footer ps-4 pe-4">
+              <button type="button" class="primary-button" data-bs-dismiss="modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg> Close </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+        <!-- eZPay Auto Debit Maintenance Modal -->
+        <div class="modal fade mt-0" id="eZPayAutoDebitMaintenance" data-bs-backdrop=true data-bs-keyboard="true" tabindex="1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <!-- Vertically centered scrollable modal -->
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header payment-header-popup"  style="padding: 4% 5%;">
+                <h5 class="modal-title payment-title" id="staticBackdropLabel">EzPay Auto Debit Maintenance</h5>
+              </div>
+                <div class="modal-body ps-4 pe-4">
+                  <form class="needs-validation form-floating" novalidate>
+                    <div>
+                      <div style="display: flex; width: 100%; display: flex; flex-wrap: wrap; margin-bottom: 5%;">
+                        <div style="display: flex; align-self: center; width: 60%;">
+                          <svg style="margin-top: 1%;" xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 48 52" fill="none" class="informational-svg me-3">
+                            <path d="M47.551 14.6984L24.3718 0.119978C24.2467 0.0413544 24.1052 0 23.9612 0C23.8172 0 23.6756 0.0413544 23.5506 0.119978L0.417715 14.6984C0.290954 14.7772 0.185475 14.8915 0.112077 15.0299C0.038679 15.1682 0 15.3255 0 15.4857C0 15.6459 0.038679 15.8032 0.112077 15.9415C0.185475 16.0798 0.290954 16.1942 0.417715 16.2729L6.31186 19.9977L4.03367 27.5056C3.91759 27.8861 3.85941 28.2851 3.86149 28.6865C3.86787 29.3574 4.01281 30.018 4.28534 30.6181C4.55834 31.2336 4.97126 31.7609 5.48403 32.1489L21.7227 44.0741C22.3987 44.5567 23.1886 44.8102 23.9943 44.803C24.7994 44.8055 25.5881 44.5524 26.2659 44.0741L34.7958 37.8126V44.7228C34.0028 44.9448 33.3108 45.478 32.8497 46.222C32.3887 46.9661 32.1903 47.8698 32.292 48.7635C32.3937 49.6571 32.7883 50.4792 33.4018 51.0752C34.0153 51.6711 34.8054 52 35.6237 52C36.4419 52 37.232 51.6711 37.8455 51.0752C38.459 50.4792 38.8537 49.6571 38.9553 48.7635C39.057 47.8698 38.8587 46.9661 38.3976 46.222C37.9365 45.478 37.2445 44.9448 36.4515 44.7228L36.4184 36.6318L42.4781 32.178C43.0047 31.7886 43.4257 31.2496 43.6966 30.6181C43.9727 30.0142 44.1178 29.348 44.1205 28.6719C44.1226 28.2705 44.0644 27.8715 43.9483 27.4911L41.7099 19.9686L47.5841 16.2875C47.7106 16.2068 47.8156 16.0909 47.8886 15.9514C47.9616 15.812 48 15.6539 48 15.493C48 15.332 47.9616 15.1739 47.8886 15.0345C47.8156 14.8951 47.7106 14.7792 47.5841 14.6984H47.551ZM37.4184 48.2945C37.4197 48.6697 37.3198 49.0368 37.1314 49.3494C36.943 49.662 36.6746 49.9061 36.36 50.0507C36.0455 50.1952 35.6991 50.2338 35.3647 50.1615C35.0302 50.0892 34.7228 49.9093 34.4813 49.6445C34.2398 49.3797 34.0752 49.0421 34.0082 48.6742C33.9412 48.3064 33.9749 47.925 34.1051 47.5782C34.2352 47.2315 34.4559 46.9351 34.7392 46.7265C35.0225 46.518 35.3557 46.4066 35.6965 46.4066C35.9223 46.4057 36.1461 46.4538 36.3549 46.5482C36.5638 46.6427 36.7537 46.7816 36.9137 46.957C37.0736 47.1324 37.2006 47.3408 37.2872 47.5704C37.3738 47.7999 37.4184 48.046 37.4184 48.2945V48.2945ZM40.935 18.3358L39.7297 19.0647L35.5442 21.6888L24.4049 14.6984C24.2132 14.5798 23.9867 14.5492 23.7746 14.6133C23.5626 14.6775 23.3821 14.8312 23.2724 15.041C23.1649 15.2509 23.1373 15.4991 23.1956 15.7314C23.254 15.9636 23.3935 16.1609 23.5837 16.2802V16.2802L33.8753 22.7603L23.9016 29.0218L8.25229 19.1376L7.02048 18.3649L2.47736 15.493L23.9479 1.94229L45.4715 15.493L40.935 18.3358ZM25.3519 42.5579C24.9392 42.8202 24.4709 42.9583 23.9943 42.9583C23.5177 42.9583 23.0494 42.8202 22.6367 42.5579L6.39796 30.6181C6.12713 30.4049 5.91052 30.1188 5.76881 29.7872C5.60561 29.4375 5.5194 29.0504 5.51715 28.6573C5.5172 28.452 5.54625 28.2479 5.60324 28.0523L7.76884 20.9016L23.4844 30.8587C23.6094 30.9373 23.7509 30.9787 23.895 30.9787C24.039 30.9787 24.1805 30.9373 24.3056 30.8587L34.7495 24.2984L34.7892 35.6113L25.3519 42.5579ZM42.3721 28.0596C42.4291 28.2552 42.4582 28.4593 42.4582 28.6646C42.4518 29.0595 42.3659 29.4479 42.2066 29.8017C42.0557 30.1358 41.8272 30.42 41.5443 30.6254L36.4118 34.4085V23.2779L40.2198 20.887L42.3721 28.0596Z" fill="#2167AE"/>
+                          </svg>
+                          <div style="align-self:center; margin: 0; float: left;">
+                            <div name="policyID" class="label" style="margin: 0; padding: 0;">
+                              <span class="span-txt-spacing-desktop">#</span><span class="span-txt-spacing-desktop">11015027895862</span>
+                            </div>
+                            <div name="policyName" class="value"  style="margin: 0; padding: 0;">3 - Pay Zurich Edustart</div>
+                          </div>
+                        </div>
+                        
+                        <div style="align-self:center; margin: 0 0 0 3%;">
+                          <span class="label d-flex "  style="margin: 0; padding: 0;">
+                            Insured Person
+                          </span>
+                          <span name="insuredPerson" class="value"  style="margin: 0; padding: 0;">Arshad Ahim</span>
+                        </div>
+                      </div>
+
+                 
+                      <div class="card-bordered">
+                        <div class="mt-3">
+                            <div class="row mx-2" >
+                              <div class="col col-12 form-floating mb-3">
+                                <input type="text" style="min-width: 100%;" class="text-filed-one" id="name-notifier-detail" placeholder="Card Holder's Name"/>
+                              </div>
+                              <!-- Add Only Number type validation  -->
+                              <div class="col col-12 form-floating mb-3">
+                                <input type="text"  onKeyPress="if(this.value.length==19) return false;" style="min-width: 100%;"  class="text-filed-one" id="target" placeholder="Credit Card Number"/>
+                              </div>
+
+                              <!-- Use custom calander -->
+                              <div class="col col-12 form-floating mb-3">
+                                <input type="text" style="min-width: 100%;"  class="text-filed-one" id="name-notifier-detail" placeholder="DD - MM - YYYY"/>
+                              
+                              </div>
+                              <div class="col col-12 form-floating mb-3">
+                                <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;"  class="text-filed-one" id="floatingInput" required placeholder="CVV/CVV2" style="min-width: 100%;">
+                               
+                                 
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer payment-footer ps-4 pe-0">
+                     
+                      <button type="button" data-bs-dismiss="modal">
+                        Cancel
+                      </button>
+                      <!-- Change button type to submit while integrating-->
+                      <button type="button" class="primary-button" data-bs-target="#eZPayAutoDebitSuccessfullyUpdated" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        Update
+                      </button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="lazy-loader-id" class="loader-container-2" style="display: none;">
+          <div class="loader"></div>
+        </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <custom-footer></custom-footer>
+    <script src="component/header.js"></script>
+    <script src="component/sidebar.js"></script>
+    <script src="component/menu.js"></script>
+    <script src="component/footer.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="functions/payment.js"></script>
+    <script src="functions/menu.js"></script>
+    <script src="functions/slider.js"></script>
+    <script src="functions/lazyLoad.js"></script>
+    <script type="text/javascript">
+      $(".chb-unique").change(function() {
+        $(".chb-unique").prop('checked', false);
+        $(this).prop('checked', true);
+      });
+      document.getElementById('target').addEventListener('input', function(e) {
+        e.target.value = e.target.value.replace(/\s/g, '').replace(/(\d{4})/g, '$1 ').trim();
+      });
+    </script>
+  </body>
+</html>

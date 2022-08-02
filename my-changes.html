@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Zurich | My Coverage Home</title>
+  </head>
+  <body>
+   
+    <!-- Header from component -->
+    <custom-header></custom-header>
+    <!-- Side Banner -->
+    <div class="desktop-view side-bar-index">
+      <sidebar-custom></sidebar-custom>
+    </div>
+    <div id="main-body-mob" class="main-header-body">
+      <div class="content-body">
+        <custom-menu></custom-menu>
+        <div id="my-documents">
+          <div class="isDesktop">
+            <div class="policy-container d-flex">
+              <div class="my-changes-menu-container d-flex flex-item m-l-12">
+                <svg id="statement-certificate-svg" class="icon-tab flex-item m-r-12" width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8.69844C0 3.89443 3.94012 0 8.8005 0H35.7103C40.5707 0 44.5108 3.89442 44.5108 8.69843V18.9946C44.5108 19.4313 44.1527 19.7854 43.7108 19.7854C43.2689 19.7854 42.9108 19.4313 42.9108 18.9946V8.69843C42.9108 4.76788 39.687 1.58153 35.7103 1.58153H8.8005C4.82383 1.58153 1.60009 4.76788 1.60009 8.69844V41.3016C1.60009 45.2321 4.82383 48.4185 8.8005 48.4185H24.6556C25.0974 48.4185 25.4556 48.7725 25.4556 49.2092C25.4556 49.646 25.0974 50 24.6556 50H8.8005C3.94012 50 0 46.1056 0 41.3016V8.69844ZM7.78469 13.9276C7.78469 13.4908 8.14289 13.1368 8.58474 13.1368H35.9261C36.368 13.1368 36.7262 13.4908 36.7262 13.9276C36.7262 14.3643 36.368 14.7183 35.9261 14.7183H8.58474C8.14289 14.7183 7.78469 14.3643 7.78469 13.9276ZM7.78469 25C7.78469 24.5633 8.14289 24.2092 8.58474 24.2092H20.6479C21.0897 24.2092 21.4479 24.5633 21.4479 25C21.4479 25.4367 21.0897 25.7908 20.6479 25.7908H8.58474C8.14289 25.7908 7.78469 25.4367 7.78469 25ZM7.78469 36.0724C7.78469 35.6357 8.14289 35.2817 8.58474 35.2817H18.6479C19.0897 35.2817 19.4479 35.6357 19.4479 36.0724C19.4479 36.5092 19.0897 36.8632 18.6479 36.8632H8.58474C8.14289 36.8632 7.78469 36.5092 7.78469 36.0724Z" fill="#23366F"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M35.171 22.3217C38.0225 22.2573 40.816 23.1261 43.1258 24.7943C45.4355 26.4625 47.1345 28.8381 47.9657 31.5581C48.0935 31.9762 47.8542 32.4175 47.4312 32.5438C47.0082 32.67 46.5617 32.4335 46.434 32.0154C45.7026 29.6223 44.2087 27.5352 42.1818 26.0713C40.1549 24.6074 37.7058 23.8464 35.2075 23.9028C32.7093 23.9592 30.2969 24.8301 28.3382 26.3841C26.3793 27.9383 24.9812 30.0908 24.3588 32.5147C23.7363 34.9387 23.9242 37.4995 24.8934 39.8064C25.8626 42.1133 27.5592 44.0387 29.7232 45.2905C31.887 46.5423 34.4002 47.0526 36.8801 46.7447C39.36 46.4367 41.6725 45.327 43.4648 43.5831C43.7797 43.2767 44.2862 43.2806 44.5962 43.5918C44.9062 43.903 44.9022 44.4037 44.5874 44.7101C42.5462 46.6962 39.9099 47.9624 37.0796 48.3139C34.2492 48.6654 31.3819 48.0826 28.9149 46.6555C26.4481 45.2284 24.5175 43.0357 23.4157 40.4129C22.3138 37.7903 22.1005 34.8802 22.8079 32.1256C23.5152 29.371 25.1049 26.9213 27.3365 25.1508C29.5683 23.3801 32.3195 22.3861 35.171 22.3217ZM34.4582 30.4481C34.9001 30.4481 35.2582 30.8021 35.2582 31.2389V36.6605H39.3318C39.7737 36.6605 40.1318 37.0145 40.1318 37.4512C40.1318 37.888 39.7737 38.242 39.3318 38.242H34.4582C34.0163 38.242 33.6582 37.888 33.6582 37.4512V31.2389C33.6582 30.8021 34.0163 30.4481 34.4582 30.4481Z" fill="#23366F"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M45.2168 43.0583C45.638 43.1618 45.899 43.5782 45.805 43.997L45.0478 47.3712C44.9522 47.7976 44.5249 48.0665 44.0935 47.972C43.6622 47.8774 43.39 47.4551 43.4857 47.0287L44.0739 44.4073L41.1249 43.6833C40.6961 43.578 40.4348 43.1491 40.5413 42.7253C40.6479 42.3014 41.0818 42.0432 41.5107 42.1484L45.2168 43.0583Z" fill="#23366F"/>
+                </svg> 
+                <p class="flex-item my-changes-heading">My Changes</p>
+              </div>
+              <div class="my-changes-menu-data d-flex flex-item">
+                <p class="flex-item m-r-60 my-changes-history">My Changes History</p>
+                <div class="d-flex flex-item m-r-40">
+                  <div class="flex-item d-flex m-r-20">
+                    <p class="flex-item m-r-8">Date From:</p>
+                    <input class="flex-item date-input-box" type="text" placeholder="DD/MM/YYYY"/>
+                  </div>
+                  <div class="flex-item d-flex">
+                    <p class="flex-item m-r-8">To:</p>
+                    <input class="flex-item date-input-box" type="text" placeholder="DD/MM/YYYY"/>
+                  </div>
+                </div>
+                <div id="filter-checked" class="filter-container m-r-20">
+                  <svg class="filter-icon" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="filter-icon" d="M20.4928 8.37433H7.4917C7.39195 7.89986 7.13203 7.47413 6.75558 7.16859C6.37912 6.86305 5.90903 6.69629 5.42418 6.69629C4.93933 6.69629 4.46924 6.86305 4.09278 7.16859C3.71633 7.47413 3.45641 7.89986 3.35666 8.37433H0.403533C0.293388 8.38394 0.190847 8.43449 0.116144 8.516C0.0414402 8.59751 0 8.70405 0 8.81462C0 8.92518 0.0414402 9.03173 0.116144 9.11324C0.190847 9.19474 0.293388 9.24529 0.403533 9.25491H3.35666C3.45641 9.72938 3.71633 10.1551 4.09278 10.4606C4.46924 10.7662 4.93933 10.9329 5.42418 10.9329C5.90903 10.9329 6.37912 10.7662 6.75558 10.4606C7.13203 10.1551 7.39195 9.72938 7.4917 9.25491H20.4928C20.603 9.24529 20.7055 9.19474 20.7802 9.11324C20.8549 9.03173 20.8963 8.92518 20.8963 8.81462C20.8963 8.70405 20.8549 8.59751 20.7802 8.516C20.7055 8.43449 20.603 8.38394 20.4928 8.37433ZM5.42585 10.0484C5.1815 10.0484 4.94263 9.97597 4.73945 9.84022C4.53628 9.70446 4.37792 9.5115 4.28441 9.28575C4.1909 9.05999 4.16643 8.81157 4.2141 8.57191C4.26177 8.33225 4.37944 8.11211 4.55223 7.93932C4.72502 7.76653 4.94516 7.64886 5.18482 7.60119C5.42448 7.55352 5.6729 7.57799 5.89866 7.6715C6.12441 7.76501 6.31737 7.92337 6.45313 8.12654C6.58888 8.32972 6.66135 8.56859 6.66135 8.81294C6.66135 8.97519 6.62939 9.13585 6.5673 9.28575C6.50521 9.43564 6.4142 9.57184 6.29948 9.68657C6.18475 9.80129 6.04855 9.8923 5.89866 9.95439C5.74876 10.0165 5.5881 10.0484 5.42585 10.0484Z" fill="#23366F" />
+                    <path class="filter-icon" d="M20.5196 1.67804H17.5363C17.4366 1.20357 17.1767 0.777841 16.8002 0.472301C16.4238 0.166761 15.9537 0 15.4688 0C14.984 0 14.5139 0.166761 14.1374 0.472301C13.761 0.777841 13.5011 1.20357 13.4013 1.67804H0.403533C0.293388 1.68765 0.190847 1.7382 0.116144 1.81971C0.0414402 1.90122 0 2.00777 0 2.11833C0 2.22889 0.0414402 2.33544 0.116144 2.41695C0.190847 2.49846 0.293388 2.54901 0.403533 2.55862H13.4013C13.5011 3.03309 13.761 3.45882 14.1374 3.76436C14.5139 4.0699 14.984 4.23666 15.4688 4.23666C15.9537 4.23666 16.4238 4.0699 16.8002 3.76436C17.1767 3.45882 17.4366 3.03309 17.5363 2.55862H20.5196C20.5807 2.56395 20.6421 2.55652 20.7002 2.53682C20.7582 2.51711 20.8115 2.48555 20.8567 2.44415C20.9018 2.40274 20.9379 2.3524 20.9626 2.29631C20.9873 2.24022 21 2.17961 21 2.11833C21 2.05705 20.9873 1.99644 20.9626 1.94035C20.9379 1.88426 20.9018 1.83391 20.8567 1.79251C20.8115 1.7511 20.7582 1.71955 20.7002 1.69984C20.6421 1.68013 20.5807 1.67271 20.5196 1.67804ZM15.4705 3.35215C15.2261 3.35215 14.9873 3.27969 14.7841 3.14393C14.5809 3.00817 14.4226 2.81521 14.3291 2.58946C14.2355 2.3637 14.2111 2.11528 14.2587 1.87562C14.3064 1.63596 14.4241 1.41582 14.5969 1.24303C14.7697 1.07024 14.9898 0.952575 15.2295 0.904903C15.4691 0.857232 15.7175 0.881698 15.9433 0.97521C16.1691 1.06872 16.362 1.22708 16.4978 1.43025C16.6335 1.63343 16.706 1.8723 16.706 2.11665C16.706 2.44433 16.5758 2.75858 16.3441 2.99028C16.1124 3.22198 15.7982 3.35215 15.4705 3.35215Z" fill="#23366F" />
+                    <path class="filter-icon" d="M20.4928 15.0706H14.1881C14.0884 14.5961 13.8285 14.1704 13.452 13.8649C13.0755 13.5593 12.6055 13.3926 12.1206 13.3926C11.6358 13.3926 11.1657 13.5593 10.7892 13.8649C10.4128 14.1704 10.1528 14.5961 10.0531 15.0706H0.403533C0.293388 15.0802 0.190847 15.1308 0.116144 15.2123C0.0414402 15.2938 0 15.4003 0 15.5109C0 15.6215 0.0414402 15.728 0.116144 15.8095C0.190847 15.891 0.293388 15.9416 0.403533 15.9512H10.0531C10.1528 16.4257 10.4128 16.8514 10.7892 17.1569C11.1657 17.4625 11.6358 17.6292 12.1206 17.6292C12.6055 17.6292 13.0755 17.4625 13.452 17.1569C13.8285 16.8514 14.0884 16.4257 14.1881 15.9512H20.4928C20.603 15.9416 20.7055 15.891 20.7802 15.8095C20.8549 15.728 20.8963 15.6215 20.8963 15.5109C20.8963 15.4003 20.8549 15.2938 20.7802 15.2123C20.7055 15.1308 20.603 15.0802 20.4928 15.0706ZM12.1223 16.7447C11.8779 16.7447 11.6391 16.6723 11.4359 16.5365C11.2327 16.4007 11.0743 16.2078 10.9808 15.982C10.8873 15.7563 10.8629 15.5079 10.9105 15.2682C10.9582 15.0285 11.0759 14.8084 11.2487 14.6356C11.4214 14.4628 11.6416 14.3452 11.8813 14.2975C12.1209 14.2498 12.3693 14.2743 12.5951 14.3678C12.8208 14.4613 13.0138 14.6197 13.1496 14.8228C13.2853 15.026 13.3578 15.2649 13.3578 15.5092C13.3578 15.8369 13.2276 16.1512 12.9959 16.3829C12.7642 16.6146 12.45 16.7447 12.1223 16.7447Z" fill="#23366F" />
+                  </svg>
+                  <p class="filter-text">Filter</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="isLandscape">
+            <div class="space-between w-full m-t-60 m-b-20 d-flex-no-wrap">
+              <div class="d-flex m-l-20">
+                <svg id="statement-certificate-svg" class="icon-tab flex-item m-r-12" width="42" height="48" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8.69844C0 3.89443 3.94012 0 8.8005 0H35.7103C40.5707 0 44.5108 3.89442 44.5108 8.69843V18.9946C44.5108 19.4313 44.1527 19.7854 43.7108 19.7854C43.2689 19.7854 42.9108 19.4313 42.9108 18.9946V8.69843C42.9108 4.76788 39.687 1.58153 35.7103 1.58153H8.8005C4.82383 1.58153 1.60009 4.76788 1.60009 8.69844V41.3016C1.60009 45.2321 4.82383 48.4185 8.8005 48.4185H24.6556C25.0974 48.4185 25.4556 48.7725 25.4556 49.2092C25.4556 49.646 25.0974 50 24.6556 50H8.8005C3.94012 50 0 46.1056 0 41.3016V8.69844ZM7.78469 13.9276C7.78469 13.4908 8.14289 13.1368 8.58474 13.1368H35.9261C36.368 13.1368 36.7262 13.4908 36.7262 13.9276C36.7262 14.3643 36.368 14.7183 35.9261 14.7183H8.58474C8.14289 14.7183 7.78469 14.3643 7.78469 13.9276ZM7.78469 25C7.78469 24.5633 8.14289 24.2092 8.58474 24.2092H20.6479C21.0897 24.2092 21.4479 24.5633 21.4479 25C21.4479 25.4367 21.0897 25.7908 20.6479 25.7908H8.58474C8.14289 25.7908 7.78469 25.4367 7.78469 25ZM7.78469 36.0724C7.78469 35.6357 8.14289 35.2817 8.58474 35.2817H18.6479C19.0897 35.2817 19.4479 35.6357 19.4479 36.0724C19.4479 36.5092 19.0897 36.8632 18.6479 36.8632H8.58474C8.14289 36.8632 7.78469 36.5092 7.78469 36.0724Z" fill="#23366F"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M35.171 22.3217C38.0225 22.2573 40.816 23.1261 43.1258 24.7943C45.4355 26.4625 47.1345 28.8381 47.9657 31.5581C48.0935 31.9762 47.8542 32.4175 47.4312 32.5438C47.0082 32.67 46.5617 32.4335 46.434 32.0154C45.7026 29.6223 44.2087 27.5352 42.1818 26.0713C40.1549 24.6074 37.7058 23.8464 35.2075 23.9028C32.7093 23.9592 30.2969 24.8301 28.3382 26.3841C26.3793 27.9383 24.9812 30.0908 24.3588 32.5147C23.7363 34.9387 23.9242 37.4995 24.8934 39.8064C25.8626 42.1133 27.5592 44.0387 29.7232 45.2905C31.887 46.5423 34.4002 47.0526 36.8801 46.7447C39.36 46.4367 41.6725 45.327 43.4648 43.5831C43.7797 43.2767 44.2862 43.2806 44.5962 43.5918C44.9062 43.903 44.9022 44.4037 44.5874 44.7101C42.5462 46.6962 39.9099 47.9624 37.0796 48.3139C34.2492 48.6654 31.3819 48.0826 28.9149 46.6555C26.4481 45.2284 24.5175 43.0357 23.4157 40.4129C22.3138 37.7903 22.1005 34.8802 22.8079 32.1256C23.5152 29.371 25.1049 26.9213 27.3365 25.1508C29.5683 23.3801 32.3195 22.3861 35.171 22.3217ZM34.4582 30.4481C34.9001 30.4481 35.2582 30.8021 35.2582 31.2389V36.6605H39.3318C39.7737 36.6605 40.1318 37.0145 40.1318 37.4512C40.1318 37.888 39.7737 38.242 39.3318 38.242H34.4582C34.0163 38.242 33.6582 37.888 33.6582 37.4512V31.2389C33.6582 30.8021 34.0163 30.4481 34.4582 30.4481Z" fill="#23366F"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M45.2168 43.0583C45.638 43.1618 45.899 43.5782 45.805 43.997L45.0478 47.3712C44.9522 47.7976 44.5249 48.0665 44.0935 47.972C43.6622 47.8774 43.39 47.4551 43.4857 47.0287L44.0739 44.4073L41.1249 43.6833C40.6961 43.578 40.4348 43.1491 40.5413 42.7253C40.6479 42.3014 41.0818 42.0432 41.5107 42.1484L45.2168 43.0583Z" fill="#23366F"/>
+                </svg> 
+                <p class="my-changes-heading flex-item m-l-8 fs-18">My Changes</p>
+              </div>
+              <div class="d-flex flex-item m-r-20">
+                <svg class="flex-item transition-2ms m-r-8" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.0609 7.27393C15.9924 7.27409 15.9258 7.29712 15.8718 7.33938L10.0003 12.0376L4.12154 7.33938C4.0897 7.31455 4.05329 7.29623 4.01437 7.28548C3.97546 7.27472 3.93481 7.27173 3.89474 7.27668C3.85467 7.28163 3.81596 7.29443 3.78084 7.31434C3.74572 7.33425 3.71486 7.36088 3.69002 7.39272C3.66519 7.42455 3.64687 7.46097 3.63612 7.49988C3.62536 7.5388 3.62237 7.57945 3.62732 7.61952C3.63227 7.65959 3.64507 7.69829 3.66498 7.73342C3.68489 7.76854 3.71152 7.7994 3.74336 7.82423L9.80396 12.6727C9.85784 12.7152 9.92445 12.7383 9.99306 12.7383C10.0617 12.7383 10.1283 12.7152 10.1821 12.6727L16.2428 7.82423C16.2922 7.78512 16.3281 7.73158 16.3457 7.67107C16.3632 7.61056 16.3615 7.54608 16.3407 7.48661C16.3199 7.42713 16.2811 7.37562 16.2296 7.33924C16.1782 7.30286 16.1167 7.28342 16.0537 7.28363L16.0609 7.27393Z" fill="#23366F"/>
+                </svg>
+                <p class="flex-item zurich-active fs-16">Update</p>
+              </div>
+            </div>
+            <div class="my-changes-sub-menu-mob d-flex">
+              <div class="my-claim-menu-default d-flex flex-item m-r-20 m-b-12">
+                <svg class="flex-item" width="32" height="32" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_i_10989_36328)">
+                  <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                  </g>
+                  <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <defs>
+                  <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="2"/>
+                  <feGaussianBlur stdDeviation="1"/>
+                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                  </filter>
+                  </defs>
+                </svg>                  
+                <p id="fund-switching-txt-mob" class="flex-item my-changes-menu-txt m-l-8 fs-16">Fund Switching</p>
+              </div>
+              <div class="my-claim-menu-default d-flex flex-item m-r-20 m-b-12">
+                <svg class="flex-item" width="32" height="32" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_i_10989_36328)">
+                  <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                  </g>
+                  <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <defs>
+                  <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="2"/>
+                  <feGaussianBlur stdDeviation="1"/>
+                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                  </filter>
+                  </defs>
+                </svg>                       
+                <p id="fund-change-menu-txt-mob" class="flex-item my-changes-menu-txt m-l-8 fs-16">Change of Fund</p>
+              </div>
+              <div class="my-claim-menu-default d-flex flex-item m-r-20 m-b-12">
+                <svg class="flex-item" width="32" height="32" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_i_10989_36328)">
+                  <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                  </g>
+                  <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <defs>
+                  <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="2"/>
+                  <feGaussianBlur stdDeviation="1"/>
+                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                  </filter>
+                  </defs>
+                </svg>                   
+                <p id="payment-change-menu-txt-mob" class="flex-item my-changes-menu-txt m-l-8 fs-16">Change of Payment Mode</p>
+              </div>
+              <div onclick="location.href='my-changes-update-bank-account.html'" class="my-claim-menu-default d-flex-no-wrap flex-item m-r-20 m-b-20">
+                <svg width="32" height="32" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1 34.9187C1 34.5526 1.28885 34.2559 1.64516 34.2559H40.3548C40.7112 34.2559 41 34.5526 41 34.9187C41 35.2847 40.7112 35.5815 40.3548 35.5815H1.64516C1.28885 35.5815 1 35.2847 1 34.9187Z" fill="#23366F"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.16016 39.3366C6.16016 38.9706 6.449 38.6738 6.80532 38.6738L35.1924 38.6738C35.5487 38.6738 35.8376 38.9706 35.8376 39.3366C35.8376 39.7027 35.5487 39.9995 35.1924 39.9995L6.80532 39.9995C6.449 39.9995 6.16016 39.7027 6.16016 39.3366Z" fill="#23366F"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.51235 17.4609C5.86866 17.4609 6.15751 17.7577 6.15751 18.1238V31.38C6.15751 31.7461 5.86866 32.0428 5.51235 32.0428C5.15604 32.0428 4.86719 31.7461 4.86719 31.38V18.1238C4.86719 17.7577 5.15604 17.4609 5.51235 17.4609Z" fill="#23366F"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M36.485 17.4609C36.8413 17.4609 37.1302 17.7577 37.1302 18.1238V31.38C37.1302 31.7461 36.8413 32.0428 36.485 32.0428C36.1287 32.0428 35.8398 31.7461 35.8398 31.38V18.1238C35.8398 17.7577 36.1287 17.4609 36.485 17.4609Z" fill="#23366F"/>
+                  <path d="M8.79766 28.2328C8.79766 28.5366 9.0439 28.7828 9.34766 28.7828H14.5186C14.8135 28.7828 15.0525 28.5438 15.0525 28.2489C15.0525 27.9541 14.8135 27.7151 14.5186 27.7151H9.94282V24.4745H14.0029C14.2904 24.4745 14.5235 24.2414 14.5235 23.9539C14.5235 23.6664 14.2904 23.4333 14.0029 23.4333H9.94282V20.4181H14.5186C14.8135 20.4181 15.0525 20.1791 15.0525 19.8842C15.0525 19.5894 14.8135 19.3504 14.5186 19.3504H9.34766C9.0439 19.3504 8.79766 19.5966 8.79766 19.9004V28.2328ZM18.5013 28.2328C18.5013 28.5366 18.7476 28.7828 19.0513 28.7828H19.0965C19.4003 28.7828 19.6465 28.5366 19.6465 28.2328V24.6734H23.6096C23.9008 24.6734 24.1368 24.4373 24.1368 24.1461C24.1368 23.855 23.9008 23.6189 23.6096 23.6189H19.6465V20.4181H24.132C24.4268 20.4181 24.6659 20.1791 24.6659 19.8842C24.6659 19.5894 24.4268 19.3504 24.132 19.3504H19.0513C18.7476 19.3504 18.5013 19.5966 18.5013 19.9004V28.2328ZM29.9287 28.2328C29.9287 28.5366 30.175 28.7828 30.4787 28.7828H30.5239C30.8276 28.7828 31.0739 28.5366 31.0739 28.2328V20.4181H33.5723C33.8671 20.4181 34.1061 20.1791 34.1061 19.8842C34.1061 19.5894 33.8671 19.3504 33.5723 19.3504H27.4303C27.1355 19.3504 26.8965 19.5894 26.8965 19.8842C26.8965 20.1791 27.1355 20.4181 27.4303 20.4181H29.9287V28.2328Z" fill="#23366F" stroke="#23366F" stroke-width="0.1"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2849 2.10075C20.4941 1.96642 20.7596 1.96642 20.9688 2.10075L38.1731 13.1476C38.4172 13.3043 38.5307 13.6082 38.4513 13.8924C38.372 14.1767 38.119 14.3725 37.8312 14.3725H3.42256C3.13475 14.3725 2.88174 14.1767 2.8024 13.8924C2.72305 13.6082 2.83656 13.3043 3.08062 13.1476L20.2849 2.10075ZM5.6721 13.0469H35.5816L20.6269 3.44443L5.6721 13.0469Z" fill="#23366F"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M23.224 8.64978C23.224 10.1628 22.0301 11.3894 20.5573 11.3894C19.0845 11.3894 17.8906 10.1628 17.8906 8.64978C17.8906 7.13673 19.0845 5.91016 20.5573 5.91016C22.0301 5.91016 23.224 7.13673 23.224 8.64978ZM20.5573 10.4762C21.5391 10.4762 22.3351 9.65849 22.3351 8.64978C22.3351 7.64108 21.5391 6.82337 20.5573 6.82337C19.5755 6.82337 18.7795 7.64108 18.7795 8.64978C18.7795 9.65849 19.5755 10.4762 20.5573 10.4762Z" fill="#23366F"/>
+                </svg>                                    
+                <p id="fund-change-menu-txt-mob" class="flex-item my-changes-menu-txt m-l-8 fs-16">Update Bank Account EFT</p>
+              </div>
+              <div class="my-claim-menu-default d-flex flex-item m-r-20 m-b-20">
+                <svg class="flex-item" width="32" height="32" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_i_10989_36328)">
+                  <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                  </g>
+                  <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <defs>
+                  <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="2"/>
+                  <feGaussianBlur stdDeviation="1"/>
+                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                  </filter>
+                  </defs>
+                </svg>
+                <p id="bank-account-menu-txt-mob" class="flex-item my-changes-menu-txt m-r-20 m-l-8 fs-16">Update PDPA</p>
+              </div>
+            </div>
+            <div class="d-flex w-full space-between m-t-20">
+              <div class="flex-item d-flex">
+                <input class="date-input-box m-l-20 m-r-12" type="text" placeholder="Date from:" />
+                <input class="date-input-box m-r-20" type="text" placeholder="To:" />
+              </div>
+              <div id="filter-checked" class="filter-container flex-item">
+                <svg class="filter-icon" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="filter-icon" d="M20.4928 8.37433H7.4917C7.39195 7.89986 7.13203 7.47413 6.75558 7.16859C6.37912 6.86305 5.90903 6.69629 5.42418 6.69629C4.93933 6.69629 4.46924 6.86305 4.09278 7.16859C3.71633 7.47413 3.45641 7.89986 3.35666 8.37433H0.403533C0.293388 8.38394 0.190847 8.43449 0.116144 8.516C0.0414402 8.59751 0 8.70405 0 8.81462C0 8.92518 0.0414402 9.03173 0.116144 9.11324C0.190847 9.19474 0.293388 9.24529 0.403533 9.25491H3.35666C3.45641 9.72938 3.71633 10.1551 4.09278 10.4606C4.46924 10.7662 4.93933 10.9329 5.42418 10.9329C5.90903 10.9329 6.37912 10.7662 6.75558 10.4606C7.13203 10.1551 7.39195 9.72938 7.4917 9.25491H20.4928C20.603 9.24529 20.7055 9.19474 20.7802 9.11324C20.8549 9.03173 20.8963 8.92518 20.8963 8.81462C20.8963 8.70405 20.8549 8.59751 20.7802 8.516C20.7055 8.43449 20.603 8.38394 20.4928 8.37433ZM5.42585 10.0484C5.1815 10.0484 4.94263 9.97597 4.73945 9.84022C4.53628 9.70446 4.37792 9.5115 4.28441 9.28575C4.1909 9.05999 4.16643 8.81157 4.2141 8.57191C4.26177 8.33225 4.37944 8.11211 4.55223 7.93932C4.72502 7.76653 4.94516 7.64886 5.18482 7.60119C5.42448 7.55352 5.6729 7.57799 5.89866 7.6715C6.12441 7.76501 6.31737 7.92337 6.45313 8.12654C6.58888 8.32972 6.66135 8.56859 6.66135 8.81294C6.66135 8.97519 6.62939 9.13585 6.5673 9.28575C6.50521 9.43564 6.4142 9.57184 6.29948 9.68657C6.18475 9.80129 6.04855 9.8923 5.89866 9.95439C5.74876 10.0165 5.5881 10.0484 5.42585 10.0484Z" fill="#23366F" />
+                  <path class="filter-icon" d="M20.5196 1.67804H17.5363C17.4366 1.20357 17.1767 0.777841 16.8002 0.472301C16.4238 0.166761 15.9537 0 15.4688 0C14.984 0 14.5139 0.166761 14.1374 0.472301C13.761 0.777841 13.5011 1.20357 13.4013 1.67804H0.403533C0.293388 1.68765 0.190847 1.7382 0.116144 1.81971C0.0414402 1.90122 0 2.00777 0 2.11833C0 2.22889 0.0414402 2.33544 0.116144 2.41695C0.190847 2.49846 0.293388 2.54901 0.403533 2.55862H13.4013C13.5011 3.03309 13.761 3.45882 14.1374 3.76436C14.5139 4.0699 14.984 4.23666 15.4688 4.23666C15.9537 4.23666 16.4238 4.0699 16.8002 3.76436C17.1767 3.45882 17.4366 3.03309 17.5363 2.55862H20.5196C20.5807 2.56395 20.6421 2.55652 20.7002 2.53682C20.7582 2.51711 20.8115 2.48555 20.8567 2.44415C20.9018 2.40274 20.9379 2.3524 20.9626 2.29631C20.9873 2.24022 21 2.17961 21 2.11833C21 2.05705 20.9873 1.99644 20.9626 1.94035C20.9379 1.88426 20.9018 1.83391 20.8567 1.79251C20.8115 1.7511 20.7582 1.71955 20.7002 1.69984C20.6421 1.68013 20.5807 1.67271 20.5196 1.67804ZM15.4705 3.35215C15.2261 3.35215 14.9873 3.27969 14.7841 3.14393C14.5809 3.00817 14.4226 2.81521 14.3291 2.58946C14.2355 2.3637 14.2111 2.11528 14.2587 1.87562C14.3064 1.63596 14.4241 1.41582 14.5969 1.24303C14.7697 1.07024 14.9898 0.952575 15.2295 0.904903C15.4691 0.857232 15.7175 0.881698 15.9433 0.97521C16.1691 1.06872 16.362 1.22708 16.4978 1.43025C16.6335 1.63343 16.706 1.8723 16.706 2.11665C16.706 2.44433 16.5758 2.75858 16.3441 2.99028C16.1124 3.22198 15.7982 3.35215 15.4705 3.35215Z" fill="#23366F" />
+                  <path class="filter-icon" d="M20.4928 15.0706H14.1881C14.0884 14.5961 13.8285 14.1704 13.452 13.8649C13.0755 13.5593 12.6055 13.3926 12.1206 13.3926C11.6358 13.3926 11.1657 13.5593 10.7892 13.8649C10.4128 14.1704 10.1528 14.5961 10.0531 15.0706H0.403533C0.293388 15.0802 0.190847 15.1308 0.116144 15.2123C0.0414402 15.2938 0 15.4003 0 15.5109C0 15.6215 0.0414402 15.728 0.116144 15.8095C0.190847 15.891 0.293388 15.9416 0.403533 15.9512H10.0531C10.1528 16.4257 10.4128 16.8514 10.7892 17.1569C11.1657 17.4625 11.6358 17.6292 12.1206 17.6292C12.6055 17.6292 13.0755 17.4625 13.452 17.1569C13.8285 16.8514 14.0884 16.4257 14.1881 15.9512H20.4928C20.603 15.9416 20.7055 15.891 20.7802 15.8095C20.8549 15.728 20.8963 15.6215 20.8963 15.5109C20.8963 15.4003 20.8549 15.2938 20.7802 15.2123C20.7055 15.1308 20.603 15.0802 20.4928 15.0706ZM12.1223 16.7447C11.8779 16.7447 11.6391 16.6723 11.4359 16.5365C11.2327 16.4007 11.0743 16.2078 10.9808 15.982C10.8873 15.7563 10.8629 15.5079 10.9105 15.2682C10.9582 15.0285 11.0759 14.8084 11.2487 14.6356C11.4214 14.4628 11.6416 14.3452 11.8813 14.2975C12.1209 14.2498 12.3693 14.2743 12.5951 14.3678C12.8208 14.4613 13.0138 14.6197 13.1496 14.8228C13.2853 15.026 13.3578 15.2649 13.3578 15.5092C13.3578 15.8369 13.2276 16.1512 12.9959 16.3829C12.7642 16.6146 12.45 16.7447 12.1223 16.7447Z" fill="#23366F" />
+                </svg>
+                <p class="filter-text">Filter</p>
+              </div>
+            </div>
+          </div>
+          <div class="policy-container policy-container-no-change d-flex">
+            <div class="my-changes-menu-container isDesktop">
+              <p class="zurich-active personal-details-form-title document-section-title isDesktop">Choose the type of changes you would like to make</p>
+              <div class="my-document-sub-menu isDesktop">
+                <div onclick="location.href='my-document-policy.html'" class="my-document-menu-default d-flex">
+                  <div class="d-flex-no-wrap">
+                    <div id="statement-certificate" class="my-document-menu d-flex flex-item">
+                      <svg class="flex-item" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_i_10989_36328)">
+                        <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                        </g>
+                        <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="2"/>
+                        <feGaussianBlur stdDeviation="1"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                        </filter>
+                        </defs>
+                      </svg>                                                
+                    </div>
+                    <p id="statement-certificate-menu-txt" class="flex-item my-document-menu-txt m-l-8">Fund Switching</p>
+                  </div>
+                  <svg id="statement-certificate-bg" class="my-document-menu-background" style="display: none" width="100%" height="84" viewBox="0 0 240 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 4C0 1.79086 1.79086 0 4 0H217.064C221.209 0 224.925 2.55762 226.405 6.42983L239.454 40.5719C239.806 41.4915 239.806 42.5085 239.454 43.4281L226.405 77.5702C224.925 81.4424 221.209 84 217.064 84H4.00001C1.79087 84 0 82.2091 0 80V4Z" fill="#DDE4E3" fill-opacity="0.25"/>
+                  </svg>
+                </div>
+                <div onclick="location.href='my-document-statements.html'" class="my-document-menu-default d-flex">
+                  <div class="d-flex-no-wrap">
+                    <div id="statement-certificate" class="my-document-menu d-flex flex-item">
+                      <svg class="flex-item" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_i_10989_36328)">
+                        <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                        </g>
+                        <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="2"/>
+                        <feGaussianBlur stdDeviation="1"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                        </filter>
+                        </defs>
+                      </svg>                                                 
+                    </div>
+                    <p id="statement-certificate-menu-txt" class="flex-item my-document-menu-txt m-l-8">Change of Fund</p>
+                  </div>
+                  <svg id="statement-certificate-bg" class="my-document-menu-background" style="display: none" width="100%" height="84" viewBox="0 0 240 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 4C0 1.79086 1.79086 0 4 0H217.064C221.209 0 224.925 2.55762 226.405 6.42983L239.454 40.5719C239.806 41.4915 239.806 42.5085 239.454 43.4281L226.405 77.5702C224.925 81.4424 221.209 84 217.064 84H4.00001C1.79087 84 0 82.2091 0 80V4Z" fill="#DDE4E3" fill-opacity="0.25"/>
+                  </svg>
+                </div>
+                <div onclick="location.href='my-document-notices.html'" class="my-document-menu-default d-flex">
+                  <div class="d-flex-no-wrap">
+                    <div id="statement-certificate" class="my-document-menu d-flex flex-item">
+                      <svg class="flex-item" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_i_10989_36328)">
+                        <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                        </g>
+                        <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="2"/>
+                        <feGaussianBlur stdDeviation="1"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                        </filter>
+                        </defs>
+                      </svg>                                               
+                    </div>
+                    <p id="statement-certificate-menu-txt" class="flex-item my-document-menu-txt m-l-8">Change of Payment Mode</p>
+                  </div>
+                  <svg id="statement-certificate-bg" class="my-document-menu-background" style="display: none" width="100%" height="84" viewBox="0 0 240 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 4C0 1.79086 1.79086 0 4 0H217.064C221.209 0 224.925 2.55762 226.405 6.42983L239.454 40.5719C239.806 41.4915 239.806 42.5085 239.454 43.4281L226.405 77.5702C224.925 81.4424 221.209 84 217.064 84H4.00001C1.79087 84 0 82.2091 0 80V4Z" fill="#DDE4E3" fill-opacity="0.25"/>
+                  </svg>
+                </div>
+                <div onclick="location.href='my-changes-update-bank-account.html'" class="my-document-menu-default d-flex">
+                  <div class="d-flex-no-wrap">
+                    <div id="statement-certificate" class="my-document-menu d-flex flex-item">
+                      <svg class="flex-item" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 34.9187C1 34.5526 1.28885 34.2559 1.64516 34.2559H40.3548C40.7111 34.2559 41 34.5526 41 34.9187C41 35.2847 40.7111 35.5815 40.3548 35.5815H1.64516C1.28885 35.5815 1 35.2847 1 34.9187Z" fill="#23366F"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.16016 39.3366C6.16016 38.9706 6.449 38.6738 6.80532 38.6738L35.1924 38.6738C35.5487 38.6738 35.8376 38.9706 35.8376 39.3366C35.8376 39.7027 35.5487 39.9995 35.1924 39.9995L6.80532 39.9995C6.449 39.9995 6.16016 39.7027 6.16016 39.3366Z" fill="#23366F"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.51235 17.4609C5.86866 17.4609 6.15751 17.7577 6.15751 18.1238V31.38C6.15751 31.7461 5.86866 32.0428 5.51235 32.0428C5.15604 32.0428 4.86719 31.7461 4.86719 31.38V18.1238C4.86719 17.7577 5.15604 17.4609 5.51235 17.4609Z" fill="#23366F"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M36.485 17.4609C36.8413 17.4609 37.1302 17.7577 37.1302 18.1238V31.38C37.1302 31.7461 36.8413 32.0428 36.485 32.0428C36.1287 32.0428 35.8398 31.7461 35.8398 31.38V18.1238C35.8398 17.7577 36.1287 17.4609 36.485 17.4609Z" fill="#23366F"/>
+                        <path d="M8.79766 19.9004V28.2328C8.79766 28.5366 9.0439 28.7828 9.34766 28.7828H14.5186C14.8135 28.7828 15.0525 28.5438 15.0525 28.2489C15.0525 27.9541 14.8135 27.7151 14.5186 27.7151H9.94282V24.4745H14.0029C14.2904 24.4745 14.5235 24.2414 14.5235 23.9539C14.5235 23.6664 14.2904 23.4333 14.0029 23.4333H9.94282V20.4181H14.5186C14.8135 20.4181 15.0525 20.1791 15.0525 19.8842C15.0525 19.5894 14.8135 19.3504 14.5186 19.3504H9.34766C9.0439 19.3504 8.79766 19.5966 8.79766 19.9004ZM18.5013 19.9004V28.2328C18.5013 28.5366 18.7476 28.7828 19.0513 28.7828H19.0965C19.4003 28.7828 19.6465 28.5366 19.6465 28.2328V24.6734H23.6096C23.9008 24.6734 24.1368 24.4373 24.1368 24.1461C24.1368 23.855 23.9008 23.6189 23.6096 23.6189H19.6465V20.4181H24.132C24.4268 20.4181 24.6659 20.1791 24.6659 19.8842C24.6659 19.5894 24.4268 19.3504 24.132 19.3504H19.0513C18.7476 19.3504 18.5013 19.5966 18.5013 19.9004ZM27.4303 20.4181H29.9287V28.2328C29.9287 28.5366 30.175 28.7828 30.4787 28.7828H30.5239C30.8276 28.7828 31.0739 28.5366 31.0739 28.2328V20.4181H33.5723C33.8671 20.4181 34.1061 20.1791 34.1061 19.8842C34.1061 19.5894 33.8671 19.3504 33.5723 19.3504H27.4303C27.1355 19.3504 26.8965 19.5894 26.8965 19.8842C26.8965 20.1791 27.1355 20.4181 27.4303 20.4181Z" fill="#23366F" stroke="#23366F" stroke-width="0.1"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2849 2.10075C20.4941 1.96642 20.7596 1.96642 20.9688 2.10075L38.1731 13.1476C38.4172 13.3043 38.5307 13.6082 38.4513 13.8924C38.372 14.1767 38.119 14.3725 37.8312 14.3725H3.42256C3.13475 14.3725 2.88174 14.1767 2.8024 13.8924C2.72305 13.6082 2.83656 13.3043 3.08062 13.1476L20.2849 2.10075ZM5.6721 13.0469H35.5816L20.6269 3.44443L5.6721 13.0469Z" fill="#23366F"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.224 8.64978C23.224 10.1628 22.0301 11.3894 20.5573 11.3894C19.0845 11.3894 17.8906 10.1628 17.8906 8.64978C17.8906 7.13673 19.0845 5.91016 20.5573 5.91016C22.0301 5.91016 23.224 7.13673 23.224 8.64978ZM20.5573 10.4762C21.5391 10.4762 22.3351 9.65849 22.3351 8.64978C22.3351 7.64108 21.5391 6.82337 20.5573 6.82337C19.5755 6.82337 18.7795 7.64108 18.7795 8.64978C18.7795 9.65849 19.5755 10.4762 20.5573 10.4762Z" fill="#23366F"/>
+                      </svg>                                                                       
+                    </div>
+                    <p id="statement-certificate-menu-txt" class="flex-item my-document-menu-txt m-l-8">Update Bank Account EFT</p>
+                  </div>
+                  <svg id="statement-certificate-bg" class="my-document-menu-background" style="display: none" width="100%" height="84" viewBox="0 0 240 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 4C0 1.79086 1.79086 0 4 0H217.064C221.209 0 224.925 2.55762 226.405 6.42983L239.454 40.5719C239.806 41.4915 239.806 42.5085 239.454 43.4281L226.405 77.5702C224.925 81.4424 221.209 84 217.064 84H4.00001C1.79087 84 0 82.2091 0 80V4Z" fill="#DDE4E3" fill-opacity="0.25"/>
+                  </svg>
+                </div>
+                <div class="my-document-menu-default d-flex">
+                  <div class="d-flex-no-wrap">
+                    <div id="statement-certificate" class="my-document-menu d-flex flex-item">
+                      <svg class="flex-item" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_i_10989_36328)">
+                        <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                        </g>
+                        <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="2"/>
+                        <feGaussianBlur stdDeviation="1"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                        </filter>
+                        </defs>
+                      </svg>                                                 
+                    </div>
+                    <p id="statement-certificate-menu-txt" class="flex-item my-document-menu-txt m-l-8">Update PDPA</p>
+                  </div>
+                  <svg id="statement-certificate-bg" class="my-document-menu-background" style="display: none" width="100%" height="84" viewBox="0 0 240 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 4C0 1.79086 1.79086 0 4 0H217.064C221.209 0 224.925 2.55762 226.405 6.42983L239.454 40.5719C239.806 41.4915 239.806 42.5085 239.454 43.4281L226.405 77.5702C224.925 81.4424 221.209 84 217.064 84H4.00001C1.79087 84 0 82.2091 0 80V4Z" fill="#DDE4E3" fill-opacity="0.25"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="my-changes-menu-container isMobile">
+              <div class="isMobile p-b-10 p-t-20">
+                <div class="space-between w-full d-flex-no-wrap">
+                  <div class="d-flex m-l-20">
+                    <svg id="statement-certificate-svg" class="icon-tab flex-item m-r-12" width="24" height="26" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8.69844C0 3.89443 3.94012 0 8.8005 0H35.7103C40.5707 0 44.5108 3.89442 44.5108 8.69843V18.9946C44.5108 19.4313 44.1527 19.7854 43.7108 19.7854C43.2689 19.7854 42.9108 19.4313 42.9108 18.9946V8.69843C42.9108 4.76788 39.687 1.58153 35.7103 1.58153H8.8005C4.82383 1.58153 1.60009 4.76788 1.60009 8.69844V41.3016C1.60009 45.2321 4.82383 48.4185 8.8005 48.4185H24.6556C25.0974 48.4185 25.4556 48.7725 25.4556 49.2092C25.4556 49.646 25.0974 50 24.6556 50H8.8005C3.94012 50 0 46.1056 0 41.3016V8.69844ZM7.78469 13.9276C7.78469 13.4908 8.14289 13.1368 8.58474 13.1368H35.9261C36.368 13.1368 36.7262 13.4908 36.7262 13.9276C36.7262 14.3643 36.368 14.7183 35.9261 14.7183H8.58474C8.14289 14.7183 7.78469 14.3643 7.78469 13.9276ZM7.78469 25C7.78469 24.5633 8.14289 24.2092 8.58474 24.2092H20.6479C21.0897 24.2092 21.4479 24.5633 21.4479 25C21.4479 25.4367 21.0897 25.7908 20.6479 25.7908H8.58474C8.14289 25.7908 7.78469 25.4367 7.78469 25ZM7.78469 36.0724C7.78469 35.6357 8.14289 35.2817 8.58474 35.2817H18.6479C19.0897 35.2817 19.4479 35.6357 19.4479 36.0724C19.4479 36.5092 19.0897 36.8632 18.6479 36.8632H8.58474C8.14289 36.8632 7.78469 36.5092 7.78469 36.0724Z" fill="#23366F"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M35.171 22.3217C38.0225 22.2573 40.816 23.1261 43.1258 24.7943C45.4355 26.4625 47.1345 28.8381 47.9657 31.5581C48.0935 31.9762 47.8542 32.4175 47.4312 32.5438C47.0082 32.67 46.5617 32.4335 46.434 32.0154C45.7026 29.6223 44.2087 27.5352 42.1818 26.0713C40.1549 24.6074 37.7058 23.8464 35.2075 23.9028C32.7093 23.9592 30.2969 24.8301 28.3382 26.3841C26.3793 27.9383 24.9812 30.0908 24.3588 32.5147C23.7363 34.9387 23.9242 37.4995 24.8934 39.8064C25.8626 42.1133 27.5592 44.0387 29.7232 45.2905C31.887 46.5423 34.4002 47.0526 36.8801 46.7447C39.36 46.4367 41.6725 45.327 43.4648 43.5831C43.7797 43.2767 44.2862 43.2806 44.5962 43.5918C44.9062 43.903 44.9022 44.4037 44.5874 44.7101C42.5462 46.6962 39.9099 47.9624 37.0796 48.3139C34.2492 48.6654 31.3819 48.0826 28.9149 46.6555C26.4481 45.2284 24.5175 43.0357 23.4157 40.4129C22.3138 37.7903 22.1005 34.8802 22.8079 32.1256C23.5152 29.371 25.1049 26.9213 27.3365 25.1508C29.5683 23.3801 32.3195 22.3861 35.171 22.3217ZM34.4582 30.4481C34.9001 30.4481 35.2582 30.8021 35.2582 31.2389V36.6605H39.3318C39.7737 36.6605 40.1318 37.0145 40.1318 37.4512C40.1318 37.888 39.7737 38.242 39.3318 38.242H34.4582C34.0163 38.242 33.6582 37.888 33.6582 37.4512V31.2389C33.6582 30.8021 34.0163 30.4481 34.4582 30.4481Z" fill="#23366F"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M45.2168 43.0583C45.638 43.1618 45.899 43.5782 45.805 43.997L45.0478 47.3712C44.9522 47.7976 44.5249 48.0665 44.0935 47.972C43.6622 47.8774 43.39 47.4551 43.4857 47.0287L44.0739 44.4073L41.1249 43.6833C40.6961 43.578 40.4348 43.1491 40.5413 42.7253C40.6479 42.3014 41.0818 42.0432 41.5107 42.1484L45.2168 43.0583Z" fill="#23366F"/>
+                    </svg> 
+                    <p class="my-changes-heading flex-item">My Changes</p>
+                  </div>
+                  <div class="d-flex flex-item m-r-20">
+                    <svg class="flex-item transition-2ms m-r-8" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16.0609 7.27393C15.9924 7.27409 15.9258 7.29712 15.8718 7.33938L10.0003 12.0376L4.12154 7.33938C4.0897 7.31455 4.05329 7.29623 4.01437 7.28548C3.97546 7.27472 3.93481 7.27173 3.89474 7.27668C3.85467 7.28163 3.81596 7.29443 3.78084 7.31434C3.74572 7.33425 3.71486 7.36088 3.69002 7.39272C3.66519 7.42455 3.64687 7.46097 3.63612 7.49988C3.62536 7.5388 3.62237 7.57945 3.62732 7.61952C3.63227 7.65959 3.64507 7.69829 3.66498 7.73342C3.68489 7.76854 3.71152 7.7994 3.74336 7.82423L9.80396 12.6727C9.85784 12.7152 9.92445 12.7383 9.99306 12.7383C10.0617 12.7383 10.1283 12.7152 10.1821 12.6727L16.2428 7.82423C16.2922 7.78512 16.3281 7.73158 16.3457 7.67107C16.3632 7.61056 16.3615 7.54608 16.3407 7.48661C16.3199 7.42713 16.2811 7.37562 16.2296 7.33924C16.1782 7.30286 16.1167 7.28342 16.0537 7.28363L16.0609 7.27393Z" fill="#23366F"/>
+                    </svg>
+                    <p class="flex-item zurich-active">Update</p>
+                  </div>
+                </div>
+              </div>
+              <div class="isMobile">
+                <div class="my-changes-sub-menu-mob d-flex space-between">
+                  <div class="my-claim-menu-default d-flex flex-item">
+                    <svg class="flex-item" width="24" height="24" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_i_10989_36328)">
+                      <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                      </g>
+                      <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <defs>
+                      <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dy="2"/>
+                      <feGaussianBlur stdDeviation="1"/>
+                      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                      <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                      </filter>
+                      </defs>
+                    </svg>
+                    <p id="fund-switching-txt-mob" class="flex-item my-changes-menu-txt">Fund Switching</p>
+                  </div>
+                  <div class="my-claim-menu-default d-flex flex-item">
+                    <svg class="flex-item" width="24" height="24" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_i_10989_36328)">
+                      <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                      </g>
+                      <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <defs>
+                      <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dy="2"/>
+                      <feGaussianBlur stdDeviation="1"/>
+                      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                      <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                      </filter>
+                      </defs>
+                    </svg>                     
+                    <p id="fund-change-menu-txt-mob" class="flex-item my-changes-menu-txt">Change of Fund</p>
+                  </div>
+                  <div class="my-claim-menu-default d-flex flex-item">
+                    <svg class="flex-item" width="24" height="24" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_i_10989_36328)">
+                      <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                      </g>
+                      <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <defs>
+                      <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dy="2"/>
+                      <feGaussianBlur stdDeviation="1"/>
+                      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                      <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                      </filter>
+                      </defs>
+                    </svg>                   
+                    <p id="payment-change-menu-txt-mob" class="flex-item my-changes-menu-txt">Change of Payment Mode</p>
+                  </div>
+                  <div onclick="location.href='my-changes-update-bank-account.html'" class="my-claim-menu-default d-flex-no-wrap flex-item">
+                    <svg width="24" height="24" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1 34.9187C1 34.5526 1.28885 34.2559 1.64516 34.2559H40.3548C40.7111 34.2559 41 34.5526 41 34.9187C41 35.2847 40.7111 35.5815 40.3548 35.5815H1.64516C1.28885 35.5815 1 35.2847 1 34.9187Z" fill="#23366F"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.16016 39.3366C6.16016 38.9706 6.449 38.6738 6.80532 38.6738L35.1924 38.6738C35.5487 38.6738 35.8376 38.9706 35.8376 39.3366C35.8376 39.7027 35.5487 39.9995 35.1924 39.9995L6.80532 39.9995C6.449 39.9995 6.16016 39.7027 6.16016 39.3366Z" fill="#23366F"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.51235 17.4609C5.86866 17.4609 6.15751 17.7577 6.15751 18.1238V31.38C6.15751 31.7461 5.86866 32.0428 5.51235 32.0428C5.15604 32.0428 4.86719 31.7461 4.86719 31.38V18.1238C4.86719 17.7577 5.15604 17.4609 5.51235 17.4609Z" fill="#23366F"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M36.485 17.4609C36.8413 17.4609 37.1302 17.7577 37.1302 18.1238V31.38C37.1302 31.7461 36.8413 32.0428 36.485 32.0428C36.1287 32.0428 35.8398 31.7461 35.8398 31.38V18.1238C35.8398 17.7577 36.1287 17.4609 36.485 17.4609Z" fill="#23366F"/>
+                      <path d="M8.79766 19.9004V28.2328C8.79766 28.5366 9.0439 28.7828 9.34766 28.7828H14.5186C14.8135 28.7828 15.0525 28.5438 15.0525 28.2489C15.0525 27.9541 14.8135 27.7151 14.5186 27.7151H9.94282V24.4745H14.0029C14.2904 24.4745 14.5235 24.2414 14.5235 23.9539C14.5235 23.6664 14.2904 23.4333 14.0029 23.4333H9.94282V20.4181H14.5186C14.8135 20.4181 15.0525 20.1791 15.0525 19.8842C15.0525 19.5894 14.8135 19.3504 14.5186 19.3504H9.34766C9.0439 19.3504 8.79766 19.5966 8.79766 19.9004ZM18.5013 19.9004V28.2328C18.5013 28.5366 18.7476 28.7828 19.0513 28.7828H19.0965C19.4003 28.7828 19.6465 28.5366 19.6465 28.2328V24.6734H23.6096C23.9008 24.6734 24.1368 24.4373 24.1368 24.1461C24.1368 23.855 23.9008 23.6189 23.6096 23.6189H19.6465V20.4181H24.132C24.4268 20.4181 24.6659 20.1791 24.6659 19.8842C24.6659 19.5894 24.4268 19.3504 24.132 19.3504H19.0513C18.7476 19.3504 18.5013 19.5966 18.5013 19.9004ZM27.4303 20.4181H29.9287V28.2328C29.9287 28.5366 30.175 28.7828 30.4787 28.7828H30.5239C30.8276 28.7828 31.0739 28.5366 31.0739 28.2328V20.4181H33.5723C33.8671 20.4181 34.1061 20.1791 34.1061 19.8842C34.1061 19.5894 33.8671 19.3504 33.5723 19.3504H27.4303C27.1355 19.3504 26.8965 19.5894 26.8965 19.8842C26.8965 20.1791 27.1355 20.4181 27.4303 20.4181Z" fill="#23366F" stroke="#23366F" stroke-width="0.1"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2849 2.10075C20.4941 1.96642 20.7596 1.96642 20.9688 2.10075L38.1731 13.1476C38.4172 13.3043 38.5307 13.6082 38.4513 13.8924C38.372 14.1767 38.119 14.3725 37.8312 14.3725H3.42256C3.13475 14.3725 2.88174 14.1767 2.8024 13.8924C2.72305 13.6082 2.83656 13.3043 3.08062 13.1476L20.2849 2.10075ZM5.6721 13.0469H35.5816L20.6269 3.44443L5.6721 13.0469Z" fill="#23366F"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.224 8.64978C23.224 10.1628 22.0301 11.3894 20.5573 11.3894C19.0845 11.3894 17.8906 10.1628 17.8906 8.64978C17.8906 7.13673 19.0845 5.91016 20.5573 5.91016C22.0301 5.91016 23.224 7.13673 23.224 8.64978ZM20.5573 10.4762C21.5391 10.4762 22.3351 9.65849 22.3351 8.64978C22.3351 7.64108 21.5391 6.82337 20.5573 6.82337C19.5755 6.82337 18.7795 7.64108 18.7795 8.64978C18.7795 9.65849 19.5755 10.4762 20.5573 10.4762Z" fill="#23366F"/>
+                    </svg>                                         
+                    <p id="fund-change-menu-txt-mob" class="flex-item my-changes-menu-txt">Update Bank Account EFT</p>
+                  </div>
+                  
+                  <div class="my-claim-menu-default d-flex flex-item">
+                    <svg class="flex-item" width="24" height="24" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_i_10989_36328)">
+                      <rect width="42" height="42" rx="4" fill="#DDE4E3"/>
+                      </g>
+                      <path d="M5.5 6.5L36 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M36 6.5L5.5 37" stroke="#4870C6" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <defs>
+                      <filter id="filter0_i_10989_36328" x="0" y="0" width="42" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dy="2"/>
+                      <feGaussianBlur stdDeviation="1"/>
+                      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                      <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10989_36328"/>
+                      </filter>
+                      </defs>
+                    </svg>
+                    <p id="bank-account-menu-txt-mob" class="flex-item my-changes-menu-txt">Update PDPA</p>
+                  </div>
+                </div>
+                <div class="d-flex w-full space-between m-t-20">
+                  <input class="date-input-box m-l-20" type="text" placeholder="Date from:" />
+                  <input class="date-input-box" type="text" placeholder="To:" />
+                  <div id="filter-checked" class="filter-container m-r-20">
+                    <svg class="filter-icon" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="filter-icon" d="M20.4928 8.37433H7.4917C7.39195 7.89986 7.13203 7.47413 6.75558 7.16859C6.37912 6.86305 5.90903 6.69629 5.42418 6.69629C4.93933 6.69629 4.46924 6.86305 4.09278 7.16859C3.71633 7.47413 3.45641 7.89986 3.35666 8.37433H0.403533C0.293388 8.38394 0.190847 8.43449 0.116144 8.516C0.0414402 8.59751 0 8.70405 0 8.81462C0 8.92518 0.0414402 9.03173 0.116144 9.11324C0.190847 9.19474 0.293388 9.24529 0.403533 9.25491H3.35666C3.45641 9.72938 3.71633 10.1551 4.09278 10.4606C4.46924 10.7662 4.93933 10.9329 5.42418 10.9329C5.90903 10.9329 6.37912 10.7662 6.75558 10.4606C7.13203 10.1551 7.39195 9.72938 7.4917 9.25491H20.4928C20.603 9.24529 20.7055 9.19474 20.7802 9.11324C20.8549 9.03173 20.8963 8.92518 20.8963 8.81462C20.8963 8.70405 20.8549 8.59751 20.7802 8.516C20.7055 8.43449 20.603 8.38394 20.4928 8.37433ZM5.42585 10.0484C5.1815 10.0484 4.94263 9.97597 4.73945 9.84022C4.53628 9.70446 4.37792 9.5115 4.28441 9.28575C4.1909 9.05999 4.16643 8.81157 4.2141 8.57191C4.26177 8.33225 4.37944 8.11211 4.55223 7.93932C4.72502 7.76653 4.94516 7.64886 5.18482 7.60119C5.42448 7.55352 5.6729 7.57799 5.89866 7.6715C6.12441 7.76501 6.31737 7.92337 6.45313 8.12654C6.58888 8.32972 6.66135 8.56859 6.66135 8.81294C6.66135 8.97519 6.62939 9.13585 6.5673 9.28575C6.50521 9.43564 6.4142 9.57184 6.29948 9.68657C6.18475 9.80129 6.04855 9.8923 5.89866 9.95439C5.74876 10.0165 5.5881 10.0484 5.42585 10.0484Z" fill="#23366F" />
+                      <path class="filter-icon" d="M20.5196 1.67804H17.5363C17.4366 1.20357 17.1767 0.777841 16.8002 0.472301C16.4238 0.166761 15.9537 0 15.4688 0C14.984 0 14.5139 0.166761 14.1374 0.472301C13.761 0.777841 13.5011 1.20357 13.4013 1.67804H0.403533C0.293388 1.68765 0.190847 1.7382 0.116144 1.81971C0.0414402 1.90122 0 2.00777 0 2.11833C0 2.22889 0.0414402 2.33544 0.116144 2.41695C0.190847 2.49846 0.293388 2.54901 0.403533 2.55862H13.4013C13.5011 3.03309 13.761 3.45882 14.1374 3.76436C14.5139 4.0699 14.984 4.23666 15.4688 4.23666C15.9537 4.23666 16.4238 4.0699 16.8002 3.76436C17.1767 3.45882 17.4366 3.03309 17.5363 2.55862H20.5196C20.5807 2.56395 20.6421 2.55652 20.7002 2.53682C20.7582 2.51711 20.8115 2.48555 20.8567 2.44415C20.9018 2.40274 20.9379 2.3524 20.9626 2.29631C20.9873 2.24022 21 2.17961 21 2.11833C21 2.05705 20.9873 1.99644 20.9626 1.94035C20.9379 1.88426 20.9018 1.83391 20.8567 1.79251C20.8115 1.7511 20.7582 1.71955 20.7002 1.69984C20.6421 1.68013 20.5807 1.67271 20.5196 1.67804ZM15.4705 3.35215C15.2261 3.35215 14.9873 3.27969 14.7841 3.14393C14.5809 3.00817 14.4226 2.81521 14.3291 2.58946C14.2355 2.3637 14.2111 2.11528 14.2587 1.87562C14.3064 1.63596 14.4241 1.41582 14.5969 1.24303C14.7697 1.07024 14.9898 0.952575 15.2295 0.904903C15.4691 0.857232 15.7175 0.881698 15.9433 0.97521C16.1691 1.06872 16.362 1.22708 16.4978 1.43025C16.6335 1.63343 16.706 1.8723 16.706 2.11665C16.706 2.44433 16.5758 2.75858 16.3441 2.99028C16.1124 3.22198 15.7982 3.35215 15.4705 3.35215Z" fill="#23366F" />
+                      <path class="filter-icon" d="M20.4928 15.0706H14.1881C14.0884 14.5961 13.8285 14.1704 13.452 13.8649C13.0755 13.5593 12.6055 13.3926 12.1206 13.3926C11.6358 13.3926 11.1657 13.5593 10.7892 13.8649C10.4128 14.1704 10.1528 14.5961 10.0531 15.0706H0.403533C0.293388 15.0802 0.190847 15.1308 0.116144 15.2123C0.0414402 15.2938 0 15.4003 0 15.5109C0 15.6215 0.0414402 15.728 0.116144 15.8095C0.190847 15.891 0.293388 15.9416 0.403533 15.9512H10.0531C10.1528 16.4257 10.4128 16.8514 10.7892 17.1569C11.1657 17.4625 11.6358 17.6292 12.1206 17.6292C12.6055 17.6292 13.0755 17.4625 13.452 17.1569C13.8285 16.8514 14.0884 16.4257 14.1881 15.9512H20.4928C20.603 15.9416 20.7055 15.891 20.7802 15.8095C20.8549 15.728 20.8963 15.6215 20.8963 15.5109C20.8963 15.4003 20.8549 15.2938 20.7802 15.2123C20.7055 15.1308 20.603 15.0802 20.4928 15.0706ZM12.1223 16.7447C11.8779 16.7447 11.6391 16.6723 11.4359 16.5365C11.2327 16.4007 11.0743 16.2078 10.9808 15.982C10.8873 15.7563 10.8629 15.5079 10.9105 15.2682C10.9582 15.0285 11.0759 14.8084 11.2487 14.6356C11.4214 14.4628 11.6416 14.3452 11.8813 14.2975C12.1209 14.2498 12.3693 14.2743 12.5951 14.3678C12.8208 14.4613 13.0138 14.6197 13.1496 14.8228C13.2853 15.026 13.3578 15.2649 13.3578 15.5092C13.3578 15.8369 13.2276 16.1512 12.9959 16.3829C12.7642 16.6146 12.45 16.7447 12.1223 16.7447Z" fill="#23366F" />
+                    </svg>
+                    <p class="filter-text">Filter</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="my-document-menu-data my-changes-menu-data">
+              <!-- <p class="m-l-40 m-t-20 isLandscapeDesktop" style="color: #d0d0d0;">No Records to display currently</p>
+              <p class="m-l-20 m-t-20 isMobile" style="color: #d0d0d0;">No Records to display currently</p> -->
+              <div class="policy-changes-certificate isLandscapeDesktop">
+                <div class="policy-contact-header d-flex-no-wrap">
+                  <div class="d-flex-no-wrap flex-item policy-contact-three">
+                    <p class="policy-contact-header-heading-2 flex-item p-l-20">Policy # Name</p>
+                  </div> 
+                  <div class="d-flex-no-wrap flex-item policy-contact-three align-item-center">
+                    <p class="policy-contact-header-heading-2 flex-item">Applicant</p>
+                  </div>
+                  <div class="d-flex-no-wrap flex-item policy-contact-three align-item-center">
+                    <p class="policy-contact-header-heading-2 flex-item">Insured Name</p>
+                  </div>
+                  <div class="d-flex-no-wrap flex-item policy-contact-three align-item-center">
+                    <p class="policy-contact-header-heading-2 flex-item">Change Type</p>
+                  </div> 
+                  <div class="d-flex-no-wrap flex-item policy-contact-three align-item-center">
+                    <p class="policy-contact-header-heading-2 flex-item">Status</p>
+                  </div>
+                  <div class="d-flex-no-wrap flex-item policy-contact-three align-item-center">
+                    <p class="policy-contact-header-heading-2 flex-item">Bank Name</p>
+                  </div>
+                  <div class="d-flex-no-wrap flex-item policy-contact-three align-item-center">
+                    <p class="policy-contact-header-heading-2 flex-item">Bank A/C #</p>
+                  </div>
+                </div>
+                <div class="policy-contact-scroll-container">
+                  <div id="policy-contract-check-1-container" class="policy-contact-body d-flex-no-wrap">
+                    <div class="policy-contact-three p-l-16 flex-item">
+                      <div class="d-flex-no-wrap w-full m-b-4">
+                        <svg class="m-r-8 m-t-1" width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0 0.5C0 0.223857 0.223858 0 0.5 0H9.5C9.77614 0 10 0.223858 10 0.5V12.6893C10 13.1485 9.43288 13.3648 9.12703 13.0223L5.37297 8.81773C5.17417 8.59507 4.82583 8.59507 4.62703 8.81772L0.872969 13.0223C0.567125 13.3648 0 13.1485 0 12.6893V0.5Z" fill="#5495CF"/>
+                        </svg>
+                        <p class="policy-contact-number-change"><span class="m-r-4">#</span>11105010917564</p>
+                      </div>
+                      <p class="policy-contact-name-two p-0">3 - Pay Zurich Edustart3</p>
+                    </div> 
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <p class="policy-contact-name-two">Name of Insured Person Name</p>
+                    </div>
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <p class="policy-contact-name-two">Name of Insured Person Name of Insured Person </p>
+                    </div>
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <p class="policy-contact-name-two">Update Bank Account EFT</p>
+                    </div>
+                    <div class="d-flex-no-wrap policy-contact-three align-item-center flex-item">
+                      <div class="d-flex w-full my-change-status">
+                        <div class="my-change-status-line-active flex-item d-flex-no-wrap">
+                          <div class="my-change-status-ball-active d-flex-no-wrap flex-item"><p class="flex-item">1</p></div>
+                        </div>
+                        <div class="my-change-status-line-inactive flex-item d-flex-no-wrap">
+                          <div class="my-change-status-ball-inactive d-flex-no-wrap flex-item"><p class="flex-item">2</p></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <p class="policy-contact-name-two">Standard Chartered Bank</p>
+                    </div>
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <p class="policy-contact-name-two">Bank Account Number Bank Account Number </p>
+                    </div>
+                  </div>
+                  <div id="policy-contract-check-3-container" class="policy-contact-body d-flex-no-wrap">
+                    <div class="policy-contact-three p-l-16 flex-item">
+                      <div class="d-flex-no-wrap w-full m-b-4">
+                        <svg class="m-r-8 m-t-1" width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0 0.5C0 0.223857 0.223858 0 0.5 0H9.5C9.77614 0 10 0.223858 10 0.5V12.6893C10 13.1485 9.43288 13.3648 9.12703 13.0223L5.37297 8.81773C5.17417 8.59507 4.82583 8.59507 4.62703 8.81772L0.872969 13.0223C0.567125 13.3648 0 13.1485 0 12.6893V0.5Z" fill="#5495CF"/>
+                        </svg>
+                        <p class="policy-contact-number-change"><span class="m-r-4">#</span>11105010917564</p>
+                      </div>
+                      <p class="policy-contact-name-two p-0">3 - Pay Zurich Edustart3</p>
+                    </div> 
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <p class="policy-contact-name-two">Name of Insured Person Name</p>
+                    </div>
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <p class="policy-contact-name-two">Name of Insured Person Name of Insured Person </p>
+                    </div>
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <p class="policy-contact-name-two">Update Bank Account EFT</p>
+                    </div>
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <div class="d-flex w-full my-change-status">
+                        <div class="my-change-status-line-active flex-item d-flex-no-wrap">
+                          <div class="my-change-status-ball-active d-flex-no-wrap flex-item"><p class="flex-item">1</p></div>
+                        </div>
+                        <div class="my-change-status-line-inactive flex-item d-flex-no-wrap">
+                          <div class="my-change-status-ball-inactive d-flex-no-wrap flex-item"><p class="flex-item">2</p></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <p class="policy-contact-name-two">Standard Chartered Bank</p>
+                    </div>
+                    <div class="d-flex-no-wrap policy-contact-three text-style-align-center flex-item">
+                      <p class="policy-contact-name-two">Bank Account Number Bank Account Number </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="lazy-loader-id" style="display: none; margin-bottom: 20px">
+                  <div class="loader"></div>
+                </div>
+                <!-- <label class="checkbox adjust-22 isLandscapeDesktop flex-item" style="margin-right: 8px;">
+                  <input id="residental-address-checkbox-desk" class="checkbox custom-checkbox outer-shadow" type="checkbox" />
+                  <p></p>
+                </label> -->
+                <!-- <label class="checkbox isMobile" style="margin-left: 8px; z-index: 1;">
+                  <input id="residental-address-checkbox-mob" class="checkbox custom-checkbox outer-shadow" type="checkbox" />
+                  <p></p>
+                </label> -->
+              </div>
+
+              <div class="policy-mobile-table-tile-container isMobile" style="margin-top: 20px; margin-left: 3.5%;">
+                <div class="policy-mobile-table-tile p-0 m-b-20">
+                  <div class="claims-progress-card-box-container m-l-8">
+                    <div class="tile-conteiner-text-image-wrp">
+                      <div onclick="toggleExpandPolicyDetails('my-changes-policy-details-1', 'my-changes-policy-details-arrow-1')" class="d-flex flex-item m-r-8">
+                        <svg id="my-changes-policy-details-arrow-1" class="flex-item transition-2ms" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16.0609 7.27393C15.9924 7.27409 15.9258 7.29712 15.8718 7.33938L10.0003 12.0376L4.12154 7.33938C4.0897 7.31455 4.05329 7.29623 4.01437 7.28548C3.97546 7.27472 3.93481 7.27173 3.89474 7.27668C3.85467 7.28163 3.81596 7.29443 3.78084 7.31434C3.74572 7.33425 3.71486 7.36088 3.69002 7.39272C3.66519 7.42455 3.64687 7.46097 3.63612 7.49988C3.62536 7.5388 3.62237 7.57945 3.62732 7.61952C3.63227 7.65959 3.64507 7.69829 3.66498 7.73342C3.68489 7.76854 3.71152 7.7994 3.74336 7.82423L9.80396 12.6727C9.85784 12.7152 9.92445 12.7383 9.99306 12.7383C10.0617 12.7383 10.1283 12.7152 10.1821 12.6727L16.2428 7.82423C16.2922 7.78512 16.3281 7.73158 16.3457 7.67107C16.3632 7.61056 16.3615 7.54608 16.3407 7.48661C16.3199 7.42713 16.2811 7.37562 16.2296 7.33924C16.1782 7.30286 16.1167 7.28342 16.0537 7.28363L16.0609 7.27393Z" fill="#5495CF"/>
+                        </svg>
+                      </div>
+                      <svg class="flex-item m-r-8" width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0.5C0 0.223857 0.223858 0 0.5 0H9.5C9.77614 0 10 0.223858 10 0.5V12.6893C10 13.1485 9.43288 13.3648 9.12703 13.0223L5.37297 8.81773C5.17417 8.59507 4.82583 8.59507 4.62703 8.81772L0.872969 13.0223C0.567125 13.3648 0 13.1485 0 12.6893V0.5Z" fill="#5495CF"/>
+                      </svg>                       
+                      <p class="policy-text-one mobile-view tile-text-container flex-item"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span></p>
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-four mobile-view m-l-12">3 - Pay Zurich Edustart</p>
+                  <div class="my-changes-table-line-saperator"></div>
+                  <div class="d-flex w-full p-b-14 p-t-8 m-l-12 m-b-8">
+                    <p class="flex-item m-r-12 change-status-txt">Change Status</p>
+                    <div class="d-flex flex-item w-full my-change-status" style="width: 50%">
+                      <div class="my-change-status-line-active flex-item d-flex-no-wrap">
+                        <div class="my-change-status-ball-active d-flex-no-wrap flex-item"><p class="flex-item">1</p></div>
+                      </div>
+                      <div class="my-change-status-line-inactive flex-item d-flex-no-wrap">
+                        <div class="my-change-status-ball-inactive d-flex-no-wrap flex-item"><p class="flex-item">2</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="my-changes-policy-details-1" class="policy-mobile-table-tile-expand policy-mobile-table-tile-expand-no-shadow" style="display:none;">
+                    <div class="d-flex-no-wrap w-full p-t-12 p-b-12">
+                      <p class="flex-item my-changes-table-header">Applicant</p>
+                      <p class="flex-item my-changes-table-result">Policy # Name</p>
+                    </div>
+                    <div class="d-flex-no-wrap w-full p-t-12 p-b-12">
+                      <p class="flex-item my-changes-table-header">Insured Name</p>
+                      <p class="flex-item my-changes-table-result">Name of Insured Person Name of Insured Person</p>
+                    </div>
+                    <div class="d-flex-no-wrap w-full p-t-12 p-b-12">
+                      <p class="flex-item my-changes-table-header">Change Type</p>
+                      <p class="flex-item my-changes-table-result">Update Bank Account EFT</p>
+                    </div>
+                    <div class="d-flex-no-wrap w-full p-t-12 p-b-12">
+                      <p class="flex-item my-changes-table-header">Bank Name</p>
+                      <p class="flex-item my-changes-table-result">Standard Chartered Bank</p>
+                    </div>
+                    <div class="d-flex-no-wrap w-full p-t-12 p-b-12">
+                      <p class="flex-item my-changes-table-header">Bank A/C #</p>
+                      <p class="flex-item my-changes-table-result">Bank Account Number Bank Account Number</p>
+                    </div>
+                  </div>
+                  
+                  <!-- <div class="flex-item" id="checkbox-selected-state-all-mob" >
+                    <label class="checkbox" style="margin: 0 !important">
+                      <input class="checkbox custom-checkbox outer-shadow" type="checkbox" checked />
+                      <span></span>
+                    </label>
+                  </div> -->
+                </div>
+                <div class="policy-mobile-table-tile p-0 m-b-20">
+                  <div class="claims-progress-card-box-container m-l-8">
+                    <div class="tile-conteiner-text-image-wrp">
+                      <div onclick="toggleExpandPolicyDetails('my-changes-policy-details-1', 'my-changes-policy-details-arrow-1')" class="d-flex flex-item m-r-8">
+                        <svg id="my-changes-policy-details-arrow-1" class="flex-item transition-2ms" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16.0609 7.27393C15.9924 7.27409 15.9258 7.29712 15.8718 7.33938L10.0003 12.0376L4.12154 7.33938C4.0897 7.31455 4.05329 7.29623 4.01437 7.28548C3.97546 7.27472 3.93481 7.27173 3.89474 7.27668C3.85467 7.28163 3.81596 7.29443 3.78084 7.31434C3.74572 7.33425 3.71486 7.36088 3.69002 7.39272C3.66519 7.42455 3.64687 7.46097 3.63612 7.49988C3.62536 7.5388 3.62237 7.57945 3.62732 7.61952C3.63227 7.65959 3.64507 7.69829 3.66498 7.73342C3.68489 7.76854 3.71152 7.7994 3.74336 7.82423L9.80396 12.6727C9.85784 12.7152 9.92445 12.7383 9.99306 12.7383C10.0617 12.7383 10.1283 12.7152 10.1821 12.6727L16.2428 7.82423C16.2922 7.78512 16.3281 7.73158 16.3457 7.67107C16.3632 7.61056 16.3615 7.54608 16.3407 7.48661C16.3199 7.42713 16.2811 7.37562 16.2296 7.33924C16.1782 7.30286 16.1167 7.28342 16.0537 7.28363L16.0609 7.27393Z" fill="#5495CF"/>
+                        </svg>
+                      </div>
+                      <svg class="flex-item m-r-8" width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0.5C0 0.223857 0.223858 0 0.5 0H9.5C9.77614 0 10 0.223858 10 0.5V12.6893C10 13.1485 9.43288 13.3648 9.12703 13.0223L5.37297 8.81773C5.17417 8.59507 4.82583 8.59507 4.62703 8.81772L0.872969 13.0223C0.567125 13.3648 0 13.1485 0 12.6893V0.5Z" fill="#5495CF"/>
+                      </svg>                       
+                      <p class="policy-text-one mobile-view tile-text-container flex-item"><span class="span-txt-spacing-mob">#</span><span class="span-txt-spacing-mob">6209025601</span></p>
+                    </div>
+                  </div>
+                  <p id="life-insurance-tile-mobile" class="policy-text-four mobile-view m-l-12">3 - Pay Zurich Edustart</p>
+                  <div class="my-changes-table-line-saperator"></div>
+                  <div class="d-flex w-full p-b-14 p-t-8 m-l-12 m-b-8">
+                    <p class="flex-item m-r-12 change-status-txt">Change Status</p>
+                    <div class="d-flex flex-item w-full my-change-status" style="width: 50%">
+                      <div class="my-change-status-line-active flex-item d-flex-no-wrap">
+                        <div class="my-change-status-ball-active d-flex-no-wrap flex-item"><p class="flex-item">1</p></div>
+                      </div>
+                      <div class="my-change-status-line-inactive flex-item d-flex-no-wrap">
+                        <div class="my-change-status-ball-inactive d-flex-no-wrap flex-item"><p class="flex-item">2</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="my-changes-policy-details-1" class="policy-mobile-table-tile-expand policy-mobile-table-tile-expand-no-shadow" style="display:none;">
+                    <div class="d-flex-no-wrap w-full p-t-12 p-b-12">
+                      <p class="flex-item my-changes-table-header">Applicant</p>
+                      <p class="flex-item my-changes-table-result">Policy # Name</p>
+                    </div>
+                    <div class="d-flex-no-wrap w-full p-t-12 p-b-12">
+                      <p class="flex-item my-changes-table-header">Insured Name</p>
+                      <p class="flex-item my-changes-table-result">Name of Insured Person Name of Insured Person</p>
+                    </div>
+                    <div class="d-flex-no-wrap w-full p-t-12 p-b-12">
+                      <p class="flex-item my-changes-table-header">Change Type</p>
+                      <p class="flex-item my-changes-table-result">Update Bank Account EFT</p>
+                    </div>
+                    <div class="d-flex-no-wrap w-full p-t-12 p-b-12">
+                      <p class="flex-item my-changes-table-header">Bank Name</p>
+                      <p class="flex-item my-changes-table-result">Standard Chartered Bank</p>
+                    </div>
+                    <div class="d-flex-no-wrap w-full p-t-12 p-b-12">
+                      <p class="flex-item my-changes-table-header">Bank A/C #</p>
+                      <p class="flex-item my-changes-table-result">Bank Account Number Bank Account Number</p>
+                    </div>
+                  </div>
+                  
+                  <!-- <div class="flex-item" id="checkbox-selected-state-all-mob" >
+                    <label class="checkbox" style="margin: 0 !important">
+                      <input class="checkbox custom-checkbox outer-shadow" type="checkbox" checked />
+                      <span></span>
+                    </label>
+                  </div> -->
+                </div>
+                <div id="lazy-loader-id" style="display: none; margin-bottom: 20px">
+                  <div class="loader"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toaster-message">
+      <p>Your Bank Account EFT changes are been processed and their status can be viewed here.</p>
+    </div> 
+    
+    <custom-footer></custom-footer>
+    <script src="component/header.js"></script>
+    <script src="component/sidebar.js"></script>
+    <script src="component/menu.js"></script>
+    <script src="component/footer.js"></script>
+    <script src="functions/slider.js"></script>
+    <script src="functions/menu.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="functions/lazyLoad.js"></script>
+    <script src="functions/changes.js"></script>
+    <script type="text/javascript">
+      
+    </script>
+  </body>
+</html>

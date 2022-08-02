@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Zurich | Policy My Profile</title>
+  </head>
+  <body>
+    <div class="desktop-view side-bar-index">
+      <sidebar-custom></sidebar-custom>
+    </div>
+    <div class="isLandscapeDesktop">
+      <div id="policy-info" class="main-body-container" style="z-index: 4;">
+        <div class="main-body-info tab-desktop-sub-menu">
+          <div id="info-container" class="policy-container policy-info-padding">
+            <div id="menu-items" class="policy-menu-bar">
+              <div id="my-profile" class="policy-menu-item-container policy-over-view-menu-desktop"> Policy Update </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="isMobile">
+      <div id="policy-info" class="main-body-container" style="z-index: 4;">
+        <div class="mobile-scroll-outer-container ms-margin mob-sub-menu">
+          <div class="mobile-scroll-container">
+            <div id="menu-items-mobile" class="mobile-menu-bar">
+              <div id="my-profile-mobile" class="policy-menu-item-container policy-over-view-menu"> Policy Update </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-action-header d-flex-no-wrap adjust-26 space-between">
+      <div onclick="location.href='policy-my-profile.html'" class="back-to-policy flex-item" style="cursor: pointer; margin-left: 6px">
+        <svg class="policy-back-icon" width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="policy-back-icon" d="M7 1L1 6.5L7 12.5" stroke="rgba(0, 0, 0, 0.5)" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="policy-back-text">Back</p>
+      </div>
+      <div>
+        <div class="tooltip">
+          <button onclick="location.href='./edit-contact-form.html'" id="edit-details-button" class="primary-button d-flex zurich-inactive-btn" type="button">
+            <svg class="new-policy-icon" width="18" height="18" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="new-policy-icon" d="M1.09276 37.6912C1.18214 37.6937 1.2707 37.6652 1.35161 37.6079C1.43251 37.5507 1.50359 37.4661 1.55936 37.3609L10.8914 19.7932C10.9731 19.637 11.0176 19.4439 11.0176 19.2451C11.0176 19.0462 10.9731 18.8531 10.8914 18.697L1.55936 1.12922C1.46284 0.942848 1.32111 0.821858 1.16535 0.792866C1.00959 0.763874 0.852563 0.829253 0.728812 0.974622C0.605062 1.11999 0.524723 1.33344 0.505472 1.56802C0.486221 1.80259 0.529634 2.03908 0.62616 2.22545L9.67822 19.2451L0.635491 36.2647C0.53986 36.4479 0.496025 36.6804 0.513494 36.9119C0.530964 37.1435 0.608329 37.3553 0.728812 37.5015C0.832718 37.624 0.960801 37.6907 1.09276 37.6912Z" fill="#23366F" />
+            </svg>
+            <span class="flex-item adjust-19">Save & Update</span> 
+          </button>
+          <span id="toolip-disabled" class="tooltiptext2">Disabled Button</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="zurich-active adjust-27">Editing the information for the following Policies/Certificates:</p>
+    
+    <div class="d-flex adjust-27">
+      
+        <div class="contact-form-tile-1">
+          <div class="d-flex-no-wrap">
+          <svg style="margin: 0 10px 0 0; min-width: 12px; min-width: 12px" width="12" height="46" viewBox="0 0 12 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 4C0 1.79086 1.79086 0 4 0H11.5C11.7761 0 12 0.223858 12 0.5V44.7212C12 45.1763 11.4413 45.3948 11.1326 45.0603L6.3674 39.898C6.16942 39.6835 5.83058 39.6835 5.6326 39.898L0.867401 45.0603C0.558678 45.3948 0 45.1763 0 44.7212V4Z" fill="#5495CF"/>
+          </svg>  
+          <div class="adjust-28">
+            <div class="d-block adjust-24">
+              <span name="policyID" class="policy-text-one d-flex-no-wrap align-items-center policy-number" style="margin: 0;">
+                <img src="assets/Blue CMYK.svg" class="icon-text-space flex-item"/><span class="span-txt-spacing-desktop flex-item">#</span><span class="span-txt-spacing-desktop flex-item">110150278958</span><span class="span-txt-spacing-desktop flex-item">|</span><span class="text-one-mobile span-txt-spacing-desktop isMobile flex-item">Inforced</span><span class="policy-text-one-desktop span-txt-spacing-desktop isLandscapeDesktop flex-item">Inforced</span>
+              </span>
+            </div>
+            <div id="Policy-name-container" name="policyName" style="font-size: 18px; color: #000000"></div>
+          </div>
+        </div>
+        </div>
+  
+
+        <div class="contact-form-tile-2">
+          <div class="d-flex-no-wrap">
+            <svg style="margin: 0 10px 0 0; min-width: 12px; min-width: 12px" width="12" height="46" viewBox="0 0 12 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 4C0 1.79086 1.79086 0 4 0H11.5C11.7761 0 12 0.223858 12 0.5V44.7212C12 45.1763 11.4413 45.3948 11.1326 45.0603L6.3674 39.898C6.16942 39.6835 5.83058 39.6835 5.6326 39.898L0.867401 45.0603C0.558678 45.3948 0 45.1763 0 44.7212V4Z" fill="#19BAB6"/>
+            </svg>  
+            <div class="adjust-28">
+              <div class="d-block adjust-24">
+                <span name="policyID" class="policy-text-one d-flex-no-wrap align-items-center policy-number" style="margin: 0;">
+                  <img src="assets/teal CMYK.svg" class="icon-text-space flex-item"/><span class="span-txt-spacing-desktop flex-item">#</span><span class="span-txt-spacing-desktop flex-item">110150278958</span><span class="span-txt-spacing-desktop flex-item">|</span><span class="text-one-mobile span-txt-spacing-desktop isMobile flex-item">Inforced</span><span class="policy-text-one-desktop span-txt-spacing-desktop isLandscapeDesktop flex-item">Inforced</span>
+                </span>
+              </div>
+              <div name="policyName" style="font-size: 18px; color: #000000"> Zurich - Omni Health Gold</div>
+            </div>
+          </div>
+        </div>
+      
+     
+        <div class="contact-form-tile-1">
+          <div class="d-flex-no-wrap ">
+            <svg style="margin: 0 10px 0 0; min-width: 12px; min-width: 12px" width="12" height="46" viewBox="0 0 12 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 4C0 1.79086 1.79086 0 4 0H11.5C11.7761 0 12 0.223858 12 0.5V44.7212C12 45.1763 11.4413 45.3948 11.1326 45.0603L6.3674 39.898C6.16942 39.6835 5.83058 39.6835 5.6326 39.898L0.867401 45.0603C0.558678 45.3948 0 45.1763 0 44.7212V4Z" fill="#5495CF"/>
+            </svg>  
+            <div class="adjust-28">
+              <div class="d-block adjust-24">
+                <span name="policyID" class="policy-text-one d-flex-no-wrap align-items-center policy-number" style="margin: 0;">
+                  <img src="assets/Blue CMYK.svg" class="icon-text-space flex-item"/><span class="span-txt-spacing-desktop flex-item">#</span><span class="span-txt-spacing-desktop flex-item">110150278958</span><span class="span-txt-spacing-desktop flex-item">|</span><span class="text-one-mobile span-txt-spacing-desktop isMobile flex-item">Inforced</span><span class="policy-text-one-desktop span-txt-spacing-desktop isLandscapeDesktop flex-item">Inforced</span>
+                </span>
+              </div>
+              <div name="policyName" style="font-size: 18px; color: #000000;"> Zurich - Omni Health Gold</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="contact-form-tile-1">
+          <div class="d-flex-no-wrap ">
+            <svg style="margin: 0 10px 0 0; min-width: 12px; min-width: 12px" width="12" height="46" viewBox="0 0 12 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 4C0 1.79086 1.79086 0 4 0H11.5C11.7761 0 12 0.223858 12 0.5V44.7212C12 45.1763 11.4413 45.3948 11.1326 45.0603L6.3674 39.898C6.16942 39.6835 5.83058 39.6835 5.6326 39.898L0.867401 45.0603C0.558678 45.3948 0 45.1763 0 44.7212V4Z" fill="#5495CF"/>
+            </svg>  
+            <div class="adjust-28">
+              <div class="d-block adjust-24">
+                <span name="policyID" class="policy-text-one d-flex-no-wrap align-items-center policy-number" style="margin: 0;">
+                  <img src="assets/Blue CMYK.svg" class="icon-text-space flex-item"/><span class="span-txt-spacing-desktop flex-item">#</span><span class="span-txt-spacing-desktop flex-item">110150278958</span><span class="span-txt-spacing-desktop flex-item">|</span><span class="text-one-mobile span-txt-spacing-desktop isMobile flex-item">Inforced</span><span class="policy-text-one-desktop span-txt-spacing-desktop isLandscapeDesktop flex-item">Inforced</span>
+                </span>
+              </div>
+              <div name="policyName" style="font-size: 18px; color: #000000;"> Zurich - Omni Health Gold</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-tile-1">
+          <div class="d-flex-no-wrap ">
+            <svg style="margin: 0 10px 0 0; min-width: 12px; min-width: 12px" width="12" height="46" viewBox="0 0 12 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 4C0 1.79086 1.79086 0 4 0H11.5C11.7761 0 12 0.223858 12 0.5V44.7212C12 45.1763 11.4413 45.3948 11.1326 45.0603L6.3674 39.898C6.16942 39.6835 5.83058 39.6835 5.6326 39.898L0.867401 45.0603C0.558678 45.3948 0 45.1763 0 44.7212V4Z" fill="#5495CF"/>
+            </svg>  
+            <div class="adjust-28">
+              <div class="d-block adjust-24">
+                <span name="policyID" class="policy-text-one d-flex-no-wrap align-items-center policy-number" style="margin: 0;">
+                  <img src="assets/Blue CMYK.svg" class="icon-text-space flex-item"/><span class="span-txt-spacing-desktop flex-item">#</span><span class="span-txt-spacing-desktop flex-item">110150278958</span><span class="span-txt-spacing-desktop flex-item">|</span><span class="text-one-mobile span-txt-spacing-desktop isMobile flex-item">Inforced</span><span class="policy-text-one-desktop span-txt-spacing-desktop isLandscapeDesktop flex-item">Inforced</span>
+                </span>
+              </div>
+              <div name="policyName" style="font-size: 18px; color: #000000;"> Zurich - Omni Health Gold</div>
+            </div>
+          </div>
+        </div>
+     
+
+    </div>
+   
+    <div class="personal-details-from">
+      <p class="personal-details-form-title zurich-active">Contact Details</p>
+      <div class="d-flex">
+        <div class="text-field-spacing-1">
+          <p class="personal-details-field-title">Mobile Number*</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field contact-country-code" type="number" placeholder="+60"/>
+            <input class="flex-item contact-form-text-field contact-number" type="number" placeholder="987767874"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-2">
+          <p class="personal-details-field-title">Email Address*</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" placeholder="johndoe@sample.com" type="email"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-1">
+          <p class="personal-details-field-title">Office Telephone Number*</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field contact-country-code" type="number" placeholder="+60"/>
+            <input class="flex-item contact-form-text-field contact-number" type="number" placeholder="987767874"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-2">
+          <p class="personal-details-field-title">Resedence Telephone Number*</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field contact-country-code" type="number" placeholder="+60"/>
+            <input class="flex-item contact-form-text-field contact-number" type="number" placeholder="987767874"/>
+          </div>
+        </div>
+      </div>
+
+      <p class="zurich-active adjust-29">*Contact details will apply to all policies</p>
+      <p class="personal-details-form-title zurich-active">Address Details</p>
+      <p class="zurich-active adjust-30">Correspondence Address</p>
+      <div class="d-flex">
+        <div class="text-field-spacing-1">
+          <p class="personal-details-field-title">Address Line 1</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="text" placeholder="NO 65 JALAN MEWAH RIA 4/3"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-2">
+          <p class="personal-details-field-title">Address Line 2</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="text" placeholder="NO 65 JALAN MEWAH RIA 4/3"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-1">
+          <p class="personal-details-field-title">Post Code</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="number" placeholder="81200"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-2">
+          <p class="personal-details-field-title">City</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="text" placeholder="Johor Bahru"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-1">
+          <p class="personal-details-field-title">State</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="text" placeholder="JOHOR"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-2">
+          <p class="personal-details-field-title">Country</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="text" placeholder="MALAYSIA"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex adjust-31 space-between">
+        <p class="flex-item zurich-active">Residential Address **</p>
+        <div class="d-flex-no-wrap">
+          <label class="checkbox adjust-22 isLandscapeDesktop flex-item" style="margin-right: 8px;">
+            <input onclick="toggleResidentalAddressList()" id="residental-address-checkbox-desk" class="checkbox custom-checkbox outer-shadow" type="checkbox" />
+            <p></p>
+          </label>
+          <p class="zurich-active flex-item">Same as Correspondence Address</p>
+          <label class="checkbox isMobile" style="margin-left: 8px; z-index: 1;">
+            <input onclick="toggleResidentalAddressList()"  id="residental-address-checkbox-mob" class="checkbox custom-checkbox outer-shadow" type="checkbox" />
+            <p></p>
+          </label>
+        </div>
+      </div>
+      <div id="residental-address-id-data"  class="d-flex">
+        <div class="text-field-spacing-1">
+          <p class="personal-details-field-title">Address Line 1</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="text" placeholder="NO 65 JALAN MEWAH RIA 4/3"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-2">
+          <p class="personal-details-field-title">Address Line 2</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="text" placeholder="NO 65 JALAN MEWAH RIA 4/3"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-1">
+          <p class="personal-details-field-title">Post Code</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="number" placeholder="81200"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-2">
+          <p class="personal-details-field-title">City</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="text" placeholder="Johor Bahru"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-1">
+          <p class="personal-details-field-title">State</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="text" placeholder="JOHOR"/>
+          </div>
+        </div>
+        <div class="text-field-spacing-2">
+          <p class="personal-details-field-title">Country</p>
+          <div class="d-flex personal-details-field-input">
+            <input class="flex-item contact-form-text-field default-text-field" type="text" placeholder="MALAYSIA"/>
+          </div>
+        </div>
+      </div>
+      <p class="zurich-active adjust-32">**Residential address is only applicable to Life Insurance policies & Family Takaful Certificates</p>
+    </div>
+
+		<custom-footer></custom-footer>
+    <script src="component/header.js"></script>
+    <script src="component/sidebar.js"></script>
+    <script src="component/menu.js"></script>
+    <script src="component/footer.js"></script>
+    <script src="functions/slider.js"></script>
+    <script src="functions/coverage.js"></script>
+    <script src="functions/menu.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="functions/lazyLoad.js"></script>
+    <script type="text/javascript">
+      let policyName = "Zurich - Omni Health Gold Zurich - Omni Health Gold Zurich - Omni Health Gold Zurich - Omni Health Gold"
+      document.getElementById("Policy-name-container").innerHTML = policyName.slice(0,25) + "....";
+    </script>
+	</body>
+</html>
+	
+			
